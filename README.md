@@ -17,7 +17,7 @@
 
 ## Description
 
-Au3NewProject [...] description [...].
+Au3NewProject allows to create new AutoIt projects with a predefined and prefilled project structure. Different kinds of project types and the ability to create the project with an additional github structure makes this tool pretty helpful.
 
 ## Features
 
