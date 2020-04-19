@@ -1,4 +1,4 @@
-Global $iEnumVariables = 80
+Global $iEnumVariables = 81
 Global Enum _
     $eBackground, _
     $eBackgroundColor, _
@@ -66,6 +66,7 @@ Global Enum _
     $eReadme, _
     $eRed, _
     $eRoot, _
+    $eScreenshots, _
     $eSrc, _
     $eSrcBasicFunctions, _
     $eSrcDeclaration, _

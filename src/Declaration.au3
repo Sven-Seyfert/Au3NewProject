@@ -17,6 +17,7 @@ Global $aPath[$iEnumVariables]
        $aPath[$eImages]                     = ''
        $aPath[$eJs]                         = ''
        $aPath[$eMedia]                      = ''
+       $aPath[$eScreenshots]                = ''
        $aPath[$eSrc]                        = ''
        $aPath[$eUtilities]                  = ''
 

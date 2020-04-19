@@ -16,6 +16,7 @@ Func _setupPaths()
     $aPath[$eImages]        = $aPath[$eRoot]   & '\images'
     $aPath[$eJs]            = $aPath[$eRoot]   & '\js'
     $aPath[$eMedia]         = $aPath[$eRoot]   & '\media'
+    $aPath[$eScreenshots]   = $aPath[$eRoot]   & '\screenshots'
     $aPath[$eSrc]           = $aPath[$eRoot]   & '\src'
     $aPath[$eUtilities]     = $aPath[$eRoot]   & '\utilities'
 EndFunc
@@ -54,6 +55,7 @@ Func _createFolders()
 
     DirCreate( $aPath[$eConfig] )
     DirCreate( $aPath[$eMedia] )
+    DirCreate( $aPath[$eScreenshots] )
     DirCreate( $aPath[$eSrc] )
     DirCreate( $aPath[$eUtilities] )
 EndFunc

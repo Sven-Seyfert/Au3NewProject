@@ -1,8 +1,8 @@
 ; compiler information for AutoIt
 #AutoIt3Wrapper_AU3Check_Stop_OnWarning=y
 #AutoIt3Wrapper_Icon=..\media\favicon.ico
-#AutoIt3Wrapper_Res_Description=Au3NewProject (2020-04-07)
-#AutoIt3Wrapper_Res_Fileversion=0.4
+#AutoIt3Wrapper_Res_Description=Au3NewProject (2020-04-19)
+#AutoIt3Wrapper_Res_Fileversion=0.5
 #AutoIt3Wrapper_UseUpx=n
 #AutoIt3Wrapper_UseX64=y
 
