@@ -4,8 +4,8 @@
 
 ## Preparing
 
-- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/AutoIt-Au3NewProject/blob/master/docs/CODE_OF_CONDUCT.md) document.
-- Please also notice that I got a [StyleGuide](https://github.com/Sven-Seyfert/AutoIt-Au3StyleGuide/blob/master/README.md).
+- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/Au3NewProject/blob/master/docs/CODE_OF_CONDUCT.md) document.
+- Please also notice that I got a [StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md).
 
 ## Contribution
 

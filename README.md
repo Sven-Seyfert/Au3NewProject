@@ -6,10 +6,10 @@
 </p>
 
 ![license](https://img.shields.io/badge/license-MIT-green.svg?logo=spdx)
-![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/AutoIt-Au3NewProject.svg?logo=github)
-![repo size](https://img.shields.io/github/repo-size/Sven-Seyfert/AutoIt-Au3NewProject.svg?logo=github)
-![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/AutoIt-Au3NewProject.svg?logo=github)
-![release](https://img.shields.io/github/release/Sven-Seyfert/AutoIt-Au3NewProject.svg?logo=github)
+![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/Au3NewProject.svg?logo=github)
+![repo size](https://img.shields.io/github/repo-size/Sven-Seyfert/Au3NewProject.svg?logo=github)
+![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/Au3NewProject.svg?logo=github)
+![release](https://img.shields.io/github/release/Sven-Seyfert/Au3NewProject.svg?logo=github)
 ![os](https://img.shields.io/badge/os-windows-blueviolet.svg?logo=windows)
 ![autoit](https://img.shields.io/badge/autoit-rockz-9cf.svg?logo=visual-studio-code)
 
@@ -52,11 +52,11 @@ Au3NewProject allows to create new AutoIt projects with a predefined and prefill
 
 ## Contributing
 
-Just look at [CONTRIBUTING](https://github.com/Sven-Seyfert/AutoIt-Au3NewProject/blob/master/docs/CONTRIBUTING.md), thank you!
+Just look at [CONTRIBUTING](https://github.com/Sven-Seyfert/Au3NewProject/blob/master/docs/CONTRIBUTING.md), thank you!
 
 ## Style Guide
 
-For my AutoIt projects and programs I use a self defined StyleGuide which represents how I write nice readable code that should be understandable by others quickly. Therefore please have a look on my [AutoIt-Au3StyleGuide](https://github.com/Sven-Seyfert/AutoIt-Au3StyleGuide/blob/master/README.md) repository if you're interested.
+For my AutoIt projects and programs I use a self defined StyleGuide which represents how I write nice readable code that should be understandable by others quickly. Therefore please have a look on my [Au3StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md) repository if you're interested.
 
 ##
 

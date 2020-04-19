@@ -6,8 +6,8 @@ Describe the big picture of your changes here to communicate to the maintainers 
 
 Put an `x` in the boxes that apply. If you're unsure about any of them, don't hesitate to ask. I'm here to help! This is simply a reminder of what we are going to look for before merging your code.
 
-- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/AutoIt-Au3NewProject/blob/master/docs/CODE_OF_CONDUCT.md) document
-- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/Sven-Seyfert/AutoIt-Au3NewProject/blob/master/docs/CONTRIBUTING.md) document
+- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/Au3NewProject/blob/master/docs/CODE_OF_CONDUCT.md) document
+- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/Sven-Seyfert/Au3NewProject/blob/master/docs/CONTRIBUTING.md) document
 - [ ] I have added necessary documentation or screenshots (if appropriate)
 
 ## Pull request type
@@ -15,7 +15,7 @@ Put an `x` in the boxes that apply. If you're unsure about any of them, don't he
 Please check the type of change your PR introduces:
 - [ ] Bugfix
 - [ ] Feature
-- [ ] Code style update (formatting, renaming), please check my StyleGuide [AutoIt-Au3StyleGuide](https://github.com/Sven-Seyfert/AutoIt-Au3StyleGuide/blob/master/README.md)
+- [ ] Code style update (formatting, renaming), please check my StyleGuide [Au3StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md)
 - [ ] Refactoring (functional, structural)
 - [ ] Documentation content changes
 - [ ] Other (please describe):
