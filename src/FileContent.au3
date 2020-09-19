@@ -171,7 +171,7 @@ Func _setupContent()
         @CRLF & _
         '## Preparing' & @CRLF & _
         @CRLF & _
-        '- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/AutoIt-' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CODE_OF_CONDUCT.md) document.' & @CRLF & _
+        '- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CODE_OF_CONDUCT.md) document.' & @CRLF & _
         '- Please also notice that I got a [StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md).' & @CRLF & _
         @CRLF & _
         '## Contribution' & @CRLF & _
@@ -223,8 +223,8 @@ Func _setupContent()
         @CRLF & _
         'Put an `x` in the boxes that apply. If you''re unsure about any of them, don''t hesitate to ask. I''m here to help! This is simply a reminder of what we are going to look for before merging your code.' & @CRLF & _
         @CRLF & _
-        '- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/AutoIt-' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CODE_OF_CONDUCT.md) document' & @CRLF & _
-        '- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/Sven-Seyfert/AutoIt-' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CONTRIBUTING.md) document' & @CRLF & _
+        '- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CODE_OF_CONDUCT.md) document' & @CRLF & _
+        '- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CONTRIBUTING.md) document' & @CRLF & _
         '- [ ] I have added necessary documentation or screenshots (if appropriate)' & @CRLF & _
         @CRLF & _
         '## Pull request type' & @CRLF & _
@@ -309,10 +309,10 @@ Func _setupContent()
         '</p>' & @CRLF & _
         @CRLF & _
         '![license](https://img.shields.io/badge/license-MIT-green.svg?logo=spdx)' & @CRLF & _
-        '![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/AutoIt-' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
-        '![repo size](https://img.shields.io/github/repo-size/Sven-Seyfert/AutoIt-' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
-        '![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/AutoIt-' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
-        '![release](https://img.shields.io/github/release/Sven-Seyfert/AutoIt-' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
+        '![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
+        '![repo size](https://img.shields.io/github/repo-size/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
+        '![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
+        '![release](https://img.shields.io/github/release/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
         '![os](https://img.shields.io/badge/os-windows-blueviolet.svg?logo=windows)' & @CRLF & _
         '![autoit](https://img.shields.io/badge/autoit-rockz-9cf.svg?logo=visual-studio-code)' & @CRLF & _
         @CRLF & _
@@ -355,7 +355,7 @@ Func _setupContent()
         @CRLF & _
         '## Contributing' & @CRLF & _
         @CRLF & _
-        'Just look at [CONTRIBUTING](https://github.com/Sven-Seyfert/AutoIt-' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
+        'Just look at [CONTRIBUTING](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
         @CRLF & _
         '## Style Guide' & @CRLF & _
         @CRLF & _
