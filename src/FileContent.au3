@@ -172,7 +172,7 @@ Func _setupContent()
         '## Preparing' & @CRLF & _
         @CRLF & _
         '- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CODE_OF_CONDUCT.md) document.' & @CRLF & _
-        '- Please also notice that I got a [StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md).' & @CRLF & _
+        '- Please also notice that I try to use some Clean Code aspects for my code. So if it''s possible for you, please also keep that in mind, thanks. If you have questions about it, please contact me.' & @CRLF & _
         @CRLF & _
         '## Contribution' & @CRLF & _
         @CRLF & _
@@ -232,7 +232,7 @@ Func _setupContent()
         'Please check the type of change your PR introduces:' & @CRLF & _
         '- [ ] Bugfix' & @CRLF & _
         '- [ ] Feature' & @CRLF & _
-        '- [ ] Code style update (formatting, renaming), please check my StyleGuide [Au3StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md)' & @CRLF & _
+        '- [ ] Code style update (formatting, renaming)' & @CRLF & _
         '- [ ] Refactoring (functional, structural)' & @CRLF & _
         '- [ ] Documentation content changes' & @CRLF & _
         '- [ ] Other (please describe):' & @CRLF & _
@@ -316,7 +316,7 @@ Func _setupContent()
         '![os](https://img.shields.io/badge/os-windows-blueviolet.svg?logo=windows)' & @CRLF & _
         '![autoit](https://img.shields.io/badge/autoit-rockz-9cf.svg?logo=visual-studio-code)' & @CRLF & _
         @CRLF & _
-        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard Shortcuts](#keyboard-shortcuts) | [Tested](#tested) | [Contributing](#contributing) | [Style Guide](#style-guide)' & @CRLF & _
+        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard Shortcuts](#keyboard-shortcuts) | [Tested](#tested) | [Contributing](#contributing)' & @CRLF & _
         @CRLF & _
         '## Description' & @CRLF & _
         @CRLF & _
@@ -356,10 +356,6 @@ Func _setupContent()
         '## Contributing' & @CRLF & _
         @CRLF & _
         'Just look at [CONTRIBUTING](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
-        @CRLF & _
-        '## Style Guide' & @CRLF & _
-        @CRLF & _
-        'For my AutoIt projects and programs I use a self defined StyleGuide which represents how I write nice readable code that should be understandable by others quickly. Therefore please have a look on my [Au3StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md) repository if you''re interested.' & @CRLF & _
         @CRLF & _
         '##' & @CRLF & _
         @CRLF & _

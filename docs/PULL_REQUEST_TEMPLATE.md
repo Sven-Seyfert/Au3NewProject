@@ -15,7 +15,7 @@ Put an `x` in the boxes that apply. If you're unsure about any of them, don't he
 Please check the type of change your PR introduces:
 - [ ] Bugfix
 - [ ] Feature
-- [ ] Code style update (formatting, renaming), please check my StyleGuide [Au3StyleGuide](https://github.com/Sven-Seyfert/Au3StyleGuide/blob/master/README.md)
+- [ ] Code style update (formatting, renaming)
 - [ ] Refactoring (functional, structural)
 - [ ] Documentation content changes
 - [ ] Other (please describe):
