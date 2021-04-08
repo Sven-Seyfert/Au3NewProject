@@ -275,10 +275,10 @@ Func _setupContent()
         @CRLF & _
         '| Permissions                                                                  | Conditions                                                                                 | Limitations                                                             |' & @CRLF & _
         '| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |' & @CRLF & _
-        '| ![#3DC637](https://placehold.it/8/3DC637/000000?text=+) &nbsp;Commercial use | ![#0099D6](https://placehold.it/8/0099D6/000000?text=+) &nbsp;License and copyright notice | ![#C6403D](https://placehold.it/8/C6403D/000000?text=+) &nbsp;Liability |' & @CRLF & _
-        '| ![#3DC637](https://placehold.it/8/3DC637/000000?text=+) &nbsp;Distribution   |                                                                                            | ![#C6403D](https://placehold.it/8/C6403D/000000?text=+) &nbsp;Warranty  |' & @CRLF & _
-        '| ![#3DC637](https://placehold.it/8/3DC637/000000?text=+) &nbsp;Modification   |                                                                                            |                                                                         |' & @CRLF & _
-        '| ![#3DC637](https://placehold.it/8/3DC637/000000?text=+) &nbsp;Private use    |                                                                                            |                                                                         |' & @CRLF & _
+        '| ![#3DC637](https://via.placeholder.com/8/3DC637/000000?text=+) &nbsp;Commercial use | ![#0099D6](https://via.placeholder.com/8/0099D6/000000?text=+) &nbsp;License and copyright notice | ![#C6403D](https://via.placeholder.com/8/C6403D/000000?text=+) &nbsp;Liability |' & @CRLF & _
+        '| ![#3DC637](https://via.placeholder.com/8/3DC637/000000?text=+) &nbsp;Distribution   |                                                                                            | ![#C6403D](https://via.placeholder.com/8/C6403D/000000?text=+) &nbsp;Warranty  |' & @CRLF & _
+        '| ![#3DC637](https://via.placeholder.com/8/3DC637/000000?text=+) &nbsp;Modification   |                                                                                            |                                                                         |' & @CRLF & _
+        '| ![#3DC637](https://via.placeholder.com/8/3DC637/000000?text=+) &nbsp;Private use    |                                                                                            |                                                                         |' & @CRLF & _
         @CRLF & _
         '#### License description' & @CRLF & _
         @CRLF & _
