@@ -306,16 +306,16 @@ Func _setupContent()
         @CRLF & _
         '<p align="center">' & @CRLF & _
         '    <img src="http://sven-seyfert.de/media/logo_circle.png" width="80" />' & @CRLF & _
-        '    <h2 align="center">Welcome to <code>' & GUICtrlRead( $aProjectName[$eInput] ) & '</code> !</h2>' & @CRLF & _
+        '    <h2 align="center">Welcome to <code>' & GUICtrlRead( $aProjectName[$eInput] ) & '</code>【ツ】</h2>' & @CRLF & _
         '</p>' & @CRLF & _
         @CRLF & _
-        '![license](https://img.shields.io/badge/license-MIT-green.svg?logo=spdx)' & @CRLF & _
-        '![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
-        '![repo size](https://img.shields.io/github/repo-size/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
-        '![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
-        '![release](https://img.shields.io/github/release/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?logo=github)' & @CRLF & _
-        '![os](https://img.shields.io/badge/os-windows-blueviolet.svg?logo=windows)' & @CRLF & _
-        '![autoit](https://img.shields.io/badge/autoit-rockz-9cf.svg?logo=visual-studio-code)' & @CRLF & _
+        '![license](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square&logo=spdx)' & @CRLF & _
+        '![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![repo size](https://img.shields.io/github/repo-size/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![release](https://img.shields.io/github/release/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![os](https://img.shields.io/badge/os-windows-yellow.svg?style=flat-square&logo=windows)' & @CRLF & _
+        '![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)' & @CRLF & _
         @CRLF & _
         '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard Shortcuts](#keyboard-shortcuts) | [Tested](#tested) | [Contributing](#contributing)' & @CRLF & _
         @CRLF & _
