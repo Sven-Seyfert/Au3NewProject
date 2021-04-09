@@ -3,6 +3,7 @@ Func _setupContent()
         '; compiler information for AutoIt' & @CRLF & _
         '#AutoIt3Wrapper_AU3Check_Stop_OnWarning=y' & @CRLF & _
         '#AutoIt3Wrapper_Icon=..\media\favicon.ico' & @CRLF & _
+        '#AutoIt3Wrapper_Outfile_x64=..\build\' & GUICtrlRead( $aProjectName[$eInput] ) & @CRLF & _
         '#AutoIt3Wrapper_Res_Description=' & GUICtrlRead( $aProjectName[$eInput] ) & ' (' & @YEAR & '-' & @MON & '-' & @MDAY & ')' & @CRLF & _
         '#AutoIt3Wrapper_Res_Fileversion=0.1' & @CRLF & _
         '#AutoIt3Wrapper_UseUpx=n' & @CRLF & _

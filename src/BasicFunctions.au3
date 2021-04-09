@@ -22,6 +22,7 @@ Func _existsNotAllowedCharacters( $sString )
     If StringInStr( $sString, '<' ) <> 0 Then Return True
     If StringInStr( $sString, '>' ) <> 0 Then Return True
     If StringInStr( $sString, '|' ) <> 0 Then Return True
+
     Return False
 EndFunc
 

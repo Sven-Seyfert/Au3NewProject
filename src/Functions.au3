@@ -2,6 +2,7 @@ Func _exit()
     AdlibUnRegister( '_hoverActions' )
     _guiFadeOut( $aGui[$eHandle] )
     GUIDelete( $aGui[$eHandle] )
+
     Exit
 EndFunc
 
