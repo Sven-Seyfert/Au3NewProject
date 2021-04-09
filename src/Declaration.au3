@@ -10,6 +10,7 @@ Global $aPath[$iEnumVariables]
        $aPath[$eFolder]                     = ''
        $aPath[$eRoot]                       = ''
        $aPath[$eIssueTemplate]              = ''
+       $aPath[$eBuild]                      = ''
        $aPath[$eConfig]                     = ''
        $aPath[$eCss]                        = ''
        $aPath[$eDocs]                       = ''

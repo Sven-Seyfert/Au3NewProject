@@ -10,6 +10,7 @@ Func _setupPaths()
     $aPath[$eFolder]        = GUICtrlRead( $aLocation[$eInput] )
     $aPath[$eRoot]          = $aPath[$eFolder] & '\' & GUICtrlRead( $aProjectName[$eInput] )
     $aPath[$eIssueTemplate] = $aPath[$eRoot]   & '\.github\ISSUE_TEMPLATE'
+    $aPath[$eBuild]         = $aPath[$eRoot]   & '\build'
     $aPath[$eConfig]        = $aPath[$eRoot]   & '\config'
     $aPath[$eCss]           = $aPath[$eRoot]   & '\css'
     $aPath[$eDocs]          = $aPath[$eRoot]   & '\docs'
@@ -54,6 +55,7 @@ Func _createFolders()
         DirCreate( $aPath[$eJs] )
     EndIf
 
+    DirCreate( $aPath[$eBuild] )
     DirCreate( $aPath[$eConfig] )
     DirCreate( $aPath[$eMedia] )
     DirCreate( $aPath[$eScreenshots] )
