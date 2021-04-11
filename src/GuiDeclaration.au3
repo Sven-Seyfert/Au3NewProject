@@ -207,6 +207,66 @@ Global $aCheckboxGithub[$iEnumVariables]
        $aCheckboxGithub[$eLabelWidth]     = Default
        $aCheckboxGithub[$eLabelHeight]    = Default
 
+Global $aGithubUsername[$iEnumVariables]
+       $aGithubUsername[$eLabel]                = ''
+       $aGithubUsername[$eLabelText]            = 'Github username'
+       $aGithubUsername[$eLabelXPosition]       = 40
+       $aGithubUsername[$eLabelYPosition]       = 385
+       $aGithubUsername[$eLabelWidth]           = 245
+       $aGithubUsername[$eLabelHeight]          = 50
+       $aGithubUsername[$eLabelFontSize]        = 9
+       $aGithubUsername[$eBackground]           = ''
+       $aGithubUsername[$eBackgroundText]       = ''
+       $aGithubUsername[$eXPosition]            = $aGithubUsername[$eLabelXPosition]
+       $aGithubUsername[$eYPosition]            = $aGithubUsername[$eLabelYPosition] + 25
+       $aGithubUsername[$eWidth]                = $aGithubUsername[$eLabelWidth]
+       $aGithubUsername[$eHeight]               = $aGithubUsername[$eLabelHeight] - 10
+       $aGithubUsername[$eBackgroundColor]      = $aColor[$eLabelBackground]
+       $aGithubUsername[$eInput]                = ''
+       $aGithubUsername[$eInputText]            = 'Sven-Seyfert'
+       $aGithubUsername[$eInputColor]           = $aColor[$eLabelBackground]
+       $aGithubUsername[$eInputXPosition]       = $aGithubUsername[$eXPosition] + 5
+       $aGithubUsername[$eInputYPosition]       = $aGithubUsername[$eYPosition] + 10
+       $aGithubUsername[$eInputWidth]           = $aGithubUsername[$eWidth] - 30
+       $aGithubUsername[$eInputHeight]          = $aGithubUsername[$eHeight] - 20
+       $aGithubUsername[$eFontSize]             = 11
+       $aGithubUsername[$eBorderColor]          = $aColor[$eBorder]
+       $aGithubUsername[$eBorderSize]           = $aGui[$eBorderSize]
+       $aGithubUsername[$eBorderTop]            = ''
+       $aGithubUsername[$eBorderRight]          = ''
+       $aGithubUsername[$eBorderBottom]         = ''
+       $aGithubUsername[$eBorderLeft]           = ''
+
+Global $aGithubDefaultBranch[$iEnumVariables]
+       $aGithubDefaultBranch[$eLabel]                = ''
+       $aGithubDefaultBranch[$eLabelText]            = 'Github default branch'
+       $aGithubDefaultBranch[$eLabelXPosition]       = 40 + 255
+       $aGithubDefaultBranch[$eLabelYPosition]       = 385
+       $aGithubDefaultBranch[$eLabelWidth]           = 245
+       $aGithubDefaultBranch[$eLabelHeight]          = 50
+       $aGithubDefaultBranch[$eLabelFontSize]        = 9
+       $aGithubDefaultBranch[$eBackground]           = ''
+       $aGithubDefaultBranch[$eBackgroundText]       = ''
+       $aGithubDefaultBranch[$eXPosition]            = $aGithubDefaultBranch[$eLabelXPosition]
+       $aGithubDefaultBranch[$eYPosition]            = $aGithubDefaultBranch[$eLabelYPosition] + 25
+       $aGithubDefaultBranch[$eWidth]                = $aGithubDefaultBranch[$eLabelWidth]
+       $aGithubDefaultBranch[$eHeight]               = $aGithubDefaultBranch[$eLabelHeight] - 10
+       $aGithubDefaultBranch[$eBackgroundColor]      = $aColor[$eLabelBackground]
+       $aGithubDefaultBranch[$eInput]                = ''
+       $aGithubDefaultBranch[$eInputText]            = 'main'
+       $aGithubDefaultBranch[$eInputColor]           = $aColor[$eLabelBackground]
+       $aGithubDefaultBranch[$eInputXPosition]       = $aGithubDefaultBranch[$eXPosition] + 5
+       $aGithubDefaultBranch[$eInputYPosition]       = $aGithubDefaultBranch[$eYPosition] + 10
+       $aGithubDefaultBranch[$eInputWidth]           = $aGithubDefaultBranch[$eWidth] - 30
+       $aGithubDefaultBranch[$eInputHeight]          = $aGithubDefaultBranch[$eHeight] - 20
+       $aGithubDefaultBranch[$eFontSize]             = 11
+       $aGithubDefaultBranch[$eBorderColor]          = $aColor[$eBorder]
+       $aGithubDefaultBranch[$eBorderSize]           = $aGui[$eBorderSize]
+       $aGithubDefaultBranch[$eBorderTop]            = ''
+       $aGithubDefaultBranch[$eBorderRight]          = ''
+       $aGithubDefaultBranch[$eBorderBottom]         = ''
+       $aGithubDefaultBranch[$eBorderLeft]           = ''
+
 Global $aButtonBrowse[$iEnumVariables]
        $aButtonBrowse[$eBackground]       = ''
        $aButtonBrowse[$eBackgroundText]   = ''

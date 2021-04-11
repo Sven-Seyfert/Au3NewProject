@@ -56,7 +56,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/Sven-Seyfert
 
 - Opportunity by [GitHub](https://github.com)
 - Badges by [Shields](https://shields.io)
-- Third-party components
+- Utilities components by
   - none
 
 ##

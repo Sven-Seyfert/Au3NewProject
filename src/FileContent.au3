@@ -172,7 +172,7 @@ Func _setupContent()
         @CRLF & _
         '## Preparing' & @CRLF & _
         @CRLF & _
-        '- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CODE_OF_CONDUCT.md) document.' & @CRLF & _
+        '- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/docs/CODE_OF_CONDUCT.md) document.' & @CRLF & _
         '- Please also notice that I try to use some Clean Code aspects for my code. So if it''s possible for you, please also keep that in mind, thanks. If you have questions about it, please contact me.' & @CRLF & _
         @CRLF & _
         '## Contribution' & @CRLF & _
@@ -224,8 +224,8 @@ Func _setupContent()
         @CRLF & _
         'Put an `x` in the boxes that apply. If you''re unsure about any of them, don''t hesitate to ask. I''m here to help! This is simply a reminder of what we are going to look for before merging your code.' & @CRLF & _
         @CRLF & _
-        '- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CODE_OF_CONDUCT.md) document' & @CRLF & _
-        '- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CONTRIBUTING.md) document' & @CRLF & _
+        '- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/docs/CODE_OF_CONDUCT.md) document' & @CRLF & _
+        '- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/docs/CONTRIBUTING.md) document' & @CRLF & _
         '- [ ] I have added necessary documentation or screenshots (if appropriate)' & @CRLF & _
         @CRLF & _
         '## Pull request type' & @CRLF & _
@@ -305,19 +305,19 @@ Func _setupContent()
         '#####' & @CRLF & _
         @CRLF & _
         '<p align="center">' & @CRLF & _
-        '    <img src="http://sven-seyfert.de/media/logo_circle.png" width="80" />' & @CRLF & _
+        '    <img src="https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/media/favicon.ico" width="80" />' & @CRLF & _
         '    <h2 align="center">Welcome to <code>' & GUICtrlRead( $aProjectName[$eInput] ) & '</code>【ツ】</h2>' & @CRLF & _
         '</p>' & @CRLF & _
         @CRLF & _
         '![license](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square&logo=spdx)' & @CRLF & _
-        '![contributors](https://img.shields.io/github/contributors/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '![repo size](https://img.shields.io/github/repo-size/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '![last commit](https://img.shields.io/github/last-commit/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '![release](https://img.shields.io/github/release/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![contributors](https://img.shields.io/github/contributors/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![repo size](https://img.shields.io/github/repo-size/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![last commit](https://img.shields.io/github/last-commit/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![release](https://img.shields.io/github/release/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
         '![os](https://img.shields.io/badge/os-windows-yellow.svg?style=flat-square&logo=windows)' & @CRLF & _
         '![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)' & @CRLF & _
         @CRLF & _
-        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard Shortcuts](#keyboard-shortcuts) | [Tested](#tested) | [Contributing](#contributing)' & @CRLF & _
+        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard Shortcuts](#keyboard-shortcuts) | [Contributing](#contributing) | [License](#license) | [Acknowledgements](#acknowledgements)' & @CRLF & _
         @CRLF & _
         '## Description' & @CRLF & _
         @CRLF & _
@@ -325,15 +325,21 @@ Func _setupContent()
         @CRLF & _
         '## Features' & @CRLF & _
         @CRLF & _
-        '... to be defined ...' & @CRLF & _
+        'To be defined [...]' & @CRLF & _
         @CRLF & _
         '## Getting started' & @CRLF & _
         @CRLF & _
-        '... to be defined ...' & @CRLF & _
+        '#### *Preconditions*' & @CRLF & _
+        @CRLF & _
+        'To be defined [...]' & @CRLF & _
+        @CRLF & _
+        '#### *Installation*' & @CRLF & _
+        @CRLF & _
+        'To be defined [...]' & @CRLF & _
         @CRLF & _
         '## Configuration' & @CRLF & _
         @CRLF & _
-        '... to be defined ...' & @CRLF & _
+        'To be defined [...]' & @CRLF & _
         @CRLF & _
         '## Keyboard Shortcuts' & @CRLF & _
         @CRLF & _
@@ -342,21 +348,20 @@ Func _setupContent()
         '| ...    | ...      |' & @CRLF & _
         '| ...    | ...      |' & @CRLF & _
         @CRLF & _
-        '## Tested' & @CRLF & _
-        @CRLF & _
-        '> SUT (system under test)' & @CRLF & _
-        @CRLF & _
-        '| Property       | Win 7       | Win 10          | Win 10 Tablet |' & @CRLF & _
-        '| :------------- | :---------- | :-------------- | :------------ |' & @CRLF & _
-        '| @AutoItExe     | autoit3.exe | autoit3_x64.exe | autoit3.exe   |' & @CRLF & _
-        '| @AutoItVersion | 3.3.14.2    | 3.3.14.2        | 3.3.14.5      |' & @CRLF & _
-        '| @CPUArch       | X64         | X64             | X64           |' & @CRLF & _
-        '| @OSArch        | X64         | X64             | X86           |' & @CRLF & _
-        '| @OSVersion     | WIN_7       | WIN_10          | Win_10        |' & @CRLF & _
-        @CRLF & _
         '## Contributing' & @CRLF & _
         @CRLF & _
-        'Just look at [CONTRIBUTING](https://github.com/Sven-Seyfert/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/master/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
+        'Just look at [CONTRIBUTING](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
+        @CRLF & _
+        '## License' & @CRLF & _
+        @CRLF & _
+        'Distributed under the MIT License. See [LICENSE](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/LICENSE.md) for more information.' & @CRLF & _
+        @CRLF & _
+        '## Acknowledgements' & @CRLF & _
+        @CRLF & _
+        '- Opportunity by [GitHub](https://github.com)' & @CRLF & _
+        '- Badges by [Shields](https://shields.io)' & @CRLF & _
+        '- Utilities components by' & @CRLF & _
+        '  - none' & @CRLF & _
         @CRLF & _
         '##' & @CRLF & _
         @CRLF & _

@@ -10,9 +10,14 @@ Func _showGui()
     _guiInputProjectName()
     _guiInputLocation()
     _guiCheckboxStart()
-    _guiCheckboxGit()
+    _guiCheckboxGithub()
+    _guiInputGithubUsername()
+    _guiInputGithubDefaultBranch()
     _guiButtonBrowse()
     _guiButtonCreate()
+
+    _hideInputGithubUsername()
+    _hideInputGithubDefaultBranch()
 
     GUISetState( @SW_SHOW, $aGui[$eHandle] )
 
@@ -138,7 +143,7 @@ Func _guiCheckboxStart()
     GUICtrlSetColor( $aCheckboxStart[$eLabel], $aCheckboxStart[$eFontColor] )
 EndFunc
 
-Func _guiCheckboxGit()
+Func _guiCheckboxGithub()
     $aCheckboxGithub[$eCheckbox] = GUICtrlCreateLabel( $aCheckboxGithub[$eCheckboxText], $aCheckboxGithub[$eXPosition], $aCheckboxGithub[$eYPosition], $aCheckboxGithub[$eWidth], $aCheckboxGithub[$eHeight] )
     GUICtrlSetCursor( $aCheckboxGithub[$eCheckbox], 0 )
     GUICtrlSetColor( $aCheckboxGithub[$eCheckbox], $aCheckboxGithub[$eFontColor] )
@@ -147,6 +152,44 @@ Func _guiCheckboxGit()
     $aCheckboxGithub[$eLabel] = GUICtrlCreateLabel( $aCheckboxGithub[$eLabelText], $aCheckboxGithub[$eLabelXPosition], $aCheckboxGithub[$eLabelYPosition], $aCheckboxGithub[$eLabelWidth], $aCheckboxGithub[$eLabelHeight] )
     GUICtrlSetCursor( $aCheckboxGithub[$eLabel], 0 )
     GUICtrlSetColor( $aCheckboxGithub[$eLabel], $aCheckboxGithub[$eFontColor] )
+EndFunc
+
+Func _guiInputGithubUsername()
+    $aGithubUsername[$eLabel] = GUICtrlCreateLabel( $aGithubUsername[$eLabelText], $aGithubUsername[$eLabelXPosition], $aGithubUsername[$eLabelYPosition], $aGithubUsername[$eLabelWidth], $aGithubUsername[$eLabelHeight] )
+    GUICtrlSetFont( $aGithubUsername[$eLabel], $aGithubUsername[$eLabelFontSize] )
+
+    $aGithubUsername[$eBackground] = GUICtrlCreateLabel( $aGithubUsername[$eBackgroundText], $aGithubUsername[$eXPosition], $aGithubUsername[$eYPosition], $aGithubUsername[$eWidth], $aGithubUsername[$eHeight] )
+    GUICtrlSetBkColor( $aGithubUsername[$eBackground], $aGithubUsername[$eBackgroundColor] )
+
+    $aGithubUsername[$eInput] = GUICtrlCreateInput( $aGithubUsername[$eInputText], $aGithubUsername[$eInputXPosition], $aGithubUsername[$eInputYPosition], $aGithubUsername[$eInputWidth], $aGithubUsername[$eInputHeight], -1, $WS_EX_TOOLWINDOW )
+    GUICtrlSetBkColor( $aGithubUsername[$eInput], $aGithubUsername[$eInputColor] )
+    GUICtrlSetFont( $aGithubUsername[$eInput], $aGithubUsername[$eFontSize] )
+
+    $aGithubUsername[$eBorderTop]    = GUICtrlCreateLabel( '', $aGithubUsername[$eXPosition], $aGithubUsername[$eYPosition], $aGithubUsername[$eWidth], $aGithubUsername[$eBorderSize] )
+    $aGithubUsername[$eBorderRight]  = GUICtrlCreateLabel( '', $aGithubUsername[$eXPosition] + $aGithubUsername[$eWidth] - $aGithubUsername[$eBorderSize], $aGithubUsername[$eYPosition], $aGithubUsername[$eBorderSize], $aGithubUsername[$eHeight] )
+    $aGithubUsername[$eBorderBottom] = GUICtrlCreateLabel( '', $aGithubUsername[$eXPosition], $aGithubUsername[$eYPosition] + $aGithubUsername[$eHeight] - $aGithubUsername[$eBorderSize], $aGithubUsername[$eWidth], $aGithubUsername[$eBorderSize] )
+    $aGithubUsername[$eBorderLeft]   = GUICtrlCreateLabel( '', $aGithubUsername[$eXPosition], $aGithubUsername[$eYPosition], $aGithubUsername[$eBorderSize], $aGithubUsername[$eHeight] )
+
+    _setBorderColor( $aGithubUsername, $aGithubUsername[$eBorderColor] )
+EndFunc
+
+Func _guiInputGithubDefaultBranch()
+    $aGithubDefaultBranch[$eLabel] = GUICtrlCreateLabel( $aGithubDefaultBranch[$eLabelText], $aGithubDefaultBranch[$eLabelXPosition], $aGithubDefaultBranch[$eLabelYPosition], $aGithubDefaultBranch[$eLabelWidth], $aGithubDefaultBranch[$eLabelHeight] )
+    GUICtrlSetFont( $aGithubDefaultBranch[$eLabel], $aGithubDefaultBranch[$eLabelFontSize] )
+
+    $aGithubDefaultBranch[$eBackground] = GUICtrlCreateLabel( $aGithubDefaultBranch[$eBackgroundText], $aGithubDefaultBranch[$eXPosition], $aGithubDefaultBranch[$eYPosition], $aGithubDefaultBranch[$eWidth], $aGithubDefaultBranch[$eHeight] )
+    GUICtrlSetBkColor( $aGithubDefaultBranch[$eBackground], $aGithubDefaultBranch[$eBackgroundColor] )
+
+    $aGithubDefaultBranch[$eInput] = GUICtrlCreateInput( $aGithubDefaultBranch[$eInputText], $aGithubDefaultBranch[$eInputXPosition], $aGithubDefaultBranch[$eInputYPosition], $aGithubDefaultBranch[$eInputWidth], $aGithubDefaultBranch[$eInputHeight], -1, $WS_EX_TOOLWINDOW )
+    GUICtrlSetBkColor( $aGithubDefaultBranch[$eInput], $aGithubDefaultBranch[$eInputColor] )
+    GUICtrlSetFont( $aGithubDefaultBranch[$eInput], $aGithubDefaultBranch[$eFontSize] )
+
+    $aGithubDefaultBranch[$eBorderTop]    = GUICtrlCreateLabel( '', $aGithubDefaultBranch[$eXPosition], $aGithubDefaultBranch[$eYPosition], $aGithubDefaultBranch[$eWidth], $aGithubDefaultBranch[$eBorderSize] )
+    $aGithubDefaultBranch[$eBorderRight]  = GUICtrlCreateLabel( '', $aGithubDefaultBranch[$eXPosition] + $aGithubDefaultBranch[$eWidth] - $aGithubDefaultBranch[$eBorderSize], $aGithubDefaultBranch[$eYPosition], $aGithubDefaultBranch[$eBorderSize], $aGithubDefaultBranch[$eHeight] )
+    $aGithubDefaultBranch[$eBorderBottom] = GUICtrlCreateLabel( '', $aGithubDefaultBranch[$eXPosition], $aGithubDefaultBranch[$eYPosition] + $aGithubDefaultBranch[$eHeight] - $aGithubDefaultBranch[$eBorderSize], $aGithubDefaultBranch[$eWidth], $aGithubDefaultBranch[$eBorderSize] )
+    $aGithubDefaultBranch[$eBorderLeft]   = GUICtrlCreateLabel( '', $aGithubDefaultBranch[$eXPosition], $aGithubDefaultBranch[$eYPosition], $aGithubDefaultBranch[$eBorderSize], $aGithubDefaultBranch[$eHeight] )
+
+    _setBorderColor( $aGithubDefaultBranch, $aGithubDefaultBranch[$eBorderColor] )
 EndFunc
 
 Func _guiButtonBrowse()

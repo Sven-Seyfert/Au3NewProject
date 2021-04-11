@@ -2,8 +2,8 @@
 #AutoIt3Wrapper_AU3Check_Stop_OnWarning=y
 #AutoIt3Wrapper_Icon=..\media\favicon.ico
 #AutoIt3Wrapper_Outfile_x64=..\build\Au3NewProject.exe
-#AutoIt3Wrapper_Res_Description=Au3NewProject (2021-04-09)
-#AutoIt3Wrapper_Res_Fileversion=0.9
+#AutoIt3Wrapper_Res_Description=Au3NewProject (2021-04-11)
+#AutoIt3Wrapper_Res_Fileversion=0.10
 #AutoIt3Wrapper_UseUpx=n
 #AutoIt3Wrapper_UseX64=y
 
@@ -63,11 +63,29 @@ While 1
                     _setControlFocusWithoutSelectedText( $aProjectName )
                     _setBorderColor( $aProjectName, $aColor[$eBlue] )
                     _setBorderColor( $aLocation, $aColor[$eBorder] )
+                    _setBorderColor( $aGithubUsername, $aColor[$eBorder] )
+                    _setBorderColor( $aGithubDefaultBranch, $aColor[$eBorder] )
 
                 Case $aLocation[$eInput]
                     _setControlFocusWithoutSelectedText( $aLocation )
-                    _setBorderColor( $aLocation, $aColor[$eBlue] )
                     _setBorderColor( $aProjectName, $aColor[$eBorder] )
+                    _setBorderColor( $aLocation, $aColor[$eBlue] )
+                    _setBorderColor( $aGithubUsername, $aColor[$eBorder] )
+                    _setBorderColor( $aGithubDefaultBranch, $aColor[$eBorder] )
+
+                Case $aGithubUsername[$eInput]
+                    _setControlFocusWithoutSelectedText( $aGithubUsername )
+                    _setBorderColor( $aProjectName, $aColor[$eBorder] )
+                    _setBorderColor( $aLocation, $aColor[$eBorder] )
+                    _setBorderColor( $aGithubUsername, $aColor[$eBlue] )
+                    _setBorderColor( $aGithubDefaultBranch, $aColor[$eBorder] )
+
+                Case $aGithubDefaultBranch[$eInput]
+                    _setControlFocusWithoutSelectedText( $aGithubDefaultBranch )
+                    _setBorderColor( $aProjectName, $aColor[$eBorder] )
+                    _setBorderColor( $aLocation, $aColor[$eBorder] )
+                    _setBorderColor( $aGithubUsername, $aColor[$eBorder] )
+                    _setBorderColor( $aGithubDefaultBranch, $aColor[$eBlue] )
             EndSwitch
 
         Case $aCheckboxStart[$eCheckbox], $aCheckboxStart[$eLabel]
