@@ -317,7 +317,7 @@ Func _setupContent()
         '![os](https://img.shields.io/badge/os-windows-yellow.svg?style=flat-square&logo=windows)' & @CRLF & _
         '![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)' & @CRLF & _
         @CRLF & _
-        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard Shortcuts](#keyboard-shortcuts) | [Contributing](#contributing) | [License](#license) | [Acknowledgements](#acknowledgements)' & @CRLF & _
+        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard shortcuts](#keyboard-shortcuts) | [Contributing](#contributing) | [License](#license) | [Acknowledgements](#acknowledgements)' & @CRLF & _
         @CRLF & _
         '## Description' & @CRLF & _
         @CRLF & _
@@ -341,7 +341,7 @@ Func _setupContent()
         @CRLF & _
         'To be defined [...]' & @CRLF & _
         @CRLF & _
-        '## Keyboard Shortcuts' & @CRLF & _
+        '## Keyboard shortcuts' & @CRLF & _
         @CRLF & _
         '| Action | Shortcut |' & @CRLF & _
         '| :------| :------- |' & @CRLF & _
