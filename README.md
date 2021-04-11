@@ -25,6 +25,12 @@ To be defined [...]
 
 ## Getting started
 
+#### *Preconditions*
+
+To be defined [...]
+
+#### *Installation*
+
 To be defined [...]
 
 ## Configuration
