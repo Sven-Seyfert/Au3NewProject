@@ -3,7 +3,7 @@
 #AutoIt3Wrapper_Icon=..\media\favicon.ico
 #AutoIt3Wrapper_Outfile_x64=..\build\Au3NewProject.exe
 #AutoIt3Wrapper_Res_Description=Au3NewProject (2021-07-07)
-#AutoIt3Wrapper_Res_Fileversion=0.12.0
+#AutoIt3Wrapper_Res_Fileversion=0.13.0
 #AutoIt3Wrapper_UseUpx=n
 #AutoIt3Wrapper_UseX64=y
 

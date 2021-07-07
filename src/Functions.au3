@@ -33,6 +33,7 @@ Func _setupFiles()
     $aFile[$eDocsFeatureRequest]      = $aPath[$eDocs]   & '\FEATURE_REQUEST.md'
     $aFile[$eDocsPullRequestTemplate] = $aPath[$eDocs]   & '\PULL_REQUEST_TEMPLATE.md'
     $aFile[$eGitIgnore]               = $aPath[$eRoot]   & '\.gitignore'
+    $aFile[$eChangelog]               = $aPath[$eRoot]   & '\CHANGELOG.md'
     $aFile[$eLicense]                 = $aPath[$eRoot]   & '\LICENSE.md'
     $aFile[$eReadme]                  = $aPath[$eRoot]   & '\README.md'
     $aFile[$eSrcBasicFunctions]       = $aPath[$eSrc]    & '\BasicFunctions.au3'
@@ -95,6 +96,7 @@ Func _fillGithubRelatedFiles()
         _writeFile( $aFile[$eDocsFeatureRequest], $aContent[$eFileFeatureRequest] )
         _writeFile( $aFile[$eDocsPullRequestTemplate], $aContent[$eFilePullRequestTemplate] )
         _writeFile( $aFile[$eGitIgnore], $aContent[$eFileGitIgnore] )
+        _writeFile( $aFile[$eChangelog], $aContent[$eFileChangelog] )
         _writeFile( $aFile[$eLicense], $aContent[$eFileLicense] )
         _writeFile( $aFile[$eReadme], $aContent[$eFileReadme] )
     EndIf

@@ -1,4 +1,4 @@
-Global $iEnumVariables = 82
+Global $iEnumVariables = 84
 Global Enum _
     $eBackground, _
     $eBackgroundColor, _
@@ -13,6 +13,7 @@ Global Enum _
     $eBorderTop, _
     $eBugReport, _
     $eBuild, _
+    $eChangelog, _
     $eCheckbox, _
     $eCheckboxText, _
     $eConfig, _
@@ -25,6 +26,7 @@ Global Enum _
     $eDocsPullRequestTemplate, _
     $eFeatureRequest, _
     $eFileBugReport, _
+    $eFileChangelog, _
     $eFileCodeOfConduct, _
     $eFileContributing, _
     $eFileFeatureRequest, _

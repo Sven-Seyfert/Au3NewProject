@@ -30,6 +30,7 @@ Global $aFile[$iEnumVariables]
        $aFile[$eDocsFeatureRequest]         = ''
        $aFile[$eDocsPullRequestTemplate]    = ''
        $aFile[$eGitIgnore]                  = ''
+       $aFile[$eChangelog]                  = ''
        $aFile[$eLicense]                    = ''
        $aFile[$eReadme]                     = ''
        $aFile[$eSrcBasicFunctions]          = ''
@@ -49,3 +50,4 @@ Global $aContent[$iEnumVariables]
        $aContent[$eFileFeatureRequest]      = ''
        $aContent[$eFilePullRequestTemplate] = ''
        $aContent[$eFileGitIgnore]           = ''
+       $aContent[$eFileChangelog]           = ''
