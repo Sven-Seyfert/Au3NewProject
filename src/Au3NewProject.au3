@@ -2,8 +2,8 @@
 #AutoIt3Wrapper_AU3Check_Stop_OnWarning=y
 #AutoIt3Wrapper_Icon=..\media\favicon.ico
 #AutoIt3Wrapper_Outfile_x64=..\build\Au3NewProject.exe
-#AutoIt3Wrapper_Res_Description=Au3NewProject (2021-04-11)
-#AutoIt3Wrapper_Res_Fileversion=0.11
+#AutoIt3Wrapper_Res_Description=Au3NewProject (2021-07-07)
+#AutoIt3Wrapper_Res_Fileversion=0.12.0
 #AutoIt3Wrapper_UseUpx=n
 #AutoIt3Wrapper_UseX64=y
 

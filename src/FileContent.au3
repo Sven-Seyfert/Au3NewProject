@@ -305,7 +305,7 @@ Func _setupContent()
         '#####' & @CRLF & _
         @CRLF & _
         '<p align="center">' & @CRLF & _
-        '    <img src="https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/media/favicon.ico" width="80" />' & @CRLF & _
+        '    <img src="images/icon.png" width="80" />' & @CRLF & _
         '    <h2 align="center">Welcome to <code>' & GUICtrlRead( $aProjectName[$eInput] ) & '</code>【ツ】</h2>' & @CRLF & _
         '</p>' & @CRLF & _
         @CRLF & _
@@ -344,7 +344,7 @@ Func _setupContent()
         '## Keyboard shortcuts' & @CRLF & _
         @CRLF & _
         '| Action | Shortcut |' & @CRLF & _
-        '| :------| :------- |' & @CRLF & _
+        '| :---   | :---     |' & @CRLF & _
         '| ...    | ...      |' & @CRLF & _
         '| ...    | ...      |' & @CRLF & _
         @CRLF & _
