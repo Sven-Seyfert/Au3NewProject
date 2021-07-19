@@ -52,12 +52,12 @@ Func _createFolders()
     If StringLower( $bHtmlProject ) == 'true' Then
         DirCreate( $aPath[$eCss] )
         DirCreate( $aPath[$eFonts] )
-        DirCreate( $aPath[$eImages] )
         DirCreate( $aPath[$eJs] )
     EndIf
 
     DirCreate( $aPath[$eBuild] )
     DirCreate( $aPath[$eConfig] )
+    DirCreate( $aPath[$eImages] )
     DirCreate( $aPath[$eMedia] )
     DirCreate( $aPath[$eScreenshots] )
     DirCreate( $aPath[$eSrc] )
