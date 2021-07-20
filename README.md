@@ -37,8 +37,7 @@ Starting the EXE `build\Au3NewProject.exe` which is compiled with `#AutoIt3Wrapp
 
 **Variant 2 - Compile it on your own**
 
-Open file `src\Au3NewProject.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to (for example you could change `#AutoIt3Wrapper_UseUpx=y` from no to yes etc.).
-Then, run or compile the program.
+Open file `src\Au3NewProject.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to. For example you could change `#AutoIt3Wrapper_UseUpx=n` from no (n) to yes (y), etc. Then, run or compile the program.
 
 #### *Usage*
 
