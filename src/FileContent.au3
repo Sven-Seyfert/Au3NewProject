@@ -372,7 +372,7 @@ Func _setupContent()
         @CRLF & _
         '**Variant 2 - Compile it on your own**' & @CRLF & _
         @CRLF & _
-        'Open file `src\' & GUICtrlRead( $aProjectName[$eInput] ) & '.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to (for example you could change `#AutoIt3Wrapper_UseUpx=y` from no to yes etc.).' & @CRLF & _
+        'Open file `src\' & GUICtrlRead( $aProjectName[$eInput] ) & '.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to. For example you could change `#AutoIt3Wrapper_UseUpx=n` from no (n) to yes (y), etc.' & @CRLF & _
         'Then, run or compile the program.' & @CRLF & _
         @CRLF & _
         '#### *Usage*' & @CRLF & _
