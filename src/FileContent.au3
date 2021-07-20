@@ -366,6 +366,17 @@ Func _setupContent()
         @CRLF & _
         '#### *Installation*' & @CRLF & _
         @CRLF & _
+        '**Variant 1 - Run the EXE**' & @CRLF & _
+        @CRLF & _
+        'Starting the EXE `build\' & GUICtrlRead( $aProjectName[$eInput] ) & '.exe` which is compiled with `#AutoIt3Wrapper_UseX64=y` and `#AutoIt3Wrapper_UseUpx=n` (the default expected system is x64).' & @CRLF & _
+        @CRLF & _
+        '**Variant 2 - Compile it on your own**' & @CRLF & _
+        @CRLF & _
+        'Open file `src\' & GUICtrlRead( $aProjectName[$eInput] ) & '.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to (for example you could change `#AutoIt3Wrapper_UseUpx=y` from no to yes etc.).' & @CRLF & _
+        'Then, run or compile the program.' & @CRLF & _
+        @CRLF & _
+        '#### *Usage*' & @CRLF & _
+        @CRLF & _
         'To be defined [...]' & @CRLF & _
         @CRLF & _
         '## Configuration' & @CRLF & _
