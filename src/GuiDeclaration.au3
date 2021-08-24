@@ -1,4 +1,4 @@
-Global $aColor[$iEnumVariables]
+Global $aColor[$iMaxEnumIndex]
        $aColor[$eBackground]              = 0x21252B
        $aColor[$eBlue]                    = 0x61AFEF
        $aColor[$eBorder]                  = 0x474A4F
@@ -7,7 +7,7 @@ Global $aColor[$iEnumVariables]
        $aColor[$eRed]                     = 0xD51324
        $aColor[$eWhite]                   = 0xFFFFFF
 
-Global $aGui[$iEnumVariables]
+Global $aGui[$iMaxEnumIndex]
        $aGui[$eHandle]                    = ''
        $aGui[$eXPosition]                 = Default
        $aGui[$eYPosition]                 = Default
@@ -25,7 +25,7 @@ Global $aGui[$iEnumVariables]
        $aGui[$eBorderBottom]              = ''
        $aGui[$eBorderLeft]                = ''
 
-Global $aCloseX[$iEnumVariables]
+Global $aCloseX[$iMaxEnumIndex]
        $aCloseX[$eBackground]             = ''
        $aCloseX[$eBackgroundText]         = ''
        $aCloseX[$eXPosition]              = $aGui[$eWidth] - $aGui[$eBorderSize] - 41
@@ -45,7 +45,7 @@ Global $aCloseX[$iEnumVariables]
        $aCloseX[$eFontAttribute]          = Default
        $aCloseX[$eFontName]               = 'WingDings 2'
 
-Global $aHeadline[$iEnumVariables]
+Global $aHeadline[$iMaxEnumIndex]
        $aHeadline[$eLabel]                = ''
        $aHeadline[$eLabelText]            = 'Configure your new project'
        $aHeadline[$eLabelXPosition]       = 40
@@ -55,7 +55,7 @@ Global $aHeadline[$iEnumVariables]
        $aHeadline[$eFontSize]             = 20
        $aHeadline[$eFontWeight]           = 600
 
-Global $aKindOfProject[$iEnumVariables]
+Global $aKindOfProject[$iMaxEnumIndex]
        $aKindOfProject[$eLabel]           = ''
        $aKindOfProject[$eLabelText]       = 'AutoIt App (Default)'
        $aKindOfProject[$eLabelXPosition]  = 40
@@ -65,7 +65,7 @@ Global $aKindOfProject[$iEnumVariables]
        $aKindOfProject[$eFontSize]        = 14
        $aKindOfProject[$eFontWeight]      = 400
 
-Global $aTagOne[$iEnumVariables]
+Global $aTagOne[$iMaxEnumIndex]
        $aTagOne[$eBackground]             = ''
        $aTagOne[$eBackgroundText]         = ''
        $aTagOne[$eXPosition]              = 320
@@ -87,7 +87,7 @@ Global $aTagOne[$iEnumVariables]
        $aTagOne[$eBorderBottom]           = ''
        $aTagOne[$eBorderLeft]             = ''
 
-Global $aTagTwo[$iEnumVariables]
+Global $aTagTwo[$iMaxEnumIndex]
        $aTagTwo[$eBackground]             = ''
        $aTagTwo[$eBackgroundText]         = ''
        $aTagTwo[$eXPosition]              = 380
@@ -109,7 +109,7 @@ Global $aTagTwo[$iEnumVariables]
        $aTagTwo[$eBorderBottom]           = ''
        $aTagTwo[$eBorderLeft]             = ''
 
-Global $aProjectName[$iEnumVariables]
+Global $aProjectName[$iMaxEnumIndex]
        $aProjectName[$eLabel]             = ''
        $aProjectName[$eLabelText]         = 'Project name'
        $aProjectName[$eLabelXPosition]    = 40
@@ -139,7 +139,7 @@ Global $aProjectName[$iEnumVariables]
        $aProjectName[$eBorderBottom]      = ''
        $aProjectName[$eBorderLeft]        = ''
 
-Global $aLocation[$iEnumVariables]
+Global $aLocation[$iMaxEnumIndex]
        $aLocation[$eLabel]                = ''
        $aLocation[$eLabelText]            = 'Location'
        $aLocation[$eLabelXPosition]       = 40
@@ -169,7 +169,7 @@ Global $aLocation[$iEnumVariables]
        $aLocation[$eBorderBottom]         = ''
        $aLocation[$eBorderLeft]           = ''
 
-Global $aCheckboxStart[$iEnumVariables]
+Global $aCheckboxStart[$iMaxEnumIndex]
        $aCheckboxStart[$eCheckbox]        = ''
        $aCheckboxStart[$eCheckboxText]    = Chr( 82 )
        $aCheckboxStart[$eXPosition]       = 40
@@ -188,7 +188,7 @@ Global $aCheckboxStart[$iEnumVariables]
        $aCheckboxStart[$eLabelWidth]      = Default
        $aCheckboxStart[$eLabelHeight]     = Default
 
-Global $aCheckboxGithub[$iEnumVariables]
+Global $aCheckboxGithub[$iMaxEnumIndex]
        $aCheckboxGithub[$eCheckbox]       = ''
        $aCheckboxGithub[$eCheckboxText]   = Chr( 163 )
        $aCheckboxGithub[$eXPosition]      = 40
@@ -207,7 +207,7 @@ Global $aCheckboxGithub[$iEnumVariables]
        $aCheckboxGithub[$eLabelWidth]     = Default
        $aCheckboxGithub[$eLabelHeight]    = Default
 
-Global $aGithubUsername[$iEnumVariables]
+Global $aGithubUsername[$iMaxEnumIndex]
        $aGithubUsername[$eLabel]                = ''
        $aGithubUsername[$eLabelText]            = 'Github username'
        $aGithubUsername[$eLabelXPosition]       = 40
@@ -237,7 +237,7 @@ Global $aGithubUsername[$iEnumVariables]
        $aGithubUsername[$eBorderBottom]         = ''
        $aGithubUsername[$eBorderLeft]           = ''
 
-Global $aGithubDefaultBranch[$iEnumVariables]
+Global $aGithubDefaultBranch[$iMaxEnumIndex]
        $aGithubDefaultBranch[$eLabel]                = ''
        $aGithubDefaultBranch[$eLabelText]            = 'Github default branch'
        $aGithubDefaultBranch[$eLabelXPosition]       = 40 + 255
@@ -267,7 +267,7 @@ Global $aGithubDefaultBranch[$iEnumVariables]
        $aGithubDefaultBranch[$eBorderBottom]         = ''
        $aGithubDefaultBranch[$eBorderLeft]           = ''
 
-Global $aButtonBrowse[$iEnumVariables]
+Global $aButtonBrowse[$iMaxEnumIndex]
        $aButtonBrowse[$eBackground]       = ''
        $aButtonBrowse[$eBackgroundText]   = ''
        $aButtonBrowse[$eXPosition]        = $aLocation[$eLabelXPosition] + $aLocation[$eLabelWidth] + 10
@@ -289,7 +289,7 @@ Global $aButtonBrowse[$iEnumVariables]
        $aButtonBrowse[$eBorderBottom]     = ''
        $aButtonBrowse[$eBorderLeft]       = ''
 
-Global $aButtonCreate[$iEnumVariables]
+Global $aButtonCreate[$iMaxEnumIndex]
        $aButtonCreate[$eBackground]       = ''
        $aButtonCreate[$eBackgroundText]   = ''
        $aButtonCreate[$eXPosition]        = 713.8

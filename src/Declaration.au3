@@ -6,7 +6,7 @@ Global $bTabIsPressed                       = False
 Global $bCheckboxStartIsChecked             = True
 Global $bCheckboxGithubIsChecked            = False
 
-Global $aPath[$iEnumVariables]
+Global $aPath[$iMaxEnumIndex]
        $aPath[$eFolder]                     = ''
        $aPath[$eRoot]                       = ''
        $aPath[$eIssueTemplate]              = ''
@@ -22,7 +22,7 @@ Global $aPath[$iEnumVariables]
        $aPath[$eSrc]                        = ''
        $aPath[$eUtilities]                  = ''
 
-Global $aFile[$iEnumVariables]
+Global $aFile[$iMaxEnumIndex]
        $aFile[$eConfig]                     = ''
        $aFile[$eDocsBugReport]              = ''
        $aFile[$eDocsCodeOfConduct]          = ''
@@ -42,7 +42,7 @@ Global $aFile[$iEnumVariables]
        $aFile[$eSrcInit]                    = ''
        $aFile[$eSrcProject]                 = ''
 
-Global $aContent[$iEnumVariables]
+Global $aContent[$iMaxEnumIndex]
        $aContent[$eFileProject]             = ''
        $aContent[$eFileBugReport]           = ''
        $aContent[$eFileCodeOfConduct]       = ''

@@ -1,4 +1,3 @@
-Global $iEnumVariables = 84
 Global Enum _
     $eBackground, _
     $eBackgroundColor, _
@@ -83,4 +82,5 @@ Global Enum _
     $eWhite, _
     $eWidth, _
     $eXPosition, _
-    $eYPosition
+    $eYPosition, _
+    $iMaxEnumIndex
