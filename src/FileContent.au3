@@ -3,8 +3,8 @@ Func _setupContent()
         '; compiler information for AutoIt' & @CRLF & _
         '#AutoIt3Wrapper_AU3Check_Stop_OnWarning=y' & @CRLF & _
         '#AutoIt3Wrapper_Icon=..\media\favicon.ico' & @CRLF & _
-        '#AutoIt3Wrapper_Outfile_x64=..\build\' & GUICtrlRead( $aProjectName[$eInput] ) & @CRLF & _
-        '#AutoIt3Wrapper_Res_Description=' & GUICtrlRead( $aProjectName[$eInput] ) & ' (' & @YEAR & '-' & @MON & '-' & @MDAY & ')' & @CRLF & _
+        '#AutoIt3Wrapper_Outfile_x64=..\build\' & GUICtrlRead($aProjectName[$eInput]) & @CRLF & _
+        '#AutoIt3Wrapper_Res_Description=' & GUICtrlRead($aProjectName[$eInput]) & ' (' & @YEAR & '-' & @MON & '-' & @MDAY & ')' & @CRLF & _
         '#AutoIt3Wrapper_Res_Fileversion=0.1' & @CRLF & _
         '#AutoIt3Wrapper_UseUpx=n' & @CRLF & _
         '#AutoIt3Wrapper_UseX64=y' & @CRLF & _
@@ -12,8 +12,8 @@ Func _setupContent()
         @CRLF & _
         @CRLF & _
         '; opt and just singleton -------------------------------------------------------' & @CRLF & _
-        'Opt( ''MustDeclareVars'', 1 )' & @CRLF & _
-        'Global $aInst = ProcessList( ''' & GUICtrlRead( $aProjectName[$eInput] ) & '.exe'' )' & @CRLF & _
+        'Opt(''MustDeclareVars'', 1)' & @CRLF & _
+        'Global $aInst = ProcessList(''' & GUICtrlRead($aProjectName[$eInput]) & '.exe'')' & @CRLF & _
         'If $aInst[0][0] > 1 Then Exit' & @CRLF & _
         @CRLF & _
         @CRLF & _
@@ -75,11 +75,11 @@ Func _setupContent()
         @CRLF & _
         '``` au3' & @CRLF & _
         'Func _getSystemInfos()' & @CRLF & _
-        '    ConsoleWrite( ''@AutoItExe:      '' & @AutoItExe     & @CRLF )' & @CRLF & _
-        '    ConsoleWrite( ''@AutoItVersion:  '' & @AutoItVersion & @CRLF )' & @CRLF & _
-        '    ConsoleWrite( ''@CPUArch:        '' & @CPUArch       & @CRLF )' & @CRLF & _
-        '    ConsoleWrite( ''@OSArch:         '' & @OSArch        & @CRLF )' & @CRLF & _
-        '    ConsoleWrite( ''@OSVersion:      '' & @OSVersion     & @CRLF )' & @CRLF & _
+        '    ConsoleWrite(''@AutoItExe:      '' & @AutoItExe     & @CRLF)' & @CRLF & _
+        '    ConsoleWrite(''@AutoItVersion:  '' & @AutoItVersion & @CRLF)' & @CRLF & _
+        '    ConsoleWrite(''@CPUArch:        '' & @CPUArch       & @CRLF)' & @CRLF & _
+        '    ConsoleWrite(''@OSArch:         '' & @OSArch        & @CRLF)' & @CRLF & _
+        '    ConsoleWrite(''@OSVersion:      '' & @OSVersion     & @CRLF)' & @CRLF & _
         'EndFunc' & @CRLF & _
         '_getSystemInfos()' & @CRLF & _
         '```' & @CRLF & _
@@ -172,7 +172,7 @@ Func _setupContent()
         @CRLF & _
         '## Preparing' & @CRLF & _
         @CRLF & _
-        '- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/docs/CODE_OF_CONDUCT.md) document.' & @CRLF & _
+        '- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CODE_OF_CONDUCT.md) document.' & @CRLF & _
         '- Please also notice that I try to use some Clean Code aspects for my code. So if it''s possible for you, please also keep that in mind, thanks. If you have questions about it, please contact me.' & @CRLF & _
         @CRLF & _
         '## Contribution' & @CRLF & _
@@ -224,8 +224,8 @@ Func _setupContent()
         @CRLF & _
         'Put an `x` in the boxes that apply. If you''re unsure about any of them, don''t hesitate to ask. I''m here to help! This is simply a reminder of what we are going to look for before merging your code.' & @CRLF & _
         @CRLF & _
-        '- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/docs/CODE_OF_CONDUCT.md) document' & @CRLF & _
-        '- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/docs/CONTRIBUTING.md) document' & @CRLF & _
+        '- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CODE_OF_CONDUCT.md) document' & @CRLF & _
+        '- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CONTRIBUTING.md) document' & @CRLF & _
         '- [ ] I have added necessary documentation or screenshots (if appropriate)' & @CRLF & _
         @CRLF & _
         '## Pull request type' & @CRLF & _
@@ -252,11 +252,11 @@ Func _setupContent()
         @CRLF & _
         '``` au3' & @CRLF & _
         'Func _getSystemInfos()' & @CRLF & _
-        '    ConsoleWrite( ''@AutoItExe:      '' & @AutoItExe     & @CRLF )' & @CRLF & _
-        '    ConsoleWrite( ''@AutoItVersion:  '' & @AutoItVersion & @CRLF )' & @CRLF & _
-        '    ConsoleWrite( ''@CPUArch:        '' & @CPUArch       & @CRLF )' & @CRLF & _
-        '    ConsoleWrite( ''@OSArch:         '' & @OSArch        & @CRLF )' & @CRLF & _
-        '    ConsoleWrite( ''@OSVersion:      '' & @OSVersion     & @CRLF )' & @CRLF & _
+        '    ConsoleWrite(''@AutoItExe:      '' & @AutoItExe     & @CRLF)' & @CRLF & _
+        '    ConsoleWrite(''@AutoItVersion:  '' & @AutoItVersion & @CRLF)' & @CRLF & _
+        '    ConsoleWrite(''@CPUArch:        '' & @CPUArch       & @CRLF)' & @CRLF & _
+        '    ConsoleWrite(''@OSArch:         '' & @OSArch        & @CRLF)' & @CRLF & _
+        '    ConsoleWrite(''@OSVersion:      '' & @OSVersion     & @CRLF)' & @CRLF & _
         'EndFunc' & @CRLF & _
         '_getSystemInfos()' & @CRLF & _
         '```' & @CRLF & _
@@ -272,14 +272,10 @@ Func _setupContent()
     $aContent[$eFileChangelog] = _
         '# Changelog' & @CRLF & _
         @CRLF & _
-        'All notable changes to "' & GUICtrlRead( $aProjectName[$eInput] ) & '" extension will be documented in this file.' & @CRLF & _
+        'All notable changes to "' & GUICtrlRead($aProjectName[$eInput]) & '" will be documented in this file.' & @CRLF & _
         @CRLF & _
         'The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),' & @CRLF & _
         'and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).' & @CRLF & _
-        @CRLF & _
-        '## [Unreleased]' & @CRLF & _
-        @CRLF & _
-        '- Nothing yet.' & @CRLF & _
         @CRLF & _
         '## [1.0.0] - ' & @YEAR & '-' & @MON & '-' & @MDAY & @CRLF & _
         @CRLF & _
@@ -287,8 +283,7 @@ Func _setupContent()
         @CRLF & _
         '- All repository data and dependencies.' & @CRLF & _
         @CRLF & _
-        '[unreleased]: https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/compare/v1.0.0...HEAD' & @CRLF & _
-        '[1.0.0]: https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/releases/tag/v1.0.0' & @CRLF & _
+        '[1.0.0]: https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/releases/tag/v1.0.0' & @CRLF & _
         @CRLF & _
         '---' & @CRLF & _
         @CRLF & _
@@ -337,14 +332,14 @@ Func _setupContent()
         @CRLF & _
         '<p align="center">' & @CRLF & _
         '    <img src="images/icon.png" width="80" />' & @CRLF & _
-        '    <h2 align="center">Welcome to <code>' & GUICtrlRead( $aProjectName[$eInput] ) & '</code>【ツ】</h2>' & @CRLF & _
+        '    <h2 align="center">Welcome to <code>' & GUICtrlRead($aProjectName[$eInput]) & '</code>【ツ】</h2>' & @CRLF & _
         '</p>' & @CRLF & _
         @CRLF & _
         '![license](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square&logo=spdx)' & @CRLF & _
-        '![contributors](https://img.shields.io/github/contributors/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '![repo size](https://img.shields.io/github/repo-size/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '![last commit](https://img.shields.io/github/last-commit/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '![release](https://img.shields.io/github/release/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![contributors](https://img.shields.io/github/contributors/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![repo size](https://img.shields.io/github/repo-size/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![last commit](https://img.shields.io/github/last-commit/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '![release](https://img.shields.io/github/release/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
         '![os](https://img.shields.io/badge/os-windows-yellow.svg?style=flat-square&logo=windows)' & @CRLF & _
         '![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)' & @CRLF & _
         @CRLF & _
@@ -352,7 +347,7 @@ Func _setupContent()
         @CRLF & _
         '## Description' & @CRLF & _
         @CRLF & _
-        '' & GUICtrlRead( $aProjectName[$eInput] ) & ' [...] description [...].' & @CRLF & _
+        '' & GUICtrlRead($aProjectName[$eInput]) & ' [...] description [...].' & @CRLF & _
         @CRLF & _
         '## Features' & @CRLF & _
         @CRLF & _
@@ -368,11 +363,11 @@ Func _setupContent()
         @CRLF & _
         '**Variant 1 - Run the EXE**' & @CRLF & _
         @CRLF & _
-        'Starting the EXE `build\' & GUICtrlRead( $aProjectName[$eInput] ) & '.exe` which is compiled with `#AutoIt3Wrapper_UseX64=y` and `#AutoIt3Wrapper_UseUpx=n` (the default expected system is x64).' & @CRLF & _
+        'Starting the EXE `build\' & GUICtrlRead($aProjectName[$eInput]) & '.exe` which is compiled with `#AutoIt3Wrapper_UseX64=y` and `#AutoIt3Wrapper_UseUpx=n` (the default expected system is x64).' & @CRLF & _
         @CRLF & _
         '**Variant 2 - Compile it on your own**' & @CRLF & _
         @CRLF & _
-        'Open file `src\' & GUICtrlRead( $aProjectName[$eInput] ) & '.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to. For example you could change `#AutoIt3Wrapper_UseUpx=n` from no (n) to yes (y), etc.' & @CRLF & _
+        'Open file `src\' & GUICtrlRead($aProjectName[$eInput]) & '.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to. For example you could change `#AutoIt3Wrapper_UseUpx=n` from no (n) to yes (y), etc.' & @CRLF & _
         'Then, run or compile the program.' & @CRLF & _
         @CRLF & _
         '#### *Usage*' & @CRLF & _
@@ -392,11 +387,11 @@ Func _setupContent()
         @CRLF & _
         '## Contributing' & @CRLF & _
         @CRLF & _
-        'Just look at [CONTRIBUTING](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
+        'Just look at [CONTRIBUTING](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
         @CRLF & _
         '## License' & @CRLF & _
         @CRLF & _
-        'Distributed under the MIT License. See [LICENSE](https://github.com/' & GUICtrlRead( $aGithubUsername[$eInput] ) & '/' & GUICtrlRead( $aProjectName[$eInput] ) & '/blob/' & GUICtrlRead( $aGithubDefaultBranch[$eInput] ) & '/LICENSE.md) for more information.' & @CRLF & _
+        'Distributed under the MIT License. See [LICENSE](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/LICENSE.md) for more information.' & @CRLF & _
         @CRLF & _
         '## Acknowledgements' & @CRLF & _
         @CRLF & _

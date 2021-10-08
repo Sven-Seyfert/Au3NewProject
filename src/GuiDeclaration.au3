@@ -34,7 +34,7 @@ Global $aCloseX[$iMaxEnumIndex]
        $aCloseX[$eHeight]                 = 27
        $aCloseX[$eBackgroundColor]        = $aColor[$eBackground]
        $aCloseX[$eLabel]                  = ''
-       $aCloseX[$eLabelText]              = Chr( 206 )
+       $aCloseX[$eLabelText]              = Chr(206)
        $aCloseX[$eLabelXPosition]         = $aCloseX[$eXPosition] + 11
        $aCloseX[$eLabelYPosition]         = $aCloseX[$eYPosition] + 4
        $aCloseX[$eLabelWidth]             = 20
@@ -171,7 +171,7 @@ Global $aLocation[$iMaxEnumIndex]
 
 Global $aCheckboxStart[$iMaxEnumIndex]
        $aCheckboxStart[$eCheckbox]        = ''
-       $aCheckboxStart[$eCheckboxText]    = Chr( 82 )
+       $aCheckboxStart[$eCheckboxText]    = Chr(82)
        $aCheckboxStart[$eXPosition]       = 40
        $aCheckboxStart[$eYPosition]       = 318
        $aCheckboxStart[$eWidth]           = 20
@@ -190,7 +190,7 @@ Global $aCheckboxStart[$iMaxEnumIndex]
 
 Global $aCheckboxGithub[$iMaxEnumIndex]
        $aCheckboxGithub[$eCheckbox]       = ''
-       $aCheckboxGithub[$eCheckboxText]   = Chr( 163 )
+       $aCheckboxGithub[$eCheckboxText]   = Chr(163)
        $aCheckboxGithub[$eXPosition]      = 40
        $aCheckboxGithub[$eYPosition]      = 340
        $aCheckboxGithub[$eWidth]          = 20
