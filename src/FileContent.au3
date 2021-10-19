@@ -1,11 +1,15 @@
 Func _setupContent()
     $aContent[$eFileProject] = _
         '; compiler information for AutoIt' & @CRLF & _
+        '#pragma compile(CompanyName, © SOLVE SMART)' & @CRLF & _
+        '#pragma compile(FileVersion, 1.0.0)' & @CRLF & _
+        '#pragma compile(LegalCopyright, © Sven Seyfert)' & @CRLF & _
+        '#pragma compile(ProductName, ' & GUICtrlRead($aProjectName[$eInput]) & ')' & @CRLF & _
+        '#pragma compile(ProductVersion, 1.0.0 - ' & @YEAR & '-' & @MON & '-' & @MDAY & ')' & @CRLF & _
+        @CRLF & _
         '#AutoIt3Wrapper_AU3Check_Stop_OnWarning=y' & @CRLF & _
         '#AutoIt3Wrapper_Icon=..\media\favicon.ico' & @CRLF & _
-        '#AutoIt3Wrapper_Outfile_x64=..\build\' & GUICtrlRead($aProjectName[$eInput]) & @CRLF & _
-        '#AutoIt3Wrapper_Res_Description=' & GUICtrlRead($aProjectName[$eInput]) & ' (' & @YEAR & '-' & @MON & '-' & @MDAY & ')' & @CRLF & _
-        '#AutoIt3Wrapper_Res_Fileversion=0.1' & @CRLF & _
+        '#AutoIt3Wrapper_Outfile_x64=..\build\' & GUICtrlRead($aProjectName[$eInput]) & '.exe' & @CRLF & _
         '#AutoIt3Wrapper_UseUpx=n' & @CRLF & _
         '#AutoIt3Wrapper_UseX64=y' & @CRLF & _
         @CRLF & _
