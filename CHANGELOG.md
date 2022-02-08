@@ -13,6 +13,7 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ### Changed
 
+- Copyright year update of LICENSE.md file.
 - Changelog template adjustment (scroll up and scroll down).
 
 ## [1.1.0] - 2021-10-19
