@@ -11,11 +11,11 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [1.2.0] - 2022-02-08
 
-## [1.1.0] - 2021-10-19
-
 ### Changed
 
 - Changelog template adjustment (scroll up and scroll down).
+
+## [1.1.0] - 2021-10-19
 
 ### Added
 
