@@ -9,7 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Go to [legend](#legend---types-of-changes) for further information about the types of changes.
 
+## [1.2.0] - 2022-02-08
+
 ## [1.1.0] - 2021-10-19
+
+### Changed
+
+- Changelog template adjustment (scroll up and scroll down).
 
 ### Added
 
@@ -29,6 +35,7 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - AutoIt Code formatting to the common notation without additional spaces after opened brackets and before closed brackets.
 
+[1.2.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Sven-Seyfert/Au3NewProject/releases/tag/v1.0.0
 

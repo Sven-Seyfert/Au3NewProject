@@ -274,12 +274,16 @@ Func _setupContent()
         '# _tryouts' & @CRLF
 
     $aContent[$eFileChangelog] = _
+        '#####' & @CRLF & _
+        @CRLF & _
         '# Changelog' & @CRLF & _
         @CRLF & _
         'All notable changes to "' & GUICtrlRead($aProjectName[$eInput]) & '" will be documented in this file.' & @CRLF & _
         @CRLF & _
         'The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),' & @CRLF & _
         'and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).' & @CRLF & _
+        @CRLF & _
+        'Go to [legend](#legend---types-of-changes) for further information about the types of changes.' & @CRLF & _
         @CRLF & _
         '## [1.0.0] - ' & @YEAR & '-' & @MON & '-' & @MDAY & @CRLF & _
         @CRLF & _
@@ -292,12 +296,17 @@ Func _setupContent()
         '---' & @CRLF & _
         @CRLF & _
         '### Legend - Types of changes' & @CRLF & _
+        @CRLF & _
         '- `Added` for new features.' & @CRLF & _
         '- `Changed` for changes in existing functionality.' & @CRLF & _
         '- `Deprecated` for soon-to-be removed features.' & @CRLF & _
-        '- `Removed` for now removed features.' & @CRLF & _
         '- `Fixed` for any bug fixes.' & @CRLF & _
-        '- `Security` in case of vulnerabilities.' & @CRLF
+        '- `Removed` for now removed features.' & @CRLF & _
+        '- `Security` in case of vulnerabilities.' & @CRLF & _
+        @CRLF & _
+        '##' & @CRLF & _
+        @CRLF & _
+        '[To the top](#)' & @CRLF
 
     $aContent[$eFileLicense] = _
         '## MIT License' & @CRLF & _
