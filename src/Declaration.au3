@@ -24,10 +24,8 @@ Global $aPath[$iMaxEnumIndex]
 
 Global $aFile[$iMaxEnumIndex]
        $aFile[$eConfig]                     = ''
-       $aFile[$eDocsBugReport]              = ''
        $aFile[$eDocsCodeOfConduct]          = ''
        $aFile[$eDocsContributing]           = ''
-       $aFile[$eDocsFeatureRequest]         = ''
        $aFile[$eDocsPullRequestTemplate]    = ''
        $aFile[$eGitIgnore]                  = ''
        $aFile[$eChangelog]                  = ''

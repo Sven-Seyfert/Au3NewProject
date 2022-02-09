@@ -27,10 +27,8 @@ Func _setupFiles()
     $aFile[$eBugReport]               = $aPath[$eIssueTemplate] & '\bug_report.md'
     $aFile[$eFeatureRequest]          = $aPath[$eIssueTemplate] & '\feature_request.md'
     $aFile[$eConfig]                  = $aPath[$eConfig] & '\config.ini'
-    $aFile[$eDocsBugReport]           = $aPath[$eDocs]   & '\BUG_REPORT.md'
     $aFile[$eDocsCodeOfConduct]       = $aPath[$eDocs]   & '\CODE_OF_CONDUCT.md'
     $aFile[$eDocsContributing]        = $aPath[$eDocs]   & '\CONTRIBUTING.md'
-    $aFile[$eDocsFeatureRequest]      = $aPath[$eDocs]   & '\FEATURE_REQUEST.md'
     $aFile[$eDocsPullRequestTemplate] = $aPath[$eDocs]   & '\PULL_REQUEST_TEMPLATE.md'
     $aFile[$eGitIgnore]               = $aPath[$eRoot]   & '\.gitignore'
     $aFile[$eChangelog]               = $aPath[$eRoot]   & '\CHANGELOG.md'
@@ -90,10 +88,8 @@ Func _fillGithubRelatedFiles()
     If StringLower($bCheckboxGithubIsChecked) == 'true' Then
         _writeFile($aFile[$eBugReport], $aContent[$eFileBugReport])
         _writeFile($aFile[$eFeatureRequest], $aContent[$eFileFeatureRequest])
-        _writeFile($aFile[$eDocsBugReport], $aContent[$eFileBugReport])
         _writeFile($aFile[$eDocsCodeOfConduct], $aContent[$eFileCodeOfConduct])
         _writeFile($aFile[$eDocsContributing], $aContent[$eFileContributing])
-        _writeFile($aFile[$eDocsFeatureRequest], $aContent[$eFileFeatureRequest])
         _writeFile($aFile[$eDocsPullRequestTemplate], $aContent[$eFilePullRequestTemplate])
         _writeFile($aFile[$eGitIgnore], $aContent[$eFileGitIgnore])
         _writeFile($aFile[$eChangelog], $aContent[$eFileChangelog])

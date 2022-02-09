@@ -51,45 +51,48 @@ Func _setupContent()
     $aContent[$eFileBugReport] = _
         '---' & @CRLF & _
         'name: Bug report' & @CRLF & _
-        'about: Create a report to help to improve the project' & @CRLF & _
+        'about: Create a report to help us improve' & @CRLF & _
         'title: ''''' & @CRLF & _
         'labels: ''''' & @CRLF & _
         'assignees: ''''' & @CRLF & _
         @CRLF & _
         '---' & @CRLF & _
         @CRLF & _
-        '**Describe the bug**' & @CRLF & _
+        '## Bug report' & @CRLF & _
+        @CRLF & _
+        '### Describe the bug' & @CRLF & _
+        @CRLF & _
         'A clear and concise description of what the bug is.' & @CRLF & _
         @CRLF & _
-        '**To Reproduce**' & @CRLF & _
-        'Steps to reproduce the behavior:' & @CRLF & _
+        '### How to reproduce' & @CRLF & _
+        @CRLF & _
+        'Steps to reproduce the behavior (e.g.):' & @CRLF & _
+        @CRLF & _
         '1. Go to ''...''' & @CRLF & _
-        '2. Click on ''....''' & @CRLF & _
-        '3. Scroll down to ''....''' & @CRLF & _
+        '2. Click on ''...''' & @CRLF & _
+        '3. Scroll down to ''...''' & @CRLF & _
         '4. See error' & @CRLF & _
         @CRLF & _
-        '**Expected behavior**' & @CRLF & _
+        '### Expected behavior' & @CRLF & _
+        @CRLF & _
         'A clear and concise description of what you expected to happen.' & @CRLF & _
         @CRLF & _
-        '**Screenshots**' & @CRLF & _
+        '### Screenshots' & @CRLF & _
+        @CRLF & _
         'If applicable, add screenshots to help explain your problem.' & @CRLF & _
         @CRLF & _
-        '**SUT (system under test)**' & @CRLF & _
-        'Please execute the following function and copy the console result here.' & @CRLF & _
+        '### Additional context' & @CRLF & _
         @CRLF & _
-        '``` au3' & @CRLF & _
-        'Func _getSystemInfos()' & @CRLF & _
-        '    ConsoleWrite(''@AutoItExe:      '' & @AutoItExe     & @CRLF)' & @CRLF & _
-        '    ConsoleWrite(''@AutoItVersion:  '' & @AutoItVersion & @CRLF)' & @CRLF & _
-        '    ConsoleWrite(''@CPUArch:        '' & @CPUArch       & @CRLF)' & @CRLF & _
-        '    ConsoleWrite(''@OSArch:         '' & @OSArch        & @CRLF)' & @CRLF & _
-        '    ConsoleWrite(''@OSVersion:      '' & @OSVersion     & @CRLF)' & @CRLF & _
-        'EndFunc' & @CRLF & _
-        '_getSystemInfos()' & @CRLF & _
-        '```' & @CRLF & _
+        'Add any other context about the problem here.' & @CRLF & _
         @CRLF & _
-        '**Additional context**' & @CRLF & _
-        'Add any other context about the problem here.'& @CRLF
+        '### System under test' & @CRLF & _
+        @CRLF & _
+        'Please complete the following information.' & @CRLF & _
+        @CRLF & _
+        '- OS: [e.g. Windows 10]' & @CRLF & _
+        '- OS Arch.: [e.g. X64]' & @CRLF & _
+        '- Browser [e.g. firefox]' & @CRLF & _
+        '- Browser version [e.g. 96.0.3]' & @CRLF
 
     Local $sContactAddress = 'info@sven-seyfert.de'
 
@@ -229,31 +232,34 @@ Func _setupContent()
         '[translations]: https://www.contributor-covenant.org/translations' & @CRLF
 
     $aContent[$eFileContributing] = _
-        '# Contributing' & @CRLF & _
-        @CRLF & _
+        '## Contributing' & @CRLF & _
+        '' & @CRLF & _
         '> First off, thanks for taking the time to contribute, I appreciate it.' & @CRLF & _
-        @CRLF & _
-        '## Preparing' & @CRLF & _
-        @CRLF & _
+        '' & @CRLF & _
+        '### Preparing' & @CRLF & _
+        '' & @CRLF & _
         '- Please ensure that you have read and noticed the [CODE OF CONDUCT](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CODE_OF_CONDUCT.md) document.' & @CRLF & _
-        '- Please also notice that I try to use some Clean Code aspects for my code. So if it''s possible for you, please also keep that in mind, thanks. If you have questions about it, please contact me.' & @CRLF & _
-        @CRLF & _
-        '## Contribution' & @CRLF & _
-        @CRLF & _
+        '- Please also notice that there are "Bug report" and "Feature request" templates which you can use.' & @CRLF & _
+        '- Please try to follow the existing code style as good as you can.' & @CRLF & _
+        '- If you''re unsure about anything, don''t hesitate to ask.' & @CRLF & _
+        '' & @CRLF & _
+        '### Contribution' & @CRLF & _
+        '' & @CRLF & _
         '- Check out the code, leave feedback and requests (for various topics, see types below).' & @CRLF & _
-        '- Please fork the repository and contribute using pull requests.' & @CRLF & _
-        @CRLF & _
-        '## Pull request type' & @CRLF & _
-        @CRLF & _
+        '- Please fork the repository and contribute using issues and pull requests.' & @CRLF & _
+        '' & @CRLF & _
+        '### Pull request type (types of changes)' & @CRLF & _
+        '' & @CRLF & _
         'Commonly your pull request should be one of the following types:' & @CRLF & _
-        '- Bugfix' & @CRLF & _
-        '- Feature' & @CRLF & _
+        '' & @CRLF & _
+        '- Bugfix (change which fixes an issue)' & @CRLF & _
+        '- Feature (change which adds functionality)' & @CRLF & _
         '- Code style update (formatting, renaming)' & @CRLF & _
         '- Refactoring (functional, structural)' & @CRLF & _
         '- Documentation content changes' & @CRLF & _
-        @CRLF & _
+        '' & @CRLF & _
         'If it''s another type, please describe.' & @CRLF & _
-        @CRLF & _
+        '' & @CRLF & _
         '> Thank you!' & @CRLF
 
     $aContent[$eFileFeatureRequest] = _
@@ -266,67 +272,72 @@ Func _setupContent()
         @CRLF & _
         '---' & @CRLF & _
         @CRLF & _
-        '**Is your feature request related to a problem? Please describe.**' & @CRLF & _
-        'A clear and concise description of what the problem is. Ex. I''m always frustrated when [...]' & @CRLF & _
+        '## Feature request' & @CRLF & _
         @CRLF & _
-        '**Describe the solution you''d like**' & @CRLF & _
+        '### Is your feature request related to a problem? Please describe' & @CRLF & _
+        @CRLF & _
+        'A clear and concise description of what the problem is. For example: I''m always frustrated when [...] .' & @CRLF & _
+        @CRLF & _
+        '### Describe the solution you''d like' & @CRLF & _
+        @CRLF & _
         'A clear and concise description of what you want to happen.' & @CRLF & _
         @CRLF & _
-        '**Describe alternatives you''ve considered**' & @CRLF & _
+        '### Describe alternatives you''ve considered' & @CRLF & _
+        @CRLF & _
         'A clear and concise description of any alternative solutions or features you''ve considered.' & @CRLF & _
         @CRLF & _
-        '**Additional context**' & @CRLF & _
+        '### Additional context' & @CRLF & _
+        @CRLF & _
         'Add any other context or screenshots about the feature request here.' & @CRLF
 
     $aContent[$eFilePullRequestTemplate] = _
-        '## Proposed changes' & @CRLF & _
+        '## Pull request' & @CRLF & _
         @CRLF & _
-        'Describe the big picture of your changes here to communicate to the maintainers why we should accept this pull request. Please ensure you have read and noticed the checklist below.' & @CRLF & _
+        '### Proposed changes' & @CRLF & _
         @CRLF & _
-        '## Pull request checklist' & @CRLF & _
+        'Describe the big picture of your changes here to communicate to the maintainers why we should accept this pull request.<br>' & @CRLF & _
+        'Please ensure you have read and noticed the checklist below.' & @CRLF & _
         @CRLF & _
-        'Put an `x` in the boxes that apply. If you''re unsure about any of them, don''t hesitate to ask. I''m here to help! This is simply a reminder of what we are going to look for before merging your code.' & @CRLF & _
+        '### Checklist' & @CRLF & _
+        @CRLF & _
+        'Put an `x` in the boxes that apply. If you''re unsure about any of them, don''t hesitate to ask. We are here to help!<br>' & @CRLF & _
+        'This is simply a reminder of what we are going to look for before merging your code.' & @CRLF & _
         @CRLF & _
         '- [ ] I have read and noticed the [CODE OF CONDUCT](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CODE_OF_CONDUCT.md) document' & @CRLF & _
         '- [ ] I have read and noticed the [CONTRIBUTING](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CONTRIBUTING.md) document' & @CRLF & _
         '- [ ] I have added necessary documentation or screenshots (if appropriate)' & @CRLF & _
         @CRLF & _
-        '## Pull request type' & @CRLF & _
+        '### Types of changes' & @CRLF & _
         @CRLF & _
-        'Please check the type of change your PR introduces:' & @CRLF & _
-        '- [ ] Bugfix' & @CRLF & _
-        '- [ ] Feature' & @CRLF & _
+        'Please check `x` the type of change your PR introduces:' & @CRLF & _
+        @CRLF & _
+        '- [ ] Bugfix (change which fixes an issue)' & @CRLF & _
+        '- [ ] Feature (change which adds functionality)' & @CRLF & _
         '- [ ] Code style update (formatting, renaming)' & @CRLF & _
         '- [ ] Refactoring (functional, structural)' & @CRLF & _
         '- [ ] Documentation content changes' & @CRLF & _
-        '- [ ] Other (please describe):' & @CRLF & _
+        '- [ ] Other (please describe)' & @CRLF & _
         @CRLF & _
-        '## What is the current behavior?' & @CRLF & _
+        '### What is the current behavior?' & @CRLF & _
         @CRLF & _
         'Please describe the current behavior that you are modifying, or link to a relevant issue.' & @CRLF & _
         @CRLF & _
-        '## What is the new behavior?' & @CRLF & _
+        '### What is the new behavior?' & @CRLF & _
         @CRLF & _
         'Please describe the behavior or changes that are being added by this PR.' & @CRLF & _
         @CRLF & _
-        '## What is your SUT (system under test)?' & @CRLF & _
+        '### Additional context' & @CRLF & _
         @CRLF & _
-        'Please execute the following function and copy the console result here. Just to ensure your changes won''t affect other versions negatively.' & @CRLF & _
+        'Add any other context about the problem here.' & @CRLF & _
         @CRLF & _
-        '``` au3' & @CRLF & _
-        'Func _getSystemInfos()' & @CRLF & _
-        '    ConsoleWrite(''@AutoItExe:      '' & @AutoItExe     & @CRLF)' & @CRLF & _
-        '    ConsoleWrite(''@AutoItVersion:  '' & @AutoItVersion & @CRLF)' & @CRLF & _
-        '    ConsoleWrite(''@CPUArch:        '' & @CPUArch       & @CRLF)' & @CRLF & _
-        '    ConsoleWrite(''@OSArch:         '' & @OSArch        & @CRLF)' & @CRLF & _
-        '    ConsoleWrite(''@OSVersion:      '' & @OSVersion     & @CRLF)' & @CRLF & _
-        'EndFunc' & @CRLF & _
-        '_getSystemInfos()' & @CRLF & _
-        '```' & @CRLF & _
+        '### System under test' & @CRLF & _
         @CRLF & _
-        '## Further information' & @CRLF & _
+        'Please complete the following information.' & @CRLF & _
         @CRLF & _
-        'If this is a relatively large or complex change, kick off the discussion by explaining why you chose the solution you did and what alternatives you considered, etc. Thanks!' & @CRLF
+        '- OS: [e.g. Windows 10]' & @CRLF & _
+        '- OS Arch.: [e.g. X64]' & @CRLF & _
+        '- Browser [e.g. firefox]' & @CRLF & _
+        '- Browser version [e.g. 96.0.3]' & @CRLF
 
     $aContent[$eFileGitIgnore] = _
         '# ignore folder _tryouts' & @CRLF & _

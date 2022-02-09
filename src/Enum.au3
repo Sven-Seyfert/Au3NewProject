@@ -18,10 +18,8 @@ Global Enum _
     $eConfig, _
     $eCss, _
     $eDocs, _
-    $eDocsBugReport, _
     $eDocsCodeOfConduct, _
     $eDocsContributing, _
-    $eDocsFeatureRequest, _
     $eDocsPullRequestTemplate, _
     $eFeatureRequest, _
     $eFileBugReport, _
