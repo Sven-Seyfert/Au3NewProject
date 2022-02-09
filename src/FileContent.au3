@@ -91,83 +91,142 @@ Func _setupContent()
         '**Additional context**' & @CRLF & _
         'Add any other context about the problem here.'& @CRLF
 
+    Local $sContactAddress = 'info@sven-seyfert.de'
+
     $aContent[$eFileCodeOfConduct] = _
+        @CRLF & _
         '# Contributor Covenant Code of Conduct' & @CRLF & _
         @CRLF & _
         '## Our Pledge' & @CRLF & _
         @CRLF & _
-        'In the interest of fostering an open and welcoming environment, we as' & @CRLF & _
-        'contributors and maintainers pledge to making participation in our project and' & @CRLF & _
-        'our community a harassment-free experience for everyone, regardless of age, body' & @CRLF & _
-        'size, disability, ethnicity, sex characteristics, gender identity and expression,' & @CRLF & _
-        'level of experience, education, socio-economic status, nationality, personal' & @CRLF & _
-        'appearance, race, religion, or sexual identity and orientation.' & @CRLF & _
+        'We as members, contributors, and leaders pledge to make participation in our' & @CRLF & _
+        'community a harassment-free experience for everyone, regardless of age, body' & @CRLF & _
+        'size, visible or invisible disability, ethnicity, sex characteristics, gender' & @CRLF & _
+        'identity and expression, level of experience, education, socio-economic status,' & @CRLF & _
+        'nationality, personal appearance, race, caste, color, religion, or sexual' & @CRLF & _
+        'identity and orientation.' & @CRLF & _
+        @CRLF & _
+        'We pledge to act and interact in ways that contribute to an open, welcoming,' & @CRLF & _
+        'diverse, inclusive, and healthy community.' & @CRLF & _
         @CRLF & _
         '## Our Standards' & @CRLF & _
         @CRLF & _
-        'Examples of behavior that contributes to creating a positive environment' & @CRLF & _
-        'include:' & @CRLF & _
+        'Examples of behavior that contributes to a positive environment for our' & @CRLF & _
+        'community include:' & @CRLF & _
         @CRLF & _
-        '* Using welcoming and inclusive language' & @CRLF & _
-        '* Being respectful of differing viewpoints and experiences' & @CRLF & _
-        '* Gracefully accepting constructive criticism' & @CRLF & _
-        '* Focusing on what is best for the community' & @CRLF & _
-        '* Showing empathy towards other community members' & @CRLF & _
+        '* Demonstrating empathy and kindness toward other people' & @CRLF & _
+        '* Being respectful of differing opinions, viewpoints, and experiences' & @CRLF & _
+        '* Giving and gracefully accepting constructive feedback' & @CRLF & _
+        '* Accepting responsibility and apologizing to those affected by our mistakes,' & @CRLF & _
+        '  and learning from the experience' & @CRLF & _
+        '* Focusing on what is best not just for us as individuals, but for the overall' & @CRLF & _
+        '  community' & @CRLF & _
         @CRLF & _
-        'Examples of unacceptable behavior by participants include:' & @CRLF & _
+        'Examples of unacceptable behavior include:' & @CRLF & _
         @CRLF & _
-        '* The use of sexualized language or imagery and unwelcome sexual attention or' & @CRLF & _
-        ' advances' & @CRLF & _
-        '* Trolling, insulting/derogatory comments, and personal or political attacks' & @CRLF & _
+        '* The use of sexualized language or imagery, and sexual attention or advances of' & @CRLF & _
+        '  any kind' & @CRLF & _
+        '* Trolling, insulting or derogatory comments, and personal or political attacks' & @CRLF & _
         '* Public or private harassment' & @CRLF & _
-        '* Publishing others'' private information, such as a physical or electronic' & @CRLF & _
-        ' address, without explicit permission' & @CRLF & _
+        '* Publishing others'' private information, such as a physical or email address,' & @CRLF & _
+        '  without their explicit permission' & @CRLF & _
         '* Other conduct which could reasonably be considered inappropriate in a' & @CRLF & _
-        ' professional setting' & @CRLF & _
+        '  professional setting' & @CRLF & _
         @CRLF & _
-        '## Our Responsibilities' & @CRLF & _
+        '## Enforcement Responsibilities' & @CRLF & _
         @CRLF & _
-        'Project maintainers are responsible for clarifying the standards of acceptable' & @CRLF & _
-        'behavior and are expected to take appropriate and fair corrective action in' & @CRLF & _
-        'response to any instances of unacceptable behavior.' & @CRLF & _
+        'Community leaders are responsible for clarifying and enforcing our standards of' & @CRLF & _
+        'acceptable behavior and will take appropriate and fair corrective action in' & @CRLF & _
+        'response to any behavior that they deem inappropriate, threatening, offensive,' & @CRLF & _
+        'or harmful.' & @CRLF & _
         @CRLF & _
-        'Project maintainers have the right and responsibility to remove, edit, or' & @CRLF & _
-        'reject comments, commits, code, wiki edits, issues, and other contributions' & @CRLF & _
-        'that are not aligned to this Code of Conduct, or to ban temporarily or' & @CRLF & _
-        'permanently any contributor for other behaviors that they deem inappropriate,' & @CRLF & _
-        'threatening, offensive, or harmful.' & @CRLF & _
+        'Community leaders have the right and responsibility to remove, edit, or reject' & @CRLF & _
+        'comments, commits, code, wiki edits, issues, and other contributions that are' & @CRLF & _
+        'not aligned to this Code of Conduct, and will communicate reasons for moderation' & @CRLF & _
+        'decisions when appropriate.' & @CRLF & _
         @CRLF & _
         '## Scope' & @CRLF & _
         @CRLF & _
-        'This Code of Conduct applies both within project spaces and in public spaces' & @CRLF & _
-        'when an individual is representing the project or its community. Examples of' & @CRLF & _
-        'representing a project or community include using an official project e-mail' & @CRLF & _
-        'address, posting via an official social media account, or acting as an appointed' & @CRLF & _
-        'representative at an online or offline event. Representation of a project may be' & @CRLF & _
-        'further defined and clarified by project maintainers.' & @CRLF & _
+        'This Code of Conduct applies within all community spaces, and also applies when' & @CRLF & _
+        'an individual is officially representing the community in public spaces.' & @CRLF & _
+        'Examples of representing our community include using an official e-mail address,' & @CRLF & _
+        'posting via an official social media account, or acting as an appointed' & @CRLF & _
+        'representative at an online or offline event.' & @CRLF & _
         @CRLF & _
         '## Enforcement' & @CRLF & _
         @CRLF & _
         'Instances of abusive, harassing, or otherwise unacceptable behavior may be' & @CRLF & _
-        'reported by contacting the project team at info@sven-seyfert.de. All' & @CRLF & _
-        'complaints will be reviewed and investigated and will result in a response that' & @CRLF & _
-        'is deemed necessary and appropriate to the circumstances. The project team is' & @CRLF & _
-        'obligated to maintain confidentiality with regard to the reporter of an incident.' & @CRLF & _
-        'Further details of specific enforcement policies may be posted separately.' & @CRLF & _
+        'reported to the community leaders responsible for enforcement at' & @CRLF & _
+        '' & $sContactAddress & '.' & @CRLF & _
+        'All complaints will be reviewed and investigated promptly and fairly.' & @CRLF & _
         @CRLF & _
-        'Project maintainers who do not follow or enforce the Code of Conduct in good' & @CRLF & _
-        'faith may face temporary or permanent repercussions as determined by other' & @CRLF & _
-        'members of the project''s leadership.' & @CRLF & _
+        'All community leaders are obligated to respect the privacy and security of the' & @CRLF & _
+        'reporter of any incident.' & @CRLF & _
+        @CRLF & _
+        '## Enforcement Guidelines' & @CRLF & _
+        @CRLF & _
+        'Community leaders will follow these Community Impact Guidelines in determining' & @CRLF & _
+        'the consequences for any action they deem in violation of this Code of Conduct:' & @CRLF & _
+        @CRLF & _
+        '### 1. Correction' & @CRLF & _
+        @CRLF & _
+        '**Community Impact**: Use of inappropriate language or other behavior deemed' & @CRLF & _
+        'unprofessional or unwelcome in the community.' & @CRLF & _
+        @CRLF & _
+        '**Consequence**: A private, written warning from community leaders, providing' & @CRLF & _
+        'clarity around the nature of the violation and an explanation of why the' & @CRLF & _
+        'behavior was inappropriate. A public apology may be requested.' & @CRLF & _
+        @CRLF & _
+        '### 2. Warning' & @CRLF & _
+        @CRLF & _
+        '**Community Impact**: A violation through a single incident or series of' & @CRLF & _
+        'actions.' & @CRLF & _
+        @CRLF & _
+        '**Consequence**: A warning with consequences for continued behavior. No' & @CRLF & _
+        'interaction with the people involved, including unsolicited interaction with' & @CRLF & _
+        'those enforcing the Code of Conduct, for a specified period of time. This' & @CRLF & _
+        'includes avoiding interactions in community spaces as well as external channels' & @CRLF & _
+        'like social media. Violating these terms may lead to a temporary or permanent' & @CRLF & _
+        'ban.' & @CRLF & _
+        @CRLF & _
+        '### 3. Temporary Ban' & @CRLF & _
+        @CRLF & _
+        '**Community Impact**: A serious violation of community standards, including' & @CRLF & _
+        'sustained inappropriate behavior.' & @CRLF & _
+        @CRLF & _
+        '**Consequence**: A temporary ban from any sort of interaction or public' & @CRLF & _
+        'communication with the community for a specified period of time. No public or' & @CRLF & _
+        'private interaction with the people involved, including unsolicited interaction' & @CRLF & _
+        'with those enforcing the Code of Conduct, is allowed during this period.' & @CRLF & _
+        'Violating these terms may lead to a permanent ban.' & @CRLF & _
+        @CRLF & _
+        '### 4. Permanent Ban' & @CRLF & _
+        @CRLF & _
+        '**Community Impact**: Demonstrating a pattern of violation of community' & @CRLF & _
+        'standards, including sustained inappropriate behavior, harassment of an' & @CRLF & _
+        'individual, or aggression toward or disparagement of classes of individuals.' & @CRLF & _
+        @CRLF & _
+        '**Consequence**: A permanent ban from any sort of public interaction within the' & @CRLF & _
+        'community.' & @CRLF & _
         @CRLF & _
         '## Attribution' & @CRLF & _
         @CRLF & _
-        'This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,' & @CRLF & _
-        'available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html' & @CRLF & _
+        'This Code of Conduct is adapted from the [Contributor Covenant][homepage],' & @CRLF & _
+        'version 2.1, available at' & @CRLF & _
+        '[https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].' & @CRLF & _
+        @CRLF & _
+        'Community Impact Guidelines were inspired by' & @CRLF & _
+        '[Mozilla''s code of conduct enforcement ladder][Mozilla CoC].' & @CRLF & _
+        @CRLF & _
+        'For answers to common questions about this code of conduct, see the FAQ at' & @CRLF & _
+        '[https://www.contributor-covenant.org/faq][FAQ]. Translations are available at' & @CRLF & _
+        '[https://www.contributor-covenant.org/translations][translations].' & @CRLF & _
         @CRLF & _
         '[homepage]: https://www.contributor-covenant.org' & @CRLF & _
-        @CRLF & _
-        'For answers to common questions about this code of conduct, see' & @CRLF & _
-        'https://www.contributor-covenant.org/faq' & @CRLF
+        '[v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html' & @CRLF & _
+        '[Mozilla CoC]: https://github.com/mozilla/diversity' & @CRLF & _
+        '[FAQ]: https://www.contributor-covenant.org/faq' & @CRLF & _
+        '[translations]: https://www.contributor-covenant.org/translations' & @CRLF
 
     $aContent[$eFileContributing] = _
         '# Contributing' & @CRLF & _
