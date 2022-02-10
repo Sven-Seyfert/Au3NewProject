@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Go to [legend](#legend---types-of-changes) for further information about the types of changes.
 
+## [1.6.0] - 2022-02-10
+
+### Added
+
+- FAQ section to README.md file.
+
+### Changed
+
+- Move "Keyboard shortcuts" section into "Getting started" section (as sub section after "Usage").
+- Include the FAQ structure into the creation file FileContent.au3.
+- Version bump.
+
 ## [1.5.0] - 2022-02-10
 
 ### Added
@@ -68,6 +80,7 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - AutoIt Code formatting to the common notation without additional spaces after opened brackets and before closed brackets.
 
+[1.6.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.2.0...v1.3.0

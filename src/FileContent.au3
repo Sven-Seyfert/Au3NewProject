@@ -426,7 +426,7 @@ Func _setupContent()
         '![os](https://img.shields.io/badge/os-windows-yellow.svg?style=flat-square&logo=windows)' & @CRLF & _
         '![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)' & @CRLF & _
         @CRLF & _
-        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [Keyboard shortcuts](#keyboard-shortcuts) | [Contributing](#contributing) | [License](#license) | [Acknowledgements](#acknowledgements)' & @CRLF & _
+        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [FAQ](#faq) | [Contributing](#contributing) | [License](#license) | [Acknowledgements](#acknowledgements)' & @CRLF & _
         @CRLF & _
         '## Description' & @CRLF & _
         @CRLF & _
@@ -457,16 +457,39 @@ Func _setupContent()
         @CRLF & _
         'To be defined [...]' & @CRLF & _
         @CRLF & _
-        '## Configuration' & @CRLF & _
-        @CRLF & _
-        'To be defined [...]' & @CRLF & _
-        @CRLF & _
-        '## Keyboard shortcuts' & @CRLF & _
+        '#### *Keyboard shortcuts*' & @CRLF & _
         @CRLF & _
         '| Action | Shortcut |' & @CRLF & _
         '| :---   | :---     |' & @CRLF & _
         '| ...    | ...      |' & @CRLF & _
         '| ...    | ...      |' & @CRLF & _
+        @CRLF & _
+        '## Configuration' & @CRLF & _
+        @CRLF & _
+        'To be defined [...]' & @CRLF & _
+        @CRLF & _
+        '## FAQ' & @CRLF & _
+        @CRLF & _
+        '<details>' & @CRLF & _
+        '<summary><i>Frequently Asked Questions</i></summary><br>' & @CRLF & _
+        @CRLF & _
+        '  <details>' & @CRLF & _
+        '  <summary><code>1. How to [...]</code></summary><p>' & @CRLF & _
+        @CRLF & _
+        '  **Q:** Is there a frequently asked question already?<br>' & @CRLF & _
+        '  **A:** No, not yet.' & @CRLF & _
+        @CRLF & _
+        '  <br></p></details>' & @CRLF & _
+        @CRLF & _
+        '  <details>' & @CRLF & _
+        '  <summary><code>2. How to [...]</code></summary><p>' & @CRLF & _
+        @CRLF & _
+        '  **Q:** [...]?<br>' & @CRLF & _
+        '  **A:** [...].' & @CRLF & _
+        @CRLF & _
+        '  <br></p></details>' & @CRLF & _
+        @CRLF & _
+        '</details>' & @CRLF & _
         @CRLF & _
         '## Contributing' & @CRLF & _
         @CRLF & _
