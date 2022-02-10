@@ -418,11 +418,11 @@ Func _setupContent()
         '    <h2 align="center">Welcome to <code>' & GUICtrlRead($aProjectName[$eInput]) & '</code>【ツ】</h2>' & @CRLF & _
         '</p>' & @CRLF & _
         @CRLF & _
-        '![license](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square&logo=spdx)' & @CRLF & _
-        '![contributors](https://img.shields.io/github/contributors/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '[![license](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square&logo=spdx)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/LICENSE.md)' & @CRLF & _
+        '[![contributors](https://img.shields.io/github/contributors/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/graphs/contributors)' & @CRLF & _
         '![repo size](https://img.shields.io/github/repo-size/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '![last commit](https://img.shields.io/github/last-commit/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '![release](https://img.shields.io/github/release/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+        '[![last commit](https://img.shields.io/github/last-commit/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/commits/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & ')' & @CRLF & _
+        '[![release](https://img.shields.io/github/release/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/releases/latest)' & @CRLF & _
         '![os](https://img.shields.io/badge/os-windows-yellow.svg?style=flat-square&logo=windows)' & @CRLF & _
         '![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)' & @CRLF & _
         @CRLF & _
