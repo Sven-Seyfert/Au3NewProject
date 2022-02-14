@@ -1,4 +1,4 @@
-Func _isMouseOnGui($hGui)
+Func _IsMouseOnGui($hGui)
     $aMouseData = MouseGetPos()
     $aGuiData   = WinGetPos($hGui)
 
@@ -12,7 +12,7 @@ Func _isMouseOnGui($hGui)
     Return False
 EndFunc
 
-Func _isMouseOnControl($iXMouse, $iYMouse, $iXControl, $iYControl, $iWidthControl, $iHeightControl)
+Func _IsMouseOnControl($iXMouse, $iYMouse, $iXControl, $iYControl, $iWidthControl, $iHeightControl)
     If $iXMouse >= $iXControl And _
        $iYMouse >= $iYControl And _
        $iXMouse <= $iXControl + $iWidthControl  And _
@@ -23,91 +23,91 @@ Func _isMouseOnControl($iXMouse, $iYMouse, $iXControl, $iYControl, $iWidthContro
     EndIf
 EndFunc
 
-Func _hoverActions()
-    If _isMouseOnGui($aGui[$eHandle]) Then
+Func _HoverActions()
+    If _IsMouseOnGui($aGui[$eHandle]) Then
         Select
-            Case _hoverCloseX()
+            Case _HoverCloseX()
                 GUICtrlSetBkColor($aCloseX[$eBackground], $aColor[$eRed])
                 GUICtrlSetBkColor($aCloseX[$eLabel], $aColor[$eRed])
                 GUICtrlSetColor($aCloseX[$eLabel], $aColor[$eWhite])
 
-            Case _hoverTagOne()
-                _setBorderColor($aTagOne, $aColor[$eBlue])
+            Case _HoverTagOne()
+                _SetBorderColor($aTagOne, $aColor[$eBlue])
 
-            Case _hoverTagTwo()
-                _setBorderColor($aTagTwo, $aColor[$eBlue])
+            Case _HoverTagTwo()
+                _SetBorderColor($aTagTwo, $aColor[$eBlue])
 
-            Case _hoverButtonBrowse()
-                _setBorderColor($aButtonBrowse, $aColor[$eBlue])
+            Case _HoverButtonBrowse()
+                _SetBorderColor($aButtonBrowse, $aColor[$eBlue])
 
-            Case _hoverButtonCreate()
-                _setBorderColor($aButtonCreate, $aColor[$eBlue])
+            Case _HoverButtonCreate()
+                _SetBorderColor($aButtonCreate, $aColor[$eBlue])
 
             Case Else
                 GUICtrlSetBkColor($aCloseX[$eBackground], $aCloseX[$eBackgroundColor])
                 GUICtrlSetBkColor($aCloseX[$eLabel], $aCloseX[$eBackgroundColor])
                 GUICtrlSetColor($aCloseX[$eLabel], $aCloseX[$eFontColor])
 
-                If StringLower($bHtmlProject) == 'true' Then _setBorderColor($aTagOne, $aTagOne[$eBorderColor])
-                If StringLower($bHtmlProject) == 'false' Then _setBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
+                If StringLower($bHtmlProject) == 'true' Then _SetBorderColor($aTagOne, $aTagOne[$eBorderColor])
+                If StringLower($bHtmlProject) == 'false' Then _SetBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
 
-                _setBorderColor($aButtonBrowse, $aButtonBrowse[$eBorderColor])
-                _setBorderColor($aButtonCreate, $aButtonCreate[$eBorderColor])
+                _SetBorderColor($aButtonBrowse, $aButtonBrowse[$eBorderColor])
+                _SetBorderColor($aButtonCreate, $aButtonCreate[$eBorderColor])
         EndSelect
     EndIf
 EndFunc
 
-Func _hoverCloseX()
-    Return _isMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aCloseX[$eXPosition], $aCloseX[$eYPosition], $aCloseX[$eWidth], $aCloseX[$eHeight])
+Func _HoverCloseX()
+    Return _IsMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aCloseX[$eXPosition], $aCloseX[$eYPosition], $aCloseX[$eWidth], $aCloseX[$eHeight])
 EndFunc
 
-Func _hoverTagOne()
-    Return _isMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aTagOne[$eXPosition], $aTagOne[$eYPosition], $aTagOne[$eWidth], $aTagOne[$eHeight])
+Func _HoverTagOne()
+    Return _IsMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aTagOne[$eXPosition], $aTagOne[$eYPosition], $aTagOne[$eWidth], $aTagOne[$eHeight])
 EndFunc
 
-Func _hoverTagTwo()
-    Return _isMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aTagTwo[$eXPosition], $aTagTwo[$eYPosition], $aTagTwo[$eWidth], $aTagTwo[$eHeight])
+Func _HoverTagTwo()
+    Return _IsMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aTagTwo[$eXPosition], $aTagTwo[$eYPosition], $aTagTwo[$eWidth], $aTagTwo[$eHeight])
 EndFunc
 
-Func _hoverButtonBrowse()
-    Return _isMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aButtonBrowse[$eXPosition], $aButtonBrowse[$eYPosition], $aButtonBrowse[$eWidth], $aButtonBrowse[$eHeight])
+Func _HoverButtonBrowse()
+    Return _IsMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aButtonBrowse[$eXPosition], $aButtonBrowse[$eYPosition], $aButtonBrowse[$eWidth], $aButtonBrowse[$eHeight])
 EndFunc
 
-Func _hoverButtonCreate()
-    Return _isMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aButtonCreate[$eXPosition], $aButtonCreate[$eYPosition], $aButtonCreate[$eWidth], $aButtonCreate[$eHeight])
+Func _HoverButtonCreate()
+    Return _IsMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aButtonCreate[$eXPosition], $aButtonCreate[$eYPosition], $aButtonCreate[$eWidth], $aButtonCreate[$eHeight])
 EndFunc
 
-Func _setBorderColor($aControl, $vBorderColor)
+Func _SetBorderColor($aControl, $vBorderColor)
     GUICtrlSetBkColor($aControl[$eBorderTop], $vBorderColor)
     GUICtrlSetBkColor($aControl[$eBorderRight], $vBorderColor)
     GUICtrlSetBkColor($aControl[$eBorderBottom], $vBorderColor)
     GUICtrlSetBkColor($aControl[$eBorderLeft], $vBorderColor)
 EndFunc
 
-Func _setControlFocusWithoutSelectedText($aControl)
+Func _SetControlFocusWithoutSelectedText($aControl)
     GUICtrlSetState($aControl[$eInput], $GUI_FOCUS)
     ControlClick($aGui[$eHandle], '', $aControl[$eInput])
 EndFunc
 
-Func _toggleInput()
+Func _ToggleInput()
     If StringLower($bTabIsPressed) == 'false' Then
-        _setControlFocusWithoutSelectedText($aLocation)
-        _setBorderColor($aProjectName, $aColor[$eBorder])
-        _setBorderColor($aLocation, $aColor[$eBlue])
-        _setBorderColor($aGithubUsername, $aColor[$eBorder])
-        _setBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+        _SetControlFocusWithoutSelectedText($aLocation)
+        _SetBorderColor($aProjectName, $aColor[$eBorder])
+        _SetBorderColor($aLocation, $aColor[$eBlue])
+        _SetBorderColor($aGithubUsername, $aColor[$eBorder])
+        _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
         $bTabIsPressed = True
     Else
-        _setControlFocusWithoutSelectedText($aProjectName)
-        _setBorderColor($aProjectName, $aColor[$eBlue])
-        _setBorderColor($aLocation, $aColor[$eBorder])
-        _setBorderColor($aGithubUsername, $aColor[$eBorder])
-        _setBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+        _SetControlFocusWithoutSelectedText($aProjectName)
+        _SetBorderColor($aProjectName, $aColor[$eBlue])
+        _SetBorderColor($aLocation, $aColor[$eBorder])
+        _SetBorderColor($aGithubUsername, $aColor[$eBorder])
+        _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
         $bTabIsPressed = False
     EndIf
 EndFunc
 
-Func _toggleCheckboxStart()
+Func _ToggleCheckboxStart()
     If StringLower($bCheckboxStartIsChecked) == 'true' Then
         GUICtrlSetData($aCheckboxStart[$eCheckbox], Chr(163))
         $bCheckboxStartIsChecked = False
@@ -117,21 +117,21 @@ Func _toggleCheckboxStart()
     EndIf
 EndFunc
 
-Func _toggleCheckboxGithub()
+Func _ToggleCheckboxGithub()
     If StringLower($bCheckboxGithubIsChecked) == 'true' Then
         GUICtrlSetData($aCheckboxGithub[$eCheckbox], Chr(163))
-        _hideInputGithubUsername()
-        _hideInputGithubDefaultBranch()
+        _HideInputGithubUsername()
+        _HideInputGithubDefaultBranch()
         $bCheckboxGithubIsChecked = False
     Else
         GUICtrlSetData($aCheckboxGithub[$eCheckbox], Chr(82))
-        _showInputGithubUsername()
-        _showInputGithubDefaultBranch()
+        _ShowInputGithubUsername()
+        _ShowInputGithubDefaultBranch()
         $bCheckboxGithubIsChecked = True
     EndIf
 EndFunc
 
-Func _hideInputGithubUsername()
+Func _HideInputGithubUsername()
     GUICtrlSetState($aGithubUsername[$eLabel], $GUI_HIDE)
     GUICtrlSetState($aGithubUsername[$eBackground], $GUI_HIDE)
     GUICtrlSetState($aGithubUsername[$eInput], $GUI_HIDE)
@@ -141,7 +141,7 @@ Func _hideInputGithubUsername()
     GUICtrlSetState($aGithubUsername[$eBorderLeft], $GUI_HIDE)
 EndFunc
 
-Func _showInputGithubUsername()
+Func _ShowInputGithubUsername()
     GUICtrlSetState($aGithubUsername[$eLabel], $GUI_SHOW)
     GUICtrlSetState($aGithubUsername[$eBackground], $GUI_SHOW)
     GUICtrlSetState($aGithubUsername[$eInput], $GUI_SHOW)
@@ -151,7 +151,7 @@ Func _showInputGithubUsername()
     GUICtrlSetState($aGithubUsername[$eBorderLeft], $GUI_SHOW)
 EndFunc
 
-Func _hideInputGithubDefaultBranch()
+Func _HideInputGithubDefaultBranch()
     GUICtrlSetState($aGithubDefaultBranch[$eLabel], $GUI_HIDE)
     GUICtrlSetState($aGithubDefaultBranch[$eBackground], $GUI_HIDE)
     GUICtrlSetState($aGithubDefaultBranch[$eInput], $GUI_HIDE)
@@ -161,7 +161,7 @@ Func _hideInputGithubDefaultBranch()
     GUICtrlSetState($aGithubDefaultBranch[$eBorderLeft], $GUI_HIDE)
 EndFunc
 
-Func _showInputGithubDefaultBranch()
+Func _ShowInputGithubDefaultBranch()
     GUICtrlSetState($aGithubDefaultBranch[$eLabel], $GUI_SHOW)
     GUICtrlSetState($aGithubDefaultBranch[$eBackground], $GUI_SHOW)
     GUICtrlSetState($aGithubDefaultBranch[$eInput], $GUI_SHOW)

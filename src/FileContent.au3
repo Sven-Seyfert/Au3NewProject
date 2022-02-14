@@ -1,4 +1,4 @@
-Func _setupContent()
+Func _SetupContent()
     $aContent[$eFileProject] = _
         '; compiler information for AutoIt' & @CRLF & _
         '#pragma compile(CompanyName, © SOLVE SMART)' & @CRLF & _
@@ -41,7 +41,7 @@ Func _setupContent()
         @CRLF & _
         @CRLF & _
         '; processing -------------------------------------------------------------------' & @CRLF & _
-        'While 1' & @CRLF & _
+        'While True' & @CRLF & _
         '    Switch GUIGetMsg()' & @CRLF & _
         '        Case -3' & @CRLF & _
         '            Exit' & @CRLF & _

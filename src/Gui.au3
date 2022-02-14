@@ -1,30 +1,30 @@
 
 
-Func _showGui()
-    _gui()
-    _guiCloseX()
-    _guiHeadline()
-    _guiKindOfProject()
-    _guiTagOne()
-    _guiTagTwo()
-    _guiInputProjectName()
-    _guiInputLocation()
-    _guiCheckboxStart()
-    _guiCheckboxGithub()
-    _guiInputGithubUsername()
-    _guiInputGithubDefaultBranch()
-    _guiButtonBrowse()
-    _guiButtonCreate()
+Func _ShowGui()
+    _Gui()
+    _GuiCloseX()
+    _GuiHeadline()
+    _GuiKindOfProject()
+    _GuiTagOne()
+    _GuiTagTwo()
+    _GuiInputProjectName()
+    _GuiInputLocation()
+    _GuiCheckboxStart()
+    _GuiCheckboxGithub()
+    _GuiInputGithubUsername()
+    _GuiInputGithubDefaultBranch()
+    _GuiButtonBrowse()
+    _GuiButtonCreate()
 
-    _hideInputGithubUsername()
-    _hideInputGithubDefaultBranch()
+    _HideInputGithubUsername()
+    _HideInputGithubDefaultBranch()
 
     GUISetState(@SW_SHOW, $aGui[$eHandle])
 
-    _guiFadeIn($aGui[$eHandle])
+    _GuiFadeIn($aGui[$eHandle])
 EndFunc
 
-Func _gui()
+Func _Gui()
     $aGui[$eHandle] = GUICreate('', $aGui[$eWidth], $aGui[$eHeight], $aGui[$eXPosition], $aGui[$eYPosition], $WS_POPUP, $WS_EX_TOPMOST)
     GUISetBkColor($aGui[$eBackgroundColor], $aGui[$eHandle])
     GUISetFont($aGui[$eFontSize], $aGui[$eFontWeight], $aGui[$eFontAttribute], $aGui[$eFontName])
@@ -35,10 +35,10 @@ Func _gui()
     $aGui[$eBorderBottom] = GUICtrlCreateLabel('', 0, 0 + $aGui[$eHeight] - $aGui[$eBorderSize], $aGui[$eWidth], $aGui[$eBorderSize])
     $aGui[$eBorderLeft]   = GUICtrlCreateLabel('', 0, 0, $aGui[$eBorderSize], $aGui[$eHeight])
 
-    _setBorderColor($aGui, $aColor[$eBorder])
+    _SetBorderColor($aGui, $aColor[$eBorder])
 EndFunc
 
-Func _guiCloseX()
+Func _GuiCloseX()
     $aCloseX[$eBackground] = GUICtrlCreateLabel($aCloseX[$eBackgroundText], $aCloseX[$eXPosition], $aCloseX[$eYPosition], $aCloseX[$eWidth], $aCloseX[$eHeight])
     GUICtrlSetBkColor($aCloseX[$eBackground], $aCloseX[$eBackgroundColor])
     GUICtrlSetCursor($aCloseX[$eBackground], 0)
@@ -49,17 +49,17 @@ Func _guiCloseX()
     GUICtrlSetFont($aCloseX[$eLabel], $aCloseX[$eFontSize], $aCloseX[$eFontWeight], $aCloseX[$eFontAttribute], $aCloseX[$eFontName])
 EndFunc
 
-Func _guiHeadline()
+Func _GuiHeadline()
     $aHeadline[$eLabel] = GUICtrlCreateLabel($aHeadline[$eLabelText], $aHeadline[$eLabelXPosition], $aHeadline[$eLabelYPosition], $aHeadline[$eLabelWidth], $aHeadline[$eLabelHeight])
     GUICtrlSetFont($aHeadline[$eLabel], $aHeadline[$eFontSize], $aHeadline[$eFontWeight])
 EndFunc
 
-Func _guiKindOfProject()
+Func _GuiKindOfProject()
     $aKindOfProject[$eLabel] = GUICtrlCreateLabel($aKindOfProject[$eLabelText], $aKindOfProject[$eLabelXPosition], $aKindOfProject[$eLabelYPosition], $aKindOfProject[$eLabelWidth], $aKindOfProject[$eLabelHeight])
     GUICtrlSetFont($aKindOfProject[$eLabel], $aKindOfProject[$eFontSize], $aKindOfProject[$eFontWeight])
 EndFunc
 
-Func _guiTagOne()
+Func _GuiTagOne()
     $aTagOne[$eBackground] = GUICtrlCreateLabel($aTagOne[$eBackgroundText], $aTagOne[$eXPosition], $aTagOne[$eYPosition], $aTagOne[$eWidth], $aTagOne[$eHeight])
     GUICtrlSetBkColor($aTagOne[$eBackground], $aTagOne[$eBackgroundColor])
     GUICtrlSetCursor($aTagOne[$eBackground], 0)
@@ -73,10 +73,10 @@ Func _guiTagOne()
     $aTagOne[$eBorderBottom] = GUICtrlCreateLabel('', $aTagOne[$eXPosition], $aTagOne[$eYPosition] + $aTagOne[$eHeight] - $aTagOne[$eBorderSize], $aTagOne[$eWidth], $aTagOne[$eBorderSize])
     $aTagOne[$eBorderLeft]   = GUICtrlCreateLabel('', $aTagOne[$eXPosition], $aTagOne[$eYPosition], $aTagOne[$eBorderSize], $aTagOne[$eHeight])
 
-    _setBorderColor($aTagOne, $aColor[$eBlue])
+    _SetBorderColor($aTagOne, $aColor[$eBlue])
 EndFunc
 
-Func _guiTagTwo()
+Func _GuiTagTwo()
     $aTagTwo[$eBackground] = GUICtrlCreateLabel($aTagTwo[$eBackgroundText], $aTagTwo[$eXPosition], $aTagTwo[$eYPosition], $aTagTwo[$eWidth], $aTagTwo[$eHeight])
     GUICtrlSetBkColor($aTagTwo[$eBackground], $aTagTwo[$eBackgroundColor])
     GUICtrlSetCursor($aTagTwo[$eBackground], 0)
@@ -90,10 +90,10 @@ Func _guiTagTwo()
     $aTagTwo[$eBorderBottom] = GUICtrlCreateLabel('', $aTagTwo[$eXPosition], $aTagTwo[$eYPosition] + $aTagTwo[$eHeight] - $aTagTwo[$eBorderSize], $aTagTwo[$eWidth], $aTagTwo[$eBorderSize])
     $aTagTwo[$eBorderLeft]   = GUICtrlCreateLabel('', $aTagTwo[$eXPosition], $aTagTwo[$eYPosition], $aTagTwo[$eBorderSize], $aTagTwo[$eHeight])
 
-    _setBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
+    _SetBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
 EndFunc
 
-Func _guiInputProjectName()
+Func _GuiInputProjectName()
     $aProjectName[$eLabel] = GUICtrlCreateLabel($aProjectName[$eLabelText], $aProjectName[$eLabelXPosition], $aProjectName[$eLabelYPosition], $aProjectName[$eLabelWidth], $aProjectName[$eLabelHeight])
     GUICtrlSetFont($aProjectName[$eLabel], $aProjectName[$eLabelFontSize])
 
@@ -109,11 +109,11 @@ Func _guiInputProjectName()
     $aProjectName[$eBorderBottom] = GUICtrlCreateLabel('', $aProjectName[$eXPosition], $aProjectName[$eYPosition] + $aProjectName[$eHeight] - $aProjectName[$eBorderSize], $aProjectName[$eWidth], $aProjectName[$eBorderSize])
     $aProjectName[$eBorderLeft]   = GUICtrlCreateLabel('', $aProjectName[$eXPosition], $aProjectName[$eYPosition], $aProjectName[$eBorderSize], $aProjectName[$eHeight])
 
-    _setBorderColor($aProjectName, $aProjectName[$eBorderColor])
-    _setControlFocusWithoutSelectedText($aProjectName)
+    _SetBorderColor($aProjectName, $aProjectName[$eBorderColor])
+    _SetControlFocusWithoutSelectedText($aProjectName)
 EndFunc
 
-Func _guiInputLocation()
+Func _GuiInputLocation()
     $aLocation[$eLabel] = GUICtrlCreateLabel($aLocation[$eLabelText], $aLocation[$eLabelXPosition], $aLocation[$eLabelYPosition], $aLocation[$eLabelWidth], $aLocation[$eLabelHeight])
     GUICtrlSetFont($aLocation[$eLabel], $aLocation[$eLabelFontSize])
 
@@ -129,10 +129,10 @@ Func _guiInputLocation()
     $aLocation[$eBorderBottom] = GUICtrlCreateLabel('', $aLocation[$eXPosition], $aLocation[$eYPosition] + $aLocation[$eHeight] - $aLocation[$eBorderSize], $aLocation[$eWidth], $aLocation[$eBorderSize])
     $aLocation[$eBorderLeft]   = GUICtrlCreateLabel('', $aLocation[$eXPosition], $aLocation[$eYPosition], $aLocation[$eBorderSize], $aLocation[$eHeight])
 
-    _setBorderColor($aLocation, $aLocation[$eBorderColor])
+    _SetBorderColor($aLocation, $aLocation[$eBorderColor])
 EndFunc
 
-Func _guiCheckboxStart()
+Func _GuiCheckboxStart()
     $aCheckboxStart[$eCheckbox] = GUICtrlCreateLabel($aCheckboxStart[$eCheckboxText], $aCheckboxStart[$eXPosition], $aCheckboxStart[$eYPosition], $aCheckboxStart[$eWidth], $aCheckboxStart[$eHeight])
     GUICtrlSetCursor($aCheckboxStart[$eCheckbox], 0)
     GUICtrlSetColor($aCheckboxStart[$eCheckbox], $aCheckboxStart[$eFontColor])
@@ -143,7 +143,7 @@ Func _guiCheckboxStart()
     GUICtrlSetColor($aCheckboxStart[$eLabel], $aCheckboxStart[$eFontColor])
 EndFunc
 
-Func _guiCheckboxGithub()
+Func _GuiCheckboxGithub()
     $aCheckboxGithub[$eCheckbox] = GUICtrlCreateLabel($aCheckboxGithub[$eCheckboxText], $aCheckboxGithub[$eXPosition], $aCheckboxGithub[$eYPosition], $aCheckboxGithub[$eWidth], $aCheckboxGithub[$eHeight])
     GUICtrlSetCursor($aCheckboxGithub[$eCheckbox], 0)
     GUICtrlSetColor($aCheckboxGithub[$eCheckbox], $aCheckboxGithub[$eFontColor])
@@ -154,7 +154,7 @@ Func _guiCheckboxGithub()
     GUICtrlSetColor($aCheckboxGithub[$eLabel], $aCheckboxGithub[$eFontColor])
 EndFunc
 
-Func _guiInputGithubUsername()
+Func _GuiInputGithubUsername()
     $aGithubUsername[$eLabel] = GUICtrlCreateLabel($aGithubUsername[$eLabelText], $aGithubUsername[$eLabelXPosition], $aGithubUsername[$eLabelYPosition], $aGithubUsername[$eLabelWidth], $aGithubUsername[$eLabelHeight])
     GUICtrlSetFont($aGithubUsername[$eLabel], $aGithubUsername[$eLabelFontSize])
 
@@ -170,10 +170,10 @@ Func _guiInputGithubUsername()
     $aGithubUsername[$eBorderBottom] = GUICtrlCreateLabel('', $aGithubUsername[$eXPosition], $aGithubUsername[$eYPosition] + $aGithubUsername[$eHeight] - $aGithubUsername[$eBorderSize], $aGithubUsername[$eWidth], $aGithubUsername[$eBorderSize])
     $aGithubUsername[$eBorderLeft]   = GUICtrlCreateLabel('', $aGithubUsername[$eXPosition], $aGithubUsername[$eYPosition], $aGithubUsername[$eBorderSize], $aGithubUsername[$eHeight])
 
-    _setBorderColor($aGithubUsername, $aGithubUsername[$eBorderColor])
+    _SetBorderColor($aGithubUsername, $aGithubUsername[$eBorderColor])
 EndFunc
 
-Func _guiInputGithubDefaultBranch()
+Func _GuiInputGithubDefaultBranch()
     $aGithubDefaultBranch[$eLabel] = GUICtrlCreateLabel($aGithubDefaultBranch[$eLabelText], $aGithubDefaultBranch[$eLabelXPosition], $aGithubDefaultBranch[$eLabelYPosition], $aGithubDefaultBranch[$eLabelWidth], $aGithubDefaultBranch[$eLabelHeight])
     GUICtrlSetFont($aGithubDefaultBranch[$eLabel], $aGithubDefaultBranch[$eLabelFontSize])
 
@@ -189,10 +189,10 @@ Func _guiInputGithubDefaultBranch()
     $aGithubDefaultBranch[$eBorderBottom] = GUICtrlCreateLabel('', $aGithubDefaultBranch[$eXPosition], $aGithubDefaultBranch[$eYPosition] + $aGithubDefaultBranch[$eHeight] - $aGithubDefaultBranch[$eBorderSize], $aGithubDefaultBranch[$eWidth], $aGithubDefaultBranch[$eBorderSize])
     $aGithubDefaultBranch[$eBorderLeft]   = GUICtrlCreateLabel('', $aGithubDefaultBranch[$eXPosition], $aGithubDefaultBranch[$eYPosition], $aGithubDefaultBranch[$eBorderSize], $aGithubDefaultBranch[$eHeight])
 
-    _setBorderColor($aGithubDefaultBranch, $aGithubDefaultBranch[$eBorderColor])
+    _SetBorderColor($aGithubDefaultBranch, $aGithubDefaultBranch[$eBorderColor])
 EndFunc
 
-Func _guiButtonBrowse()
+Func _GuiButtonBrowse()
     $aButtonBrowse[$eBackground] = GUICtrlCreateLabel($aButtonBrowse[$eBackgroundText], $aButtonBrowse[$eXPosition], $aButtonBrowse[$eYPosition], $aButtonBrowse[$eWidth], $aButtonBrowse[$eHeight])
     GUICtrlSetBkColor($aButtonBrowse[$eBackground], $aButtonBrowse[$eBackgroundColor])
     GUICtrlSetCursor($aButtonBrowse[$eBackground], 0)
@@ -206,10 +206,10 @@ Func _guiButtonBrowse()
     $aButtonBrowse[$eBorderBottom] = GUICtrlCreateLabel('', $aButtonBrowse[$eXPosition], $aButtonBrowse[$eYPosition] + $aButtonBrowse[$eHeight] - $aButtonBrowse[$eBorderSize], $aButtonBrowse[$eWidth], $aButtonBrowse[$eBorderSize])
     $aButtonBrowse[$eBorderLeft]   = GUICtrlCreateLabel('', $aButtonBrowse[$eXPosition], $aButtonBrowse[$eYPosition], $aButtonBrowse[$eBorderSize], $aButtonBrowse[$eHeight])
 
-    _setBorderColor($aButtonBrowse, $aButtonBrowse[$eBorderColor])
+    _SetBorderColor($aButtonBrowse, $aButtonBrowse[$eBorderColor])
 EndFunc
 
-Func _guiButtonCreate()
+Func _GuiButtonCreate()
     $aButtonCreate[$eBackground] = GUICtrlCreateLabel($aButtonCreate[$eBackgroundText], $aButtonCreate[$eXPosition], $aButtonCreate[$eYPosition], $aButtonCreate[$eWidth], $aButtonCreate[$eHeight])
     GUICtrlSetBkColor($aButtonCreate[$eBackground], $aButtonCreate[$eBackgroundColor])
     GUICtrlSetCursor($aButtonCreate[$eBackground], 0)
@@ -223,5 +223,5 @@ Func _guiButtonCreate()
     $aButtonCreate[$eBorderBottom] = GUICtrlCreateLabel('', $aButtonCreate[$eXPosition], $aButtonCreate[$eYPosition] + $aButtonCreate[$eHeight] - $aButtonCreate[$eBorderSize], $aButtonCreate[$eWidth], $aButtonCreate[$eBorderSize])
     $aButtonCreate[$eBorderLeft]   = GUICtrlCreateLabel('', $aButtonCreate[$eXPosition], $aButtonCreate[$eYPosition], $aButtonCreate[$eBorderSize], $aButtonCreate[$eHeight])
 
-    _setBorderColor($aButtonCreate, $aButtonCreate[$eBorderColor])
+    _SetBorderColor($aButtonCreate, $aButtonCreate[$eBorderColor])
 EndFunc

@@ -1,12 +1,12 @@
-Func _exit()
-    AdlibUnRegister('_hoverActions')
-    _guiFadeOut($aGui[$eHandle])
+Func _Exit()
+    AdlibUnRegister('_HoverActions')
+    _GuiFadeOut($aGui[$eHandle])
     GUIDelete($aGui[$eHandle])
 
     Exit
 EndFunc
 
-Func _setupPaths()
+Func _SetupPaths()
     $aPath[$eFolder]        = GUICtrlRead($aLocation[$eInput])
     $aPath[$eRoot]          = $aPath[$eFolder] & '\' & GUICtrlRead($aProjectName[$eInput])
     $aPath[$eIssueTemplate] = $aPath[$eRoot]   & '\.github\ISSUE_TEMPLATE'
@@ -23,7 +23,7 @@ Func _setupPaths()
     $aPath[$eUtilities]     = $aPath[$eRoot]   & '\utilities'
 EndFunc
 
-Func _setupFiles()
+Func _SetupFiles()
     $aFile[$eBugReport]               = $aPath[$eIssueTemplate] & '\bug_report.md'
     $aFile[$eFeatureRequest]          = $aPath[$eIssueTemplate] & '\feature_request.md'
     $aFile[$eConfig]                  = $aPath[$eConfig] & '\config.ini'
@@ -46,7 +46,7 @@ EndFunc
 
 #include "FileContent.au3"
 
-Func _createFolders()
+Func _CreateFolders()
     If StringLower($bHtmlProject) == 'true' Then
         DirCreate($aPath[$eCss])
         DirCreate($aPath[$eFonts])
@@ -62,38 +62,38 @@ Func _createFolders()
     DirCreate($aPath[$eUtilities])
 EndFunc
 
-Func _createFiles()
-    _writeFile($aFile[$eConfig], '')
-    _writeFile($aFile[$eSrcBasicFunctions], '')
-    _writeFile($aFile[$eSrcDeclaration], '')
-    _writeFile($aFile[$eSrcEnum], '')
-    _writeFile($aFile[$eSrcFunctions], '')
-    _writeFile($aFile[$eSrcGui], '')
-    _writeFile($aFile[$eSrcGuiFunctions], '')
-    _writeFile($aFile[$eSrcInit], '')
-    _writeFile($aFile[$eSrcProject], '')
+Func _CreateFiles()
+    _WriteFile($aFile[$eConfig], '')
+    _WriteFile($aFile[$eSrcBasicFunctions], '')
+    _WriteFile($aFile[$eSrcDeclaration], '')
+    _WriteFile($aFile[$eSrcEnum], '')
+    _WriteFile($aFile[$eSrcFunctions], '')
+    _WriteFile($aFile[$eSrcGui], '')
+    _WriteFile($aFile[$eSrcGuiFunctions], '')
+    _WriteFile($aFile[$eSrcInit], '')
+    _WriteFile($aFile[$eSrcProject], '')
 EndFunc
 
-Func _fillProjectFile()
-    _writeFile($aFile[$eSrcProject], $aContent[$eFileProject])
+Func _FillProjectFile()
+    _WriteFile($aFile[$eSrcProject], $aContent[$eFileProject])
 EndFunc
 
-Func _openInVisualStudioCode()
+Func _OpenInVisualStudioCode()
     If StringLower($bCheckboxStartIsChecked) == 'true' Then
         ShellExecute(@ComSpec, ' /C code "' & $aPath[$eRoot] & '"', '', '', @SW_HIDE)
     EndIf
 EndFunc
 
-Func _fillGithubRelatedFiles()
+Func _FillGithubRelatedFiles()
     If StringLower($bCheckboxGithubIsChecked) == 'true' Then
-        _writeFile($aFile[$eBugReport], $aContent[$eFileBugReport])
-        _writeFile($aFile[$eFeatureRequest], $aContent[$eFileFeatureRequest])
-        _writeFile($aFile[$eDocsCodeOfConduct], $aContent[$eFileCodeOfConduct])
-        _writeFile($aFile[$eDocsContributing], $aContent[$eFileContributing])
-        _writeFile($aFile[$eDocsPullRequestTemplate], $aContent[$eFilePullRequestTemplate])
-        _writeFile($aFile[$eGitIgnore], $aContent[$eFileGitIgnore])
-        _writeFile($aFile[$eChangelog], $aContent[$eFileChangelog])
-        _writeFile($aFile[$eLicense], $aContent[$eFileLicense])
-        _writeFile($aFile[$eReadme], $aContent[$eFileReadme])
+        _WriteFile($aFile[$eBugReport], $aContent[$eFileBugReport])
+        _WriteFile($aFile[$eFeatureRequest], $aContent[$eFileFeatureRequest])
+        _WriteFile($aFile[$eDocsCodeOfConduct], $aContent[$eFileCodeOfConduct])
+        _WriteFile($aFile[$eDocsContributing], $aContent[$eFileContributing])
+        _WriteFile($aFile[$eDocsPullRequestTemplate], $aContent[$eFilePullRequestTemplate])
+        _WriteFile($aFile[$eGitIgnore], $aContent[$eFileGitIgnore])
+        _WriteFile($aFile[$eChangelog], $aContent[$eFileChangelog])
+        _WriteFile($aFile[$eLicense], $aContent[$eFileLicense])
+        _WriteFile($aFile[$eReadme], $aContent[$eFileReadme])
     EndIf
 EndFunc

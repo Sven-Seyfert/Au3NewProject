@@ -1,18 +1,18 @@
-Func _guiFadeIn($hGui, $iSleep = 10)
+Func _GuiFadeIn($hGui, $iSleep = 10)
     For $i = 0 To 255 Step 5
         WinSetTrans($hGui, '', $i)
         Sleep($iSleep)
     Next
 EndFunc
 
-Func _guiFadeOut($hGui, $iSleep = 10)
+Func _GuiFadeOut($hGui, $iSleep = 10)
     For $i = 255 To 0 Step -5
         WinSetTrans($hGui, '', $i)
         Sleep($iSleep)
     Next
 EndFunc
 
-Func _existsNotAllowedCharacters($sString)
+Func _ExistsNotAllowedCharacters($sString)
     If StringInStr($sString, '\') <> 0 Then Return True
     If StringInStr($sString, '/') <> 0 Then Return True
     If StringInStr($sString, ':') <> 0 Then Return True
@@ -26,7 +26,7 @@ Func _existsNotAllowedCharacters($sString)
     Return False
 EndFunc
 
-Func _writeFile($sFile, $sText)
+Func _WriteFile($sFile, $sText)
     Local $hFile = FileOpen($sFile, 2 + 8 + 256)
     FileWrite($hFile, $sText)
     FileClose($hFile)

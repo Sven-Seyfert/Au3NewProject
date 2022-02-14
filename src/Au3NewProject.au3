@@ -1,9 +1,9 @@
 ; compiler information for AutoIt
 #pragma compile(CompanyName, © SOLVE SMART)
-#pragma compile(FileVersion, 1.6.0)
+#pragma compile(FileVersion, 1.7.0)
 #pragma compile(LegalCopyright, © Sven Seyfert)
 #pragma compile(ProductName, Au3NewProject)
-#pragma compile(ProductVersion, 1.6.0 - 2022-02-10)
+#pragma compile(ProductVersion, 1.7.0 - 2022-02-14)
 
 #AutoIt3Wrapper_AU3Check_Stop_OnWarning=y
 #AutoIt3Wrapper_Icon=..\media\favicon.ico
@@ -40,84 +40,84 @@ If $aInst[0][0] > 1 Then Exit
 
 
 ; processing -------------------------------------------------------------------
-_showGui()
+_ShowGui()
 
-AdlibRegister('_hoverActions', 150)
-HotKeySet('+{TAB}', '_toggleInput')
-HotKeySet('{TAB}', '_toggleInput')
+AdlibRegister('_HoverActions', 150)
+HotKeySet('+{TAB}', '_ToggleInput')
+HotKeySet('{TAB}', '_ToggleInput')
 
-While 1
+While True
     Switch GUIGetMsg()
         Case $aCloseX[$eBackground]
-            _exit()
+            _Exit()
 
         Case $aTagOne[$eBackground]
             $bHtmlProject = False
-            _setBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
+            _SetBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
             GUICtrlSetData($aKindOfProject[$eLabel], 'AutoIt App (Default)')
 
         Case $aTagTwo[$eBackground]
             $bHtmlProject = True
-            _setBorderColor($aTagOne, $aTagOne[$eBorderColor])
+            _SetBorderColor($aTagOne, $aTagOne[$eBorderColor])
             GUICtrlSetData($aKindOfProject[$eLabel], 'AutoIt App (with Web structure)')
 
         Case $GUI_EVENT_PRIMARYUP
             Switch GUIGetCursorInfo()[4]
                 Case $aProjectName[$eInput], $aProjectName[$eBackground]
-                    _setControlFocusWithoutSelectedText($aProjectName)
-                    _setBorderColor($aProjectName, $aColor[$eBlue])
-                    _setBorderColor($aLocation, $aColor[$eBorder])
-                    _setBorderColor($aGithubUsername, $aColor[$eBorder])
-                    _setBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+                    _SetControlFocusWithoutSelectedText($aProjectName)
+                    _SetBorderColor($aProjectName, $aColor[$eBlue])
+                    _SetBorderColor($aLocation, $aColor[$eBorder])
+                    _SetBorderColor($aGithubUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
 
                 Case $aLocation[$eInput]
-                    _setControlFocusWithoutSelectedText($aLocation)
-                    _setBorderColor($aProjectName, $aColor[$eBorder])
-                    _setBorderColor($aLocation, $aColor[$eBlue])
-                    _setBorderColor($aGithubUsername, $aColor[$eBorder])
-                    _setBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+                    _SetControlFocusWithoutSelectedText($aLocation)
+                    _SetBorderColor($aProjectName, $aColor[$eBorder])
+                    _SetBorderColor($aLocation, $aColor[$eBlue])
+                    _SetBorderColor($aGithubUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
 
                 Case $aGithubUsername[$eInput]
-                    _setControlFocusWithoutSelectedText($aGithubUsername)
-                    _setBorderColor($aProjectName, $aColor[$eBorder])
-                    _setBorderColor($aLocation, $aColor[$eBorder])
-                    _setBorderColor($aGithubUsername, $aColor[$eBlue])
-                    _setBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+                    _SetControlFocusWithoutSelectedText($aGithubUsername)
+                    _SetBorderColor($aProjectName, $aColor[$eBorder])
+                    _SetBorderColor($aLocation, $aColor[$eBorder])
+                    _SetBorderColor($aGithubUsername, $aColor[$eBlue])
+                    _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
 
                 Case $aGithubDefaultBranch[$eInput]
-                    _setControlFocusWithoutSelectedText($aGithubDefaultBranch)
-                    _setBorderColor($aProjectName, $aColor[$eBorder])
-                    _setBorderColor($aLocation, $aColor[$eBorder])
-                    _setBorderColor($aGithubUsername, $aColor[$eBorder])
-                    _setBorderColor($aGithubDefaultBranch, $aColor[$eBlue])
+                    _SetControlFocusWithoutSelectedText($aGithubDefaultBranch)
+                    _SetBorderColor($aProjectName, $aColor[$eBorder])
+                    _SetBorderColor($aLocation, $aColor[$eBorder])
+                    _SetBorderColor($aGithubUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGithubDefaultBranch, $aColor[$eBlue])
             EndSwitch
 
         Case $aCheckboxStart[$eCheckbox], $aCheckboxStart[$eLabel]
-            _toggleCheckboxStart()
+            _ToggleCheckboxStart()
 
         Case $aCheckboxGithub[$eCheckbox], $aCheckboxGithub[$eLabel]
-            _toggleCheckboxGithub()
+            _ToggleCheckboxGithub()
 
         Case $aButtonBrowse[$eBackground]
-            _toggleInput()
+            _ToggleInput()
             WinSetOnTop($aGui[$eHandle], '', 0)
             GUICtrlSetData($aLocation[$eInput], FileSelectFolder('Choose folder', @DesktopDir))
             WinSetOnTop($aGui[$eHandle], '', 1)
 
         Case $aButtonCreate[$eBackground]
             If FileExists(GUICtrlRead($aLocation[$eInput])) Then
-                If Not _existsNotAllowedCharacters(GUICtrlRead($aProjectName[$eInput])) Then
-                    _setupPaths()
-                    _setupFiles()
-                    _setupContent()
+                If Not _ExistsNotAllowedCharacters(GUICtrlRead($aProjectName[$eInput])) Then
+                    _SetupPaths()
+                    _SetupFiles()
+                    _SetupContent()
 
-                    _createFolders()
-                    _createFiles()
-                    _fillProjectFile()
-                    _fillGithubRelatedFiles()
-                    _openInVisualStudioCode()
+                    _CreateFolders()
+                    _CreateFiles()
+                    _FillProjectFile()
+                    _FillGithubRelatedFiles()
+                    _OpenInVisualStudioCode()
 
-                    _exit()
+                    _Exit()
                 EndIf
             EndIf
     EndSwitch
