@@ -21,6 +21,7 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - Minor adjustments.
 - Project file (Main.au3) prefilled content.
+- Version bump.
 
 ### Removed
 
