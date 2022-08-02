@@ -2,10 +2,10 @@ Func _SetupContent()
     $aContent[$eFileProject] = _
         '; compiler information for AutoIt' & @CRLF & _
         '#pragma compile(CompanyName, © SOLVE SMART)' & @CRLF & _
-        '#pragma compile(FileVersion, 1.0.0)' & @CRLF & _
+        '#pragma compile(FileVersion, 0.1.0)' & @CRLF & _
         '#pragma compile(LegalCopyright, © Sven Seyfert)' & @CRLF & _
         '#pragma compile(ProductName, ' & GUICtrlRead($aProjectName[$eInput]) & ')' & @CRLF & _
-        '#pragma compile(ProductVersion, 1.0.0 - ' & @YEAR & '-' & @MON & '-' & @MDAY & ')' & @CRLF & _
+        '#pragma compile(ProductVersion, 0.1.0 - ' & @YEAR & '-' & @MON & '-' & @MDAY & ')' & @CRLF & _
         @CRLF & _
         '#AutoIt3Wrapper_AU3Check_Stop_OnWarning=y' & @CRLF & _
         '#AutoIt3Wrapper_Icon=..\media\favicon.ico' & @CRLF & _
@@ -24,29 +24,25 @@ Func _SetupContent()
         @CRLF & _
         '; includes ---------------------------------------------------------------------' & @CRLF & _
         '#include-once' & @CRLF & _
-        '#include <GuiConstantsEx.au3>' & @CRLF & _
-        '#include <WindowsConstants.au3>' & @CRLF & _
+        '#include <Array.au3>' & @CRLF & _
+        '#include <File.au3>' & @CRLF & _
         @CRLF & _
         @CRLF & _
         @CRLF & _
-        '; references -------------------------------------------------------------------' & @CRLF & _
-        '#include "Enum.au3"' & @CRLF & _
-        '#include "Init.au3"' & @CRLF & _
-        '#include "Declaration.au3"' & @CRLF & _
-        '#include "Gui.au3"' & @CRLF & _
-        '#include "GuiFunctions.au3"' & @CRLF & _
-        '#include "Functions.au3"' & @CRLF & _
-        '#include "BasicFunctions.au3"' & @CRLF & _
+        '; modules ----------------------------------------------------------------------' & @CRLF & _
+        '#include "Initializer.au3"' & @CRLF & _
+        '#include "ActionHandler.au3"' & @CRLF & _
+        '#include "Helper.au3"' & @CRLF & _
         @CRLF & _
         @CRLF & _
         @CRLF & _
         '; processing -------------------------------------------------------------------' & @CRLF & _
-        'While True' & @CRLF & _
-        '    Switch GUIGetMsg()' & @CRLF & _
-        '        Case -3' & @CRLF & _
-        '            Exit' & @CRLF & _
-        '    EndSwitch' & @CRLF & _
-        'WEnd'
+        '_Actions()'
+
+    $aContent[$eFileActionHandler] = _
+        'Func _Actions()' & @CRLF & _
+        @CRLF & _
+        'EndFunc'
 
     $aContent[$eFileBugReport] = _
         '---' & @CRLF & _
@@ -340,8 +336,7 @@ Func _SetupContent()
         '- Browser version [e.g. 96.0.3]' & @CRLF
 
     $aContent[$eFileGitIgnore] = _
-        '# ignore folder _tryouts' & @CRLF & _
-        '# _tryouts' & @CRLF
+        'Au3ChangelogUpdater.exe' & @CRLF
 
     $aContent[$eFileChangelog] = _
         '#####' & @CRLF & _
@@ -355,13 +350,16 @@ Func _SetupContent()
         @CRLF & _
         'Go to [legend](#legend---types-of-changes) for further information about the types of changes.' & @CRLF & _
         @CRLF & _
-        '## [1.0.0] - ' & @YEAR & '-' & @MON & '-' & @MDAY & @CRLF & _
+        '## [Unreleased]' & @CRLF & _
+        @CRLF & _
+        '## [0.1.0] - ' & @YEAR & '-' & @MON & '-' & @MDAY & @CRLF & _
         @CRLF & _
         '### Added' & @CRLF & _
         @CRLF & _
-        '- All repository data and dependencies.' & @CRLF & _
+        '- Initial commit with all repository data and dependencies.' & @CRLF & _
         @CRLF & _
-        '[1.0.0]: https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/releases/tag/v1.0.0' & @CRLF & _
+        '[Unreleased]: https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/compare/v0.1.0...HEAD' & @CRLF & _
+        '[0.1.0]: https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/releases/tag/v0.1.0' & @CRLF & _
         @CRLF & _
         '---' & @CRLF & _
         @CRLF & _
