@@ -11,6 +11,21 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [1.8.0] - 2022-08-02
+
+### Added
+
+- Unreleased section to changelog file.
+
+### Changed
+
+- Minor adjustments.
+- Project file (Main.au3) prefilled content.
+
+### Removed
+
+- Structure outdated source files.
+
 ## [1.7.0] - 2022-02-14
 
 ### Changed
@@ -89,7 +104,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - AutoIt Code formatting to the common notation without additional spaces after opened brackets and before closed brackets.
 
-[Unreleased]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.7.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.8.0...HEAD
+[1.8.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.4.0...v1.5.0
