@@ -11,6 +11,13 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [1.9.0] - 2022-08-02
+
+### Changed
+
+- Creation of changelog file and readme file is default now, instead of only when github repository structure is chosen.
+- Project folder structure. Icons, images and screenshots are now in media folder.
+
 ## [1.8.0] - 2022-08-02
 
 ### Added
@@ -105,7 +112,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - AutoIt Code formatting to the common notation without additional spaces after opened brackets and before closed brackets.
 
-[Unreleased]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.8.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.9.0...HEAD
+[1.9.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.8.0...v1.9.0
 [1.8.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.5.0...v1.6.0
