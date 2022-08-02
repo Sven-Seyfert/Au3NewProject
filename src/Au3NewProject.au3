@@ -28,7 +28,7 @@ If $aInst[0][0] > 1 Then Exit
 
 
 
-; references -------------------------------------------------------------------
+; modules ----------------------------------------------------------------------
 #include "Enum.au3"
 #include "GuiDeclaration.au3"
 #include "Gui.au3"
@@ -113,7 +113,7 @@ While True
 
                     _CreateFolders()
                     _CreateFiles()
-                    _FillProjectFile()
+                    _FillProjectFiles()
                     _FillGithubRelatedFiles()
                     _OpenInVisualStudioCode()
 
