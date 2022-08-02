@@ -8,7 +8,7 @@ Func _SetupContent()
         '#pragma compile(ProductVersion, 0.1.0 - ' & @YEAR & '-' & @MON & '-' & @MDAY & ')' & @CRLF & _
         @CRLF & _
         '#AutoIt3Wrapper_AU3Check_Stop_OnWarning=y' & @CRLF & _
-        '#AutoIt3Wrapper_Icon=..\media\favicon.ico' & @CRLF & _
+        '#AutoIt3Wrapper_Icon=..\media\icons\favicon.ico' & @CRLF & _
         '#AutoIt3Wrapper_Outfile_x64=..\build\' & GUICtrlRead($aProjectName[$eInput]) & '.exe' & @CRLF & _
         '#AutoIt3Wrapper_UseUpx=n' & @CRLF & _
         '#AutoIt3Wrapper_UseX64=y' & @CRLF & _
@@ -412,7 +412,7 @@ Func _SetupContent()
         '#####' & @CRLF & _
         @CRLF & _
         '<p align="center">' & @CRLF & _
-        '    <img src="images/icon.png" width="80" />' & @CRLF & _
+        '    <img src="media/images/icon.png" width="80" />' & @CRLF & _
         '    <h2 align="center">Welcome to <code>' & GUICtrlRead($aProjectName[$eInput]) & '</code>【ツ】</h2>' & @CRLF & _
         '</p>' & @CRLF & _
         @CRLF & _

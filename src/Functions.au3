@@ -15,12 +15,13 @@ Func _SetupPaths()
     $aPath[$eCss]           = $aPath[$eRoot]   & '\css'
     $aPath[$eDocs]          = $aPath[$eRoot]   & '\docs'
     $aPath[$eFonts]         = $aPath[$eRoot]   & '\fonts'
-    $aPath[$eImages]        = $aPath[$eRoot]   & '\images'
     $aPath[$eJs]            = $aPath[$eRoot]   & '\js'
-    $aPath[$eMedia]         = $aPath[$eRoot]   & '\media'
-    $aPath[$eScreenshots]   = $aPath[$eRoot]   & '\screenshots'
     $aPath[$eSrc]           = $aPath[$eRoot]   & '\src'
     $aPath[$eUtilities]     = $aPath[$eRoot]   & '\utilities'
+    $aPath[$eMedia]         = $aPath[$eRoot]   & '\media'
+    $aPath[$eIcons]         = $aPath[$eRoot]   & '\media\icons'
+    $aPath[$eImages]        = $aPath[$eRoot]   & '\media\images'
+    $aPath[$eScreenshots]   = $aPath[$eRoot]   & '\media\screenshots'
 EndFunc
 
 Func _SetupFiles()
@@ -51,6 +52,7 @@ Func _CreateFolders()
 
     DirCreate($aPath[$eBuild])
     DirCreate($aPath[$eConfig])
+    DirCreate($aPath[$eIcons])
     DirCreate($aPath[$eImages])
     DirCreate($aPath[$eMedia])
     DirCreate($aPath[$eScreenshots])

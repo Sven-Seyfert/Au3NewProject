@@ -1,7 +1,7 @@
 #####
 
 <p align="center">
-    <img src="images/icon.png" width="80" />
+    <img src="media/images/icon.png" width="80" />
     <h2 align="center">Welcome to <code>Au3NewProject</code>【ツ】</h2>
 </p>
 

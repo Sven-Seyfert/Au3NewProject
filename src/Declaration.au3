@@ -15,6 +15,7 @@ Global $aPath[$iMaxEnumIndex]
        $aPath[$eCss]                        = ''
        $aPath[$eDocs]                       = ''
        $aPath[$eFonts]                      = ''
+       $aPath[$eIcons]                     = ''
        $aPath[$eImages]                     = ''
        $aPath[$eJs]                         = ''
        $aPath[$eMedia]                      = ''

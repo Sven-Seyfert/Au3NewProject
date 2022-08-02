@@ -44,6 +44,7 @@ Global Enum _
     $eGitIgnore, _
     $eHandle, _
     $eHeight, _
+    $eIcons, _
     $eImages, _
     $eInput, _
     $eInputColor, _
