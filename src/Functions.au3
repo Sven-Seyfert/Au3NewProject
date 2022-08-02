@@ -34,14 +34,10 @@ Func _SetupFiles()
     $aFile[$eChangelog]               = $aPath[$eRoot]   & '\CHANGELOG.md'
     $aFile[$eLicense]                 = $aPath[$eRoot]   & '\LICENSE.md'
     $aFile[$eReadme]                  = $aPath[$eRoot]   & '\README.md'
-    $aFile[$eSrcBasicFunctions]       = $aPath[$eSrc]    & '\BasicFunctions.au3'
-    $aFile[$eSrcDeclaration]          = $aPath[$eSrc]    & '\Declaration.au3'
-    $aFile[$eSrcEnum]                 = $aPath[$eSrc]    & '\Enum.au3'
-    $aFile[$eSrcFunctions]            = $aPath[$eSrc]    & '\Functions.au3'
-    $aFile[$eSrcGui]                  = $aPath[$eSrc]    & '\Gui.au3'
-    $aFile[$eSrcGuiFunctions]         = $aPath[$eSrc]    & '\GuiFunctions.au3'
-    $aFile[$eSrcInit]                 = $aPath[$eSrc]    & '\Init.au3'
-    $aFile[$eSrcProject]              = $aPath[$eSrc]    & '\' & GUICtrlRead($aProjectName[$eInput]) & '.au3'
+    $aFile[$eSrcActionHandler]        = $aPath[$eSrc]    & '\ActionHandler.au3'
+    $aFile[$eSrcHelper]               = $aPath[$eSrc]    & '\Helper.au3'
+    $aFile[$eSrcInitializer]          = $aPath[$eSrc]    & '\Initializer.au3'
+    $aFile[$eSrcProject]              = $aPath[$eSrc]    & '\Main.au3'
 EndFunc
 
 #include "FileContent.au3"
@@ -64,18 +60,15 @@ EndFunc
 
 Func _CreateFiles()
     _WriteFile($aFile[$eConfig], '')
-    _WriteFile($aFile[$eSrcBasicFunctions], '')
-    _WriteFile($aFile[$eSrcDeclaration], '')
-    _WriteFile($aFile[$eSrcEnum], '')
-    _WriteFile($aFile[$eSrcFunctions], '')
-    _WriteFile($aFile[$eSrcGui], '')
-    _WriteFile($aFile[$eSrcGuiFunctions], '')
-    _WriteFile($aFile[$eSrcInit], '')
+    _WriteFile($aFile[$eSrcActionHandler], '')
+    _WriteFile($aFile[$eSrcHelper], '')
+    _WriteFile($aFile[$eSrcInitializer], '')
     _WriteFile($aFile[$eSrcProject], '')
 EndFunc
 
-Func _FillProjectFile()
+Func _FillProjectFiles()
     _WriteFile($aFile[$eSrcProject], $aContent[$eFileProject])
+    _WriteFile($aFile[$eSrcActionHandler], $aContent[$eFileActionHandler])
 EndFunc
 
 Func _OpenInVisualStudioCode()

@@ -22,6 +22,7 @@ Global Enum _
     $eDocsContributing, _
     $eDocsPullRequestTemplate, _
     $eFeatureRequest, _
+    $eFileActionHandler, _
     $eFileBugReport, _
     $eFileChangelog, _
     $eFileCodeOfConduct, _
@@ -68,13 +69,9 @@ Global Enum _
     $eRoot, _
     $eScreenshots, _
     $eSrc, _
-    $eSrcBasicFunctions, _
-    $eSrcDeclaration, _
-    $eSrcEnum, _
-    $eSrcFunctions, _
-    $eSrcGui, _
-    $eSrcGuiFunctions, _
-    $eSrcInit, _
+    $eSrcActionHandler, _
+    $eSrcHelper, _
+    $eSrcInitializer, _
     $eSrcProject, _
     $eUtilities, _
     $eWhite, _
