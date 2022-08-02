@@ -62,15 +62,15 @@ EndFunc
 
 Func _CreateFiles()
     _WriteFile($aFile[$eConfig], '')
-    _WriteFile($aFile[$eSrcActionHandler], '')
     _WriteFile($aFile[$eSrcHelper], '')
     _WriteFile($aFile[$eSrcInitializer], '')
-    _WriteFile($aFile[$eSrcProject], '')
 EndFunc
 
 Func _FillProjectFiles()
-    _WriteFile($aFile[$eSrcProject], $aContent[$eFileProject])
+    _WriteFile($aFile[$eChangelog], $aContent[$eFileChangelog])
+    _WriteFile($aFile[$eReadme], $aContent[$eFileReadme])
     _WriteFile($aFile[$eSrcActionHandler], $aContent[$eFileActionHandler])
+    _WriteFile($aFile[$eSrcProject], $aContent[$eFileProject])
 EndFunc
 
 Func _OpenInVisualStudioCode()
@@ -87,8 +87,6 @@ Func _FillGithubRelatedFiles()
         _WriteFile($aFile[$eDocsContributing], $aContent[$eFileContributing])
         _WriteFile($aFile[$eDocsPullRequestTemplate], $aContent[$eFilePullRequestTemplate])
         _WriteFile($aFile[$eGitIgnore], $aContent[$eFileGitIgnore])
-        _WriteFile($aFile[$eChangelog], $aContent[$eFileChangelog])
         _WriteFile($aFile[$eLicense], $aContent[$eFileLicense])
-        _WriteFile($aFile[$eReadme], $aContent[$eFileReadme])
     EndIf
 EndFunc
