@@ -32,7 +32,7 @@ If $aInst[0][0] > 1 Then Exit
 #include "Enum.au3"
 #include "GuiDeclaration.au3"
 #include "Gui.au3"
-#include "Declaration.au3"
+#include "Initializer.au3"
 #include "GuiFunctions.au3"
 #include "Functions.au3"
 #include "BasicFunctions.au3"
