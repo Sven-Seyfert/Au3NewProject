@@ -147,21 +147,48 @@ EndFunc
 Func _ToggleCheckboxGithub()
     If $bCheckboxGithubIsChecked Then
         GUICtrlSetData($aCheckboxGithub[$eCheckbox], Chr(163))
+
         _HideInputGithubUsername()
         _HideInputGithubDefaultBranch()
+        _ShowGitLabTag()
+
         $bCheckboxGithubIsChecked = False
     Else
         GUICtrlSetData($aCheckboxGithub[$eCheckbox], Chr(82))
+
         _ShowInputGithubUsername()
         _ShowInputGithubDefaultBranch()
+        _HideGitLabTag()
+
         $bCheckboxGithubIsChecked = True
     EndIf
+EndFunc
+
+Func _ShowGitLabTag()
+    GUICtrlSetState($aTagFour[$eBackground], $GUI_SHOW)
+    GUICtrlSetState($aTagFour[$eLabel], $GUI_SHOW)
+
+    GUICtrlSetState($aTagFour[$eBorderTop], $GUI_SHOW)
+    GUICtrlSetState($aTagFour[$eBorderRight], $GUI_SHOW)
+    GUICtrlSetState($aTagFour[$eBorderBottom], $GUI_SHOW)
+    GUICtrlSetState($aTagFour[$eBorderLeft], $GUI_SHOW)
+EndFunc
+
+Func _HideGitLabTag()
+    GUICtrlSetState($aTagFour[$eBackground], $GUI_HIDE)
+    GUICtrlSetState($aTagFour[$eLabel], $GUI_HIDE)
+
+    GUICtrlSetState($aTagFour[$eBorderTop], $GUI_HIDE)
+    GUICtrlSetState($aTagFour[$eBorderRight], $GUI_HIDE)
+    GUICtrlSetState($aTagFour[$eBorderBottom], $GUI_HIDE)
+    GUICtrlSetState($aTagFour[$eBorderLeft], $GUI_HIDE)
 EndFunc
 
 Func _HideInputGithubUsername()
     GUICtrlSetState($aGithubUsername[$eLabel], $GUI_HIDE)
     GUICtrlSetState($aGithubUsername[$eBackground], $GUI_HIDE)
     GUICtrlSetState($aGithubUsername[$eInput], $GUI_HIDE)
+
     GUICtrlSetState($aGithubUsername[$eBorderTop], $GUI_HIDE)
     GUICtrlSetState($aGithubUsername[$eBorderRight], $GUI_HIDE)
     GUICtrlSetState($aGithubUsername[$eBorderBottom], $GUI_HIDE)
@@ -172,6 +199,7 @@ Func _ShowInputGithubUsername()
     GUICtrlSetState($aGithubUsername[$eLabel], $GUI_SHOW)
     GUICtrlSetState($aGithubUsername[$eBackground], $GUI_SHOW)
     GUICtrlSetState($aGithubUsername[$eInput], $GUI_SHOW)
+
     GUICtrlSetState($aGithubUsername[$eBorderTop], $GUI_SHOW)
     GUICtrlSetState($aGithubUsername[$eBorderRight], $GUI_SHOW)
     GUICtrlSetState($aGithubUsername[$eBorderBottom], $GUI_SHOW)
@@ -182,6 +210,7 @@ Func _HideInputGithubDefaultBranch()
     GUICtrlSetState($aGithubDefaultBranch[$eLabel], $GUI_HIDE)
     GUICtrlSetState($aGithubDefaultBranch[$eBackground], $GUI_HIDE)
     GUICtrlSetState($aGithubDefaultBranch[$eInput], $GUI_HIDE)
+
     GUICtrlSetState($aGithubDefaultBranch[$eBorderTop], $GUI_HIDE)
     GUICtrlSetState($aGithubDefaultBranch[$eBorderRight], $GUI_HIDE)
     GUICtrlSetState($aGithubDefaultBranch[$eBorderBottom], $GUI_HIDE)
@@ -192,6 +221,7 @@ Func _ShowInputGithubDefaultBranch()
     GUICtrlSetState($aGithubDefaultBranch[$eLabel], $GUI_SHOW)
     GUICtrlSetState($aGithubDefaultBranch[$eBackground], $GUI_SHOW)
     GUICtrlSetState($aGithubDefaultBranch[$eInput], $GUI_SHOW)
+
     GUICtrlSetState($aGithubDefaultBranch[$eBorderTop], $GUI_SHOW)
     GUICtrlSetState($aGithubDefaultBranch[$eBorderRight], $GUI_SHOW)
     GUICtrlSetState($aGithubDefaultBranch[$eBorderBottom], $GUI_SHOW)
