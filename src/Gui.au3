@@ -7,6 +7,8 @@ Func _ShowGui()
     _GuiKindOfProject()
     _GuiTagOne()
     _GuiTagTwo()
+    _GuiTagThree()
+    _GuiTagFour()
     _GuiInputProjectName()
     _GuiInputLocation()
     _GuiCheckboxStart()
@@ -91,6 +93,40 @@ Func _GuiTagTwo()
     $aTagTwo[$eBorderLeft]   = GUICtrlCreateLabel('', $aTagTwo[$eXPosition], $aTagTwo[$eYPosition], $aTagTwo[$eBorderSize], $aTagTwo[$eHeight])
 
     _SetBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
+EndFunc
+
+Func _GuiTagThree()
+    $aTagThree[$eBackground] = GUICtrlCreateLabel($aTagThree[$eBackgroundText], $aTagThree[$eXPosition], $aTagThree[$eYPosition], $aTagThree[$eWidth], $aTagThree[$eHeight])
+    GUICtrlSetBkColor($aTagThree[$eBackground], $aTagThree[$eBackgroundColor])
+    GUICtrlSetCursor($aTagThree[$eBackground], 0)
+
+    $aTagThree[$eLabel] = GUICtrlCreateLabel($aTagThree[$eLabelText], $aTagThree[$eLabelXPosition], $aTagThree[$eLabelYPosition], $aTagThree[$eLabelWidth], $aTagThree[$eLabelHeight])
+    GUICtrlSetBkColor($aTagThree[$eLabel], $aTagThree[$eBackgroundColor])
+    GUICtrlSetFont($aTagThree[$eLabel], $aTagThree[$eFontSize])
+
+    $aTagThree[$eBorderTop]    = GUICtrlCreateLabel('', $aTagThree[$eXPosition], $aTagThree[$eYPosition], $aTagThree[$eWidth], $aTagThree[$eBorderSize])
+    $aTagThree[$eBorderRight]  = GUICtrlCreateLabel('', $aTagThree[$eXPosition] + $aTagThree[$eWidth] - $aTagThree[$eBorderSize], $aTagThree[$eYPosition], $aTagThree[$eBorderSize], $aTagThree[$eHeight])
+    $aTagThree[$eBorderBottom] = GUICtrlCreateLabel('', $aTagThree[$eXPosition], $aTagThree[$eYPosition] + $aTagThree[$eHeight] - $aTagThree[$eBorderSize], $aTagThree[$eWidth], $aTagThree[$eBorderSize])
+    $aTagThree[$eBorderLeft]   = GUICtrlCreateLabel('', $aTagThree[$eXPosition], $aTagThree[$eYPosition], $aTagThree[$eBorderSize], $aTagThree[$eHeight])
+
+    _SetBorderColor($aTagThree, $aColor[$eBlue])
+EndFunc
+
+Func _GuiTagFour()
+    $aTagFour[$eBackground] = GUICtrlCreateLabel($aTagFour[$eBackgroundText], $aTagFour[$eXPosition], $aTagFour[$eYPosition], $aTagFour[$eWidth], $aTagFour[$eHeight])
+    GUICtrlSetBkColor($aTagFour[$eBackground], $aTagFour[$eBackgroundColor])
+    GUICtrlSetCursor($aTagFour[$eBackground], 0)
+
+    $aTagFour[$eLabel] = GUICtrlCreateLabel($aTagFour[$eLabelText], $aTagFour[$eLabelXPosition], $aTagFour[$eLabelYPosition], $aTagFour[$eLabelWidth], $aTagFour[$eLabelHeight])
+    GUICtrlSetBkColor($aTagFour[$eLabel], $aTagFour[$eBackgroundColor])
+    GUICtrlSetFont($aTagFour[$eLabel], $aTagFour[$eFontSize])
+
+    $aTagFour[$eBorderTop]    = GUICtrlCreateLabel('', $aTagFour[$eXPosition], $aTagFour[$eYPosition], $aTagFour[$eWidth], $aTagFour[$eBorderSize])
+    $aTagFour[$eBorderRight]  = GUICtrlCreateLabel('', $aTagFour[$eXPosition] + $aTagFour[$eWidth] - $aTagFour[$eBorderSize], $aTagFour[$eYPosition], $aTagFour[$eBorderSize], $aTagFour[$eHeight])
+    $aTagFour[$eBorderBottom] = GUICtrlCreateLabel('', $aTagFour[$eXPosition], $aTagFour[$eYPosition] + $aTagFour[$eHeight] - $aTagFour[$eBorderSize], $aTagFour[$eWidth], $aTagFour[$eBorderSize])
+    $aTagFour[$eBorderLeft]   = GUICtrlCreateLabel('', $aTagFour[$eXPosition], $aTagFour[$eYPosition], $aTagFour[$eBorderSize], $aTagFour[$eHeight])
+
+    _SetBorderColor($aTagFour, $aTagFour[$eBorderColor])
 EndFunc
 
 Func _GuiInputProjectName()
@@ -197,7 +233,9 @@ Func _GuiButtonBrowse()
     GUICtrlSetBkColor($aButtonBrowse[$eBackground], $aButtonBrowse[$eBackgroundColor])
     GUICtrlSetCursor($aButtonBrowse[$eBackground], 0)
 
-    $aButtonBrowse[$eLabel] = GUICtrlCreateLabel($aButtonBrowse[$eLabelText], $aButtonBrowse[$eLabelXPosition], $aButtonBrowse[$eLabelYPosition], $aButtonBrowse[$eLabelWidth], $aButtonBrowse[$eLabelHeight])
+    Local Const $vCenterLabel = 0x01
+
+    $aButtonBrowse[$eLabel] = GUICtrlCreateLabel($aButtonBrowse[$eLabelText], $aButtonBrowse[$eLabelXPosition], $aButtonBrowse[$eLabelYPosition], $aButtonBrowse[$eLabelWidth], $aButtonBrowse[$eLabelHeight], $vCenterLabel)
     GUICtrlSetBkColor($aButtonBrowse[$eLabel], $aButtonBrowse[$eBackgroundColor])
     GUICtrlSetFont($aButtonBrowse[$eLabel], $aButtonBrowse[$eFontSize])
 
