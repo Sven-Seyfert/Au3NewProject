@@ -159,6 +159,8 @@ Func _ToggleCheckboxGithub()
         _ShowInputGithubUsername()
         _ShowInputGithubDefaultBranch()
         _HideGitLabTag()
+        _HideInputGitlabUsername()
+        _HideInputGitlabUrl()
 
         $bCheckboxGithubIsChecked = True
     EndIf
@@ -226,4 +228,48 @@ Func _ShowInputGithubDefaultBranch()
     GUICtrlSetState($aGithubDefaultBranch[$eBorderRight], $GUI_SHOW)
     GUICtrlSetState($aGithubDefaultBranch[$eBorderBottom], $GUI_SHOW)
     GUICtrlSetState($aGithubDefaultBranch[$eBorderLeft], $GUI_SHOW)
+EndFunc
+
+Func _HideInputGitlabUsername()
+    GUICtrlSetState($aGitlabUsername[$eLabel], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUsername[$eBackground], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUsername[$eInput], $GUI_HIDE)
+
+    GUICtrlSetState($aGitlabUsername[$eBorderTop], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUsername[$eBorderRight], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUsername[$eBorderBottom], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUsername[$eBorderLeft], $GUI_HIDE)
+EndFunc
+
+Func _ShowInputGitlabUsername()
+    GUICtrlSetState($aGitlabUsername[$eLabel], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUsername[$eBackground], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUsername[$eInput], $GUI_SHOW)
+
+    GUICtrlSetState($aGitlabUsername[$eBorderTop], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUsername[$eBorderRight], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUsername[$eBorderBottom], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUsername[$eBorderLeft], $GUI_SHOW)
+EndFunc
+
+Func _HideInputGitlabUrl()
+    GUICtrlSetState($aGitlabUrl[$eLabel], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUrl[$eBackground], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUrl[$eInput], $GUI_HIDE)
+
+    GUICtrlSetState($aGitlabUrl[$eBorderTop], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUrl[$eBorderRight], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUrl[$eBorderBottom], $GUI_HIDE)
+    GUICtrlSetState($aGitlabUrl[$eBorderLeft], $GUI_HIDE)
+EndFunc
+
+Func _ShowInputGitlabUrl()
+    GUICtrlSetState($aGitlabUrl[$eLabel], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUrl[$eBackground], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUrl[$eInput], $GUI_SHOW)
+
+    GUICtrlSetState($aGitlabUrl[$eBorderTop], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUrl[$eBorderRight], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUrl[$eBorderBottom], $GUI_SHOW)
+    GUICtrlSetState($aGitlabUrl[$eBorderLeft], $GUI_SHOW)
 EndFunc

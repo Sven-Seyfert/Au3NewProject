@@ -253,7 +253,7 @@ Global $aCheckboxGithub[$iMaxEnumIndex]
 
 Global $aGithubUsername[$iMaxEnumIndex]
        $aGithubUsername[$eLabel]                = ''
-       $aGithubUsername[$eLabelText]            = 'Github username'
+       $aGithubUsername[$eLabelText]            = 'Github user'
        $aGithubUsername[$eLabelXPosition]       = 40
        $aGithubUsername[$eLabelYPosition]       = 385
        $aGithubUsername[$eLabelWidth]           = 245
@@ -310,6 +310,66 @@ Global $aGithubDefaultBranch[$iMaxEnumIndex]
        $aGithubDefaultBranch[$eBorderRight]     = ''
        $aGithubDefaultBranch[$eBorderBottom]    = ''
        $aGithubDefaultBranch[$eBorderLeft]      = ''
+
+Global $aGitlabUsername[$iMaxEnumIndex]
+       $aGitlabUsername[$eLabel]                = ''
+       $aGitlabUsername[$eLabelText]            = 'Gitlab user/group'
+       $aGitlabUsername[$eLabelXPosition]       = 40
+       $aGitlabUsername[$eLabelYPosition]       = 385
+       $aGitlabUsername[$eLabelWidth]           = 245
+       $aGitlabUsername[$eLabelHeight]          = 50
+       $aGitlabUsername[$eLabelFontSize]        = 9
+       $aGitlabUsername[$eBackground]           = ''
+       $aGitlabUsername[$eBackgroundText]       = ''
+       $aGitlabUsername[$eXPosition]            = $aGitlabUsername[$eLabelXPosition]
+       $aGitlabUsername[$eYPosition]            = $aGitlabUsername[$eLabelYPosition] + 25
+       $aGitlabUsername[$eWidth]                = $aGitlabUsername[$eLabelWidth]
+       $aGitlabUsername[$eHeight]               = $aGitlabUsername[$eLabelHeight] - 10
+       $aGitlabUsername[$eBackgroundColor]      = $aColor[$eLabelBackground]
+       $aGitlabUsername[$eInput]                = ''
+       $aGitlabUsername[$eInputText]            = 'testing'
+       $aGitlabUsername[$eInputColor]           = $aColor[$eLabelBackground]
+       $aGitlabUsername[$eInputXPosition]       = $aGitlabUsername[$eXPosition] + 5
+       $aGitlabUsername[$eInputYPosition]       = $aGitlabUsername[$eYPosition] + 10
+       $aGitlabUsername[$eInputWidth]           = $aGitlabUsername[$eWidth] - 30
+       $aGitlabUsername[$eInputHeight]          = $aGitlabUsername[$eHeight] - 20
+       $aGitlabUsername[$eFontSize]             = 11
+       $aGitlabUsername[$eBorderColor]          = $aColor[$eBorder]
+       $aGitlabUsername[$eBorderSize]           = $aGui[$eBorderSize]
+       $aGitlabUsername[$eBorderTop]            = ''
+       $aGitlabUsername[$eBorderRight]          = ''
+       $aGitlabUsername[$eBorderBottom]         = ''
+       $aGitlabUsername[$eBorderLeft]           = ''
+
+Global $aGitlabUrl[$iMaxEnumIndex]
+       $aGitlabUrl[$eLabel]                     = ''
+       $aGitlabUrl[$eLabelText]                 = 'Gitlab URL'
+       $aGitlabUrl[$eLabelXPosition]            = 40 + 255
+       $aGitlabUrl[$eLabelYPosition]            = 385
+       $aGitlabUrl[$eLabelWidth]                = 245
+       $aGitlabUrl[$eLabelHeight]               = 50
+       $aGitlabUrl[$eLabelFontSize]             = 9
+       $aGitlabUrl[$eBackground]                = ''
+       $aGitlabUrl[$eBackgroundText]            = ''
+       $aGitlabUrl[$eXPosition]                 = $aGitlabUrl[$eLabelXPosition]
+       $aGitlabUrl[$eYPosition]                 = $aGitlabUrl[$eLabelYPosition] + 25
+       $aGitlabUrl[$eWidth]                     = $aGitlabUrl[$eLabelWidth]
+       $aGitlabUrl[$eHeight]                    = $aGitlabUrl[$eLabelHeight] - 10
+       $aGitlabUrl[$eBackgroundColor]           = $aColor[$eLabelBackground]
+       $aGitlabUrl[$eInput]                     = ''
+       $aGitlabUrl[$eInputText]                 = 'gitlab.big-osp.de'
+       $aGitlabUrl[$eInputColor]                = $aColor[$eLabelBackground]
+       $aGitlabUrl[$eInputXPosition]            = $aGitlabUrl[$eXPosition] + 5
+       $aGitlabUrl[$eInputYPosition]            = $aGitlabUrl[$eYPosition] + 10
+       $aGitlabUrl[$eInputWidth]                = $aGitlabUrl[$eWidth] - 30
+       $aGitlabUrl[$eInputHeight]               = $aGitlabUrl[$eHeight] - 20
+       $aGitlabUrl[$eFontSize]                  = 11
+       $aGitlabUrl[$eBorderColor]               = $aColor[$eBorder]
+       $aGitlabUrl[$eBorderSize]                = $aGui[$eBorderSize]
+       $aGitlabUrl[$eBorderTop]                 = ''
+       $aGitlabUrl[$eBorderRight]               = ''
+       $aGitlabUrl[$eBorderBottom]              = ''
+       $aGitlabUrl[$eBorderLeft]                = ''
 
 Global $aButtonBrowse[$iMaxEnumIndex]
        $aButtonBrowse[$eBackground]             = ''

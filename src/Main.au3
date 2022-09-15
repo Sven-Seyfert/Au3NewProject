@@ -66,12 +66,16 @@ While True
             _SetBorderColor($aTagFour, $aTagFour[$eBorderColor])
             GUICtrlSetState($aCheckboxGithub[$eCheckbox], $GUI_SHOW)
             GUICtrlSetState($aCheckboxGithub[$eLabel], $GUI_SHOW)
+            _HideInputGitlabUsername()
+            _HideInputGitlabUrl()
 
         Case $aTagFour[$eBackground]
             $bIsGitLab = True
             _SetBorderColor($aTagThree, $aTagThree[$eBorderColor])
             GUICtrlSetState($aCheckboxGithub[$eCheckbox], $GUI_HIDE)
             GUICtrlSetState($aCheckboxGithub[$eLabel], $GUI_HIDE)
+            _ShowInputGitlabUsername()
+            _ShowInputGitlabUrl()
 
         Case $GUI_EVENT_PRIMARYUP
             Switch GUIGetCursorInfo()[4]

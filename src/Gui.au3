@@ -15,11 +15,15 @@ Func _ShowGui()
     _GuiCheckboxGithub()
     _GuiInputGithubUsername()
     _GuiInputGithubDefaultBranch()
+    _GuiInputGitlabUsername()
+    _GuiInputGitlabUrl()
     _GuiButtonBrowse()
     _GuiButtonCreate()
 
     _HideInputGithubUsername()
     _HideInputGithubDefaultBranch()
+    _HideInputGitlabUsername()
+    _HideInputGitlabUrl()
 
     GUISetState(@SW_SHOW, $aGui[$eHandle])
 
@@ -226,6 +230,44 @@ Func _GuiInputGithubDefaultBranch()
     $aGithubDefaultBranch[$eBorderLeft]   = GUICtrlCreateLabel('', $aGithubDefaultBranch[$eXPosition], $aGithubDefaultBranch[$eYPosition], $aGithubDefaultBranch[$eBorderSize], $aGithubDefaultBranch[$eHeight])
 
     _SetBorderColor($aGithubDefaultBranch, $aGithubDefaultBranch[$eBorderColor])
+EndFunc
+
+Func _GuiInputGitlabUsername()
+    $aGitlabUsername[$eLabel] = GUICtrlCreateLabel($aGitlabUsername[$eLabelText], $aGitlabUsername[$eLabelXPosition], $aGitlabUsername[$eLabelYPosition], $aGitlabUsername[$eLabelWidth], $aGitlabUsername[$eLabelHeight])
+    GUICtrlSetFont($aGitlabUsername[$eLabel], $aGitlabUsername[$eLabelFontSize])
+
+    $aGitlabUsername[$eBackground] = GUICtrlCreateLabel($aGitlabUsername[$eBackgroundText], $aGitlabUsername[$eXPosition], $aGitlabUsername[$eYPosition], $aGitlabUsername[$eWidth], $aGitlabUsername[$eHeight])
+    GUICtrlSetBkColor($aGitlabUsername[$eBackground], $aGitlabUsername[$eBackgroundColor])
+
+    $aGitlabUsername[$eInput] = GUICtrlCreateInput($aGitlabUsername[$eInputText], $aGitlabUsername[$eInputXPosition], $aGitlabUsername[$eInputYPosition], $aGitlabUsername[$eInputWidth], $aGitlabUsername[$eInputHeight], -1, $WS_EX_TOOLWINDOW)
+    GUICtrlSetBkColor($aGitlabUsername[$eInput], $aGitlabUsername[$eInputColor])
+    GUICtrlSetFont($aGitlabUsername[$eInput], $aGitlabUsername[$eFontSize])
+
+    $aGitlabUsername[$eBorderTop]    = GUICtrlCreateLabel('', $aGitlabUsername[$eXPosition], $aGitlabUsername[$eYPosition], $aGitlabUsername[$eWidth], $aGitlabUsername[$eBorderSize])
+    $aGitlabUsername[$eBorderRight]  = GUICtrlCreateLabel('', $aGitlabUsername[$eXPosition] + $aGitlabUsername[$eWidth] - $aGitlabUsername[$eBorderSize], $aGitlabUsername[$eYPosition], $aGitlabUsername[$eBorderSize], $aGitlabUsername[$eHeight])
+    $aGitlabUsername[$eBorderBottom] = GUICtrlCreateLabel('', $aGitlabUsername[$eXPosition], $aGitlabUsername[$eYPosition] + $aGitlabUsername[$eHeight] - $aGitlabUsername[$eBorderSize], $aGitlabUsername[$eWidth], $aGitlabUsername[$eBorderSize])
+    $aGitlabUsername[$eBorderLeft]   = GUICtrlCreateLabel('', $aGitlabUsername[$eXPosition], $aGitlabUsername[$eYPosition], $aGitlabUsername[$eBorderSize], $aGitlabUsername[$eHeight])
+
+    _SetBorderColor($aGitlabUsername, $aGitlabUsername[$eBorderColor])
+EndFunc
+
+Func _GuiInputGitlabUrl()
+    $aGitlabUrl[$eLabel] = GUICtrlCreateLabel($aGitlabUrl[$eLabelText], $aGitlabUrl[$eLabelXPosition], $aGitlabUrl[$eLabelYPosition], $aGitlabUrl[$eLabelWidth], $aGitlabUrl[$eLabelHeight])
+    GUICtrlSetFont($aGitlabUrl[$eLabel], $aGitlabUrl[$eLabelFontSize])
+
+    $aGitlabUrl[$eBackground] = GUICtrlCreateLabel($aGitlabUrl[$eBackgroundText], $aGitlabUrl[$eXPosition], $aGitlabUrl[$eYPosition], $aGitlabUrl[$eWidth], $aGitlabUrl[$eHeight])
+    GUICtrlSetBkColor($aGitlabUrl[$eBackground], $aGitlabUrl[$eBackgroundColor])
+
+    $aGitlabUrl[$eInput] = GUICtrlCreateInput($aGitlabUrl[$eInputText], $aGitlabUrl[$eInputXPosition], $aGitlabUrl[$eInputYPosition], $aGitlabUrl[$eInputWidth], $aGitlabUrl[$eInputHeight], -1, $WS_EX_TOOLWINDOW)
+    GUICtrlSetBkColor($aGitlabUrl[$eInput], $aGitlabUrl[$eInputColor])
+    GUICtrlSetFont($aGitlabUrl[$eInput], $aGitlabUrl[$eFontSize])
+
+    $aGitlabUrl[$eBorderTop]    = GUICtrlCreateLabel('', $aGitlabUrl[$eXPosition], $aGitlabUrl[$eYPosition], $aGitlabUrl[$eWidth], $aGitlabUrl[$eBorderSize])
+    $aGitlabUrl[$eBorderRight]  = GUICtrlCreateLabel('', $aGitlabUrl[$eXPosition] + $aGitlabUrl[$eWidth] - $aGitlabUrl[$eBorderSize], $aGitlabUrl[$eYPosition], $aGitlabUrl[$eBorderSize], $aGitlabUrl[$eHeight])
+    $aGitlabUrl[$eBorderBottom] = GUICtrlCreateLabel('', $aGitlabUrl[$eXPosition], $aGitlabUrl[$eYPosition] + $aGitlabUrl[$eHeight] - $aGitlabUrl[$eBorderSize], $aGitlabUrl[$eWidth], $aGitlabUrl[$eBorderSize])
+    $aGitlabUrl[$eBorderLeft]   = GUICtrlCreateLabel('', $aGitlabUrl[$eXPosition], $aGitlabUrl[$eYPosition], $aGitlabUrl[$eBorderSize], $aGitlabUrl[$eHeight])
+
+    _SetBorderColor($aGitlabUrl, $aGitlabUrl[$eBorderColor])
 EndFunc
 
 Func _GuiButtonBrowse()
