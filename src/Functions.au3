@@ -68,6 +68,8 @@ EndFunc
 
 Func _FillProjectFiles()
     _WriteFile($aFile[$eChangelog], $aContent[$eFileChangelog])
+    _WriteFile($aFile[$eGitIgnore], $aContent[$eFileGitIgnore])
+    _WriteFile($aFile[$eLicense], $aContent[$eFileLicense])
     _WriteFile($aFile[$eReadme], $aContent[$eFileReadme])
     _WriteFile($aFile[$eSrcActionHandler], $aContent[$eFileActionHandler])
     _WriteFile($aFile[$eSrcProject], $aContent[$eFileProject])
@@ -86,7 +88,5 @@ Func _FillGithubRelatedFiles()
         _WriteFile($aFile[$eDocsCodeOfConduct], $aContent[$eFileCodeOfConduct])
         _WriteFile($aFile[$eDocsContributing], $aContent[$eFileContributing])
         _WriteFile($aFile[$eDocsPullRequestTemplate], $aContent[$eFilePullRequestTemplate])
-        _WriteFile($aFile[$eGitIgnore], $aContent[$eFileGitIgnore])
-        _WriteFile($aFile[$eLicense], $aContent[$eFileLicense])
     EndIf
 EndFunc
