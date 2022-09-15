@@ -2,6 +2,7 @@ Global $aMouseData
 Global $aGuiData
 
 Global $bHtmlProject                        = False
+Global $bIsGitLab                           = False
 Global $bTabIsPressed                       = False
 Global $bCheckboxStartIsChecked             = True
 Global $bCheckboxGithubIsChecked            = False

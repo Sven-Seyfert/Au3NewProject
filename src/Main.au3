@@ -61,6 +61,14 @@ While True
             _SetBorderColor($aTagOne, $aTagOne[$eBorderColor])
             GUICtrlSetData($aKindOfProject[$eLabel], 'AutoIt App (with Web structure)')
 
+        Case $aTagThree[$eBackground]
+            $bIsGitLab = False
+            _SetBorderColor($aTagFour, $aTagFour[$eBorderColor])
+
+        Case $aTagFour[$eBackground]
+            $bIsGitLab = True
+            _SetBorderColor($aTagThree, $aTagThree[$eBorderColor])
+
         Case $GUI_EVENT_PRIMARYUP
             Switch GUIGetCursorInfo()[4]
                 Case $aProjectName[$eInput], $aProjectName[$eBackground]

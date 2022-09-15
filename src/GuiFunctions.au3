@@ -37,6 +37,12 @@ Func _HoverActions()
             Case _HoverTagTwo()
                 _SetBorderColor($aTagTwo, $aColor[$eBlue])
 
+            Case _HoverTagThree()
+                _SetBorderColor($aTagThree, $aColor[$eBlue])
+
+            Case _HoverTagFour()
+                _SetBorderColor($aTagFour, $aColor[$eBlue])
+
             Case _HoverButtonBrowse()
                 _SetBorderColor($aButtonBrowse, $aColor[$eBlue])
 
@@ -56,6 +62,14 @@ Func _HoverActions()
                     _SetBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
                 EndIf
 
+                If $bIsGitLab Then
+                    _SetBorderColor($aTagThree, $aTagThree[$eBorderColor])
+                EndIf
+
+                If Not $bIsGitLab Then
+                    _SetBorderColor($aTagFour, $aTagFour[$eBorderColor])
+                EndIf
+
                 _SetBorderColor($aButtonBrowse, $aButtonBrowse[$eBorderColor])
                 _SetBorderColor($aButtonCreate, $aButtonCreate[$eBorderColor])
         EndSelect
@@ -72,6 +86,14 @@ EndFunc
 
 Func _HoverTagTwo()
     Return _IsMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aTagTwo[$eXPosition], $aTagTwo[$eYPosition], $aTagTwo[$eWidth], $aTagTwo[$eHeight])
+EndFunc
+
+Func _HoverTagThree()
+    Return _IsMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aTagThree[$eXPosition], $aTagThree[$eYPosition], $aTagThree[$eWidth], $aTagThree[$eHeight])
+EndFunc
+
+Func _HoverTagFour()
+    Return _IsMouseOnControl($aMouseData[0] - $aGuiData[0], $aMouseData[1] - $aGuiData[1], $aTagFour[$eXPosition], $aTagFour[$eYPosition], $aTagFour[$eWidth], $aTagFour[$eHeight])
 EndFunc
 
 Func _HoverButtonBrowse()
