@@ -48,8 +48,13 @@ Func _HoverActions()
                 GUICtrlSetBkColor($aCloseX[$eLabel], $aCloseX[$eBackgroundColor])
                 GUICtrlSetColor($aCloseX[$eLabel], $aCloseX[$eFontColor])
 
-                If StringLower($bHtmlProject) == 'true' Then _SetBorderColor($aTagOne, $aTagOne[$eBorderColor])
-                If StringLower($bHtmlProject) == 'false' Then _SetBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
+                If $bHtmlProject Then
+                    _SetBorderColor($aTagOne, $aTagOne[$eBorderColor])
+                EndIf
+
+                If Not $bHtmlProject Then
+                    _SetBorderColor($aTagTwo, $aTagTwo[$eBorderColor])
+                EndIf
 
                 _SetBorderColor($aButtonBrowse, $aButtonBrowse[$eBorderColor])
                 _SetBorderColor($aButtonCreate, $aButtonCreate[$eBorderColor])
@@ -90,7 +95,7 @@ Func _SetControlFocusWithoutSelectedText($aControl)
 EndFunc
 
 Func _ToggleInput()
-    If StringLower($bTabIsPressed) == 'false' Then
+    If Not $bTabIsPressed Then
         _SetControlFocusWithoutSelectedText($aLocation)
         _SetBorderColor($aProjectName, $aColor[$eBorder])
         _SetBorderColor($aLocation, $aColor[$eBlue])
@@ -108,7 +113,7 @@ Func _ToggleInput()
 EndFunc
 
 Func _ToggleCheckboxStart()
-    If StringLower($bCheckboxStartIsChecked) == 'true' Then
+    If $bCheckboxStartIsChecked Then
         GUICtrlSetData($aCheckboxStart[$eCheckbox], Chr(163))
         $bCheckboxStartIsChecked = False
     Else
@@ -118,7 +123,7 @@ Func _ToggleCheckboxStart()
 EndFunc
 
 Func _ToggleCheckboxGithub()
-    If StringLower($bCheckboxGithubIsChecked) == 'true' Then
+    If $bCheckboxGithubIsChecked Then
         GUICtrlSetData($aCheckboxGithub[$eCheckbox], Chr(163))
         _HideInputGithubUsername()
         _HideInputGithubDefaultBranch()

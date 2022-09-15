@@ -44,7 +44,7 @@ EndFunc
 #include "FileContent.au3"
 
 Func _CreateFolders()
-    If StringLower($bHtmlProject) == 'true' Then
+    If $bHtmlProject Then
         DirCreate($aPath[$eCss])
         DirCreate($aPath[$eFonts])
         DirCreate($aPath[$eJs])
@@ -74,13 +74,13 @@ Func _FillProjectFiles()
 EndFunc
 
 Func _OpenInVisualStudioCode()
-    If StringLower($bCheckboxStartIsChecked) == 'true' Then
+    If $bCheckboxStartIsChecked Then
         ShellExecute(@ComSpec, ' /C code "' & $aPath[$eRoot] & '"', '', '', @SW_HIDE)
     EndIf
 EndFunc
 
 Func _FillGithubRelatedFiles()
-    If StringLower($bCheckboxGithubIsChecked) == 'true' Then
+    If $bCheckboxGithubIsChecked Then
         _WriteFile($aFile[$eBugReport], $aContent[$eFileBugReport])
         _WriteFile($aFile[$eFeatureRequest], $aContent[$eFileFeatureRequest])
         _WriteFile($aFile[$eDocsCodeOfConduct], $aContent[$eFileCodeOfConduct])
