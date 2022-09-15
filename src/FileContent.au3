@@ -338,6 +338,23 @@ Func _SetupContent()
     $aContent[$eFileGitIgnore] = _
         'Au3ChangelogUpdater.exe' & @CRLF
 
+    If $bIsGitLab Then
+        Local $sGitlabUrl = GUICtrlRead($aGitlabUrl[$eInput])
+        $sGitlabUrl = StringReplace($sGitlabUrl, 'https://', '')
+
+        If StringRight($sGitlabUrl, 1) == '/' Then
+            $sGitlabUrl = StringTrimRight($sGitlabUrl, 1)
+        EndIf
+
+        Local $sReleaseUrls = _
+            '[Unreleased]: https://' & $sGitlabUrl & '/' & GUICtrlRead($aGitlabUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/-/compare/v0.1.0...main' & @CRLF & _
+            '[0.1.0]: https://' & $sGitlabUrl & '/' & GUICtrlRead($aGitlabUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/-/tags/v0.1.0' & @CRLF
+    Else
+        Local $sReleaseUrls = _
+            '[Unreleased]: https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/compare/v0.1.0...HEAD' & @CRLF & _
+            '[0.1.0]: https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/releases/tag/v0.1.0' & @CRLF
+    EndIf
+
     $aContent[$eFileChangelog] = _
         '#####' & @CRLF & _
         @CRLF & _
@@ -358,8 +375,7 @@ Func _SetupContent()
         @CRLF & _
         '- Initial commit with all repository data and dependencies.' & @CRLF & _
         @CRLF & _
-        '[Unreleased]: https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/compare/v0.1.0...HEAD' & @CRLF & _
-        '[0.1.0]: https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/releases/tag/v0.1.0' & @CRLF & _
+        $sReleaseUrls & _
         @CRLF & _
         '---' & @CRLF & _
         @CRLF & _
