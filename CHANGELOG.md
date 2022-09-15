@@ -11,6 +11,24 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 ## [Unreleased]
 
+## [1.12.0] - 2022-09-15
+
+### Added
+
+- Border color change functionality on hover on the two new tags.
+- Differentiation whether the changelog is generated for GitHub or for GitLab.
+- Differentiation whether the readme is generated for GitHub or for GitLab.
+- Gitlab input fields for username and url (also toggled, show/hide).
+- Interaction/focus for the two gitab inputs (also with border color change).
+- Toggle between GitLab tag and GitHub repo checkbox.
+- Two new tags for GitHub and GitLab (only on GUI for now).
+
+### Changed
+
+- License and .gitignore file will now always be generated. No matter github structure or not.
+- Small code improvements of the usage of booleans.
+- Style of license file.
+
 ## [1.11.0] - 2022-08-03
 
 ### Changed
@@ -124,7 +142,8 @@ Go to [legend](#legend---types-of-changes) for further information about the typ
 
 - AutoIt Code formatting to the common notation without additional spaces after opened brackets and before closed brackets.
 
-[Unreleased]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.11.0...HEAD
+[Unreleased]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.12.0...HEAD
+[1.12.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.11.0...v1.12.0
 [1.11.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.9.0...v1.10.0
 [1.9.0]: https://github.com/Sven-Seyfert/Au3NewProject/compare/v1.8.0...v1.9.0
