@@ -424,103 +424,178 @@ Func _SetupContent()
         '> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE' & @CRLF & _
         '> SOFTWARE.' & @CRLF
 
-    $aContent[$eFileReadme] = _
-        '#####' & @CRLF & _
-        @CRLF & _
-        '<p align="center">' & @CRLF & _
-        '    <img src="media/images/icon.png" width="80" />' & @CRLF & _
-        '    <h2 align="center">Welcome to <code>' & GUICtrlRead($aProjectName[$eInput]) & '</code>【ツ】</h2>' & @CRLF & _
-        '</p>' & @CRLF & _
-        @CRLF & _
-        '[![license](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square&logo=spdx)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/LICENSE.md)' & @CRLF & _
-        '[![contributors](https://img.shields.io/github/contributors/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/graphs/contributors)' & @CRLF & _
-        '![repo size](https://img.shields.io/github/repo-size/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
-        '[![last commit](https://img.shields.io/github/last-commit/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/commits/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & ')' & @CRLF & _
-        '[![release](https://img.shields.io/github/release/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/releases/latest)' & @CRLF & _
-        '![os](https://img.shields.io/badge/os-windows-yellow.svg?style=flat-square&logo=windows)' & @CRLF & _
-        '![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)' & @CRLF & _
-        @CRLF & _
-        '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [FAQ](#faq) | [Contributing](#contributing) | [License](#license) | [Acknowledgements](#acknowledgements)' & @CRLF & _
-        @CRLF & _
-        '## Description' & @CRLF & _
-        @CRLF & _
-        '' & GUICtrlRead($aProjectName[$eInput]) & ' [...] description [...].' & @CRLF & _
-        @CRLF & _
-        '## Features' & @CRLF & _
-        @CRLF & _
-        'To be defined [...]' & @CRLF & _
-        @CRLF & _
-        '## Getting started' & @CRLF & _
-        @CRLF & _
-        '#### *Preconditions*' & @CRLF & _
-        @CRLF & _
-        'To be defined [...]' & @CRLF & _
-        @CRLF & _
-        '#### *Installation*' & @CRLF & _
-        @CRLF & _
-        'Variant 1 - Run the EXE:' & @CRLF & _
-        @CRLF & _
-        'Starting the EXE `build\' & GUICtrlRead($aProjectName[$eInput]) & '.exe` which is compiled with `#AutoIt3Wrapper_UseX64=y` and `#AutoIt3Wrapper_UseUpx=n` (the default expected system is x64).' & @CRLF & _
-        @CRLF & _
-        'Variant 2 - Compile it on your own:' & @CRLF & _
-        @CRLF & _
-        'Open file `src\Main.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to. For example you could change `#AutoIt3Wrapper_UseUpx=n` from no (n) to yes (y), etc.' & @CRLF & _
-        'Then, run or compile the program.' & @CRLF & _
-        @CRLF & _
-        '#### *Usage*' & @CRLF & _
-        @CRLF & _
-        'To be defined [...]' & @CRLF & _
-        @CRLF & _
-        '#### *Keyboard shortcuts*' & @CRLF & _
-        @CRLF & _
-        '| Action | Shortcut |' & @CRLF & _
-        '| :---   | :---     |' & @CRLF & _
-        '| ...    | ...      |' & @CRLF & _
-        '| ...    | ...      |' & @CRLF & _
-        @CRLF & _
-        '## Configuration' & @CRLF & _
-        @CRLF & _
-        'To be defined [...]' & @CRLF & _
-        @CRLF & _
-        '## FAQ' & @CRLF & _
-        @CRLF & _
-        '<details>' & @CRLF & _
-        '<summary><i>Frequently Asked Questions</i></summary><br>' & @CRLF & _
-        @CRLF & _
-        '  <details>' & @CRLF & _
-        '  <summary><code>1. How to [...]</code></summary><p>' & @CRLF & _
-        @CRLF & _
-        '  **Q:** Is there a frequently asked question already?<br>' & @CRLF & _
-        '  **A:** No, not yet.' & @CRLF & _
-        @CRLF & _
-        '  <br></p></details>' & @CRLF & _
-        @CRLF & _
-        '  <details>' & @CRLF & _
-        '  <summary><code>2. How to [...]</code></summary><p>' & @CRLF & _
-        @CRLF & _
-        '  **Q:** [...]?<br>' & @CRLF & _
-        '  **A:** [...].' & @CRLF & _
-        @CRLF & _
-        '  <br></p></details>' & @CRLF & _
-        @CRLF & _
-        '</details>' & @CRLF & _
-        @CRLF & _
-        '## Contributing' & @CRLF & _
-        @CRLF & _
-        'Just look at [CONTRIBUTING](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
-        @CRLF & _
-        '## License' & @CRLF & _
-        @CRLF & _
-        'Distributed under the MIT License. See [LICENSE](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/LICENSE.md) for more information.' & @CRLF & _
-        @CRLF & _
-        '## Acknowledgements' & @CRLF & _
-        @CRLF & _
-        '- Opportunity by [GitHub](https://github.com)' & @CRLF & _
-        '- Badges by [Shields](https://shields.io)' & @CRLF & _
-        '- Utilities components by' & @CRLF & _
-        '  - none' & @CRLF & _
-        @CRLF & _
-        '##' & @CRLF & _
-        @CRLF & _
-        '[To the top](#)' & @CRLF
+    If $bIsGitLab Then
+        Local $sReadmeContent = _
+            '#####' & @CRLF & _
+            @CRLF & _
+            '<div align="center">' & @CRLF & _
+            '    <img src="media/images/icon.png" width="90" />' & @CRLF & _
+            '    <h2 align="center">Welcome to <code>' & GUICtrlRead($aProjectName[$eInput]) & '</code></h2>' & @CRLF & _
+            '</div>' & @CRLF & _
+            @CRLF & _
+            '[![license](https://img.shields.io/badge/license-MIT-3C873A.svg?style=flat-square&logo=spdx&logoColor=white)](https://' & $sGitlabUrl & '/' & GUICtrlRead($aGitlabUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/-/blob/main/LICENSE.md)' & @CRLF & _
+            '[![release](https://img.shields.io/badge/release-none-blue.svg?style=flat-square&logo=gitlab)](https://' & $sGitlabUrl & '/' & GUICtrlRead($aGitlabUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/-/releases)' & @CRLF & _
+            '[![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)]()' & @CRLF & _
+            '[![contributors](https://img.shields.io/badge/contributers-1-green.svg?style=flat-square&logo=gitlab)](https://' & $sGitlabUrl & '/' & GUICtrlRead($aGitlabUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/-/graphs/main)' & @CRLF & _
+            '[![os](https://img.shields.io/badge/os-Windows-yellow.svg?style=flat-square&logo=windows)]()' & @CRLF & _
+            '[![autoit](https://img.shields.io/badge/lang-AutoIt-teal.svg?style=flat-square&logo=autodesk&logoColor=white)]()' & @CRLF & _
+            @CRLF & _
+            '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [License](#license) | [Acknowledgements](#acknowledgements)' & @CRLF & _
+            @CRLF & _
+            '## Description' & @CRLF & _
+            @CRLF & _
+            '' & GUICtrlRead($aProjectName[$eInput]) & ' [...] description [...].' & @CRLF & _
+            @CRLF & _
+            '## Features' & @CRLF & _
+            @CRLF & _
+            'To be defined [...]' & @CRLF & _
+            @CRLF & _
+            '## Getting started' & @CRLF & _
+            @CRLF & _
+            '#### *Preconditions*' & @CRLF & _
+            @CRLF & _
+            'To be defined [...]' & @CRLF & _
+            @CRLF & _
+            '#### *Installation*' & @CRLF & _
+            @CRLF & _
+            'Variant 1 - Run the EXE:' & @CRLF & _
+            @CRLF & _
+            'Starting the EXE `build\' & GUICtrlRead($aProjectName[$eInput]) & '.exe` which is compiled with `#AutoIt3Wrapper_UseX64=y` and `#AutoIt3Wrapper_UseUpx=n` (the default expected system is x64).' & @CRLF & _
+            @CRLF & _
+            'Variant 2 - Compile it on your own:' & @CRLF & _
+            @CRLF & _
+            'Open file `src\Main.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to. For example you could change `#AutoIt3Wrapper_UseUpx=n` from no (n) to yes (y), etc.' & @CRLF & _
+            'Then, run or compile the program.' & @CRLF & _
+            @CRLF & _
+            '#### *Usage*' & @CRLF & _
+            @CRLF & _
+            'To be defined [...]' & @CRLF & _
+            @CRLF & _
+            '#### *Keyboard shortcuts*' & @CRLF & _
+            @CRLF & _
+            '| Action | Shortcut |' & @CRLF & _
+            '| :---   | :---     |' & @CRLF & _
+            '| ...    | ...      |' & @CRLF & _
+            '| ...    | ...      |' & @CRLF & _
+            @CRLF & _
+            '## Configuration' & @CRLF & _
+            @CRLF & _
+            'To be defined [...]' & @CRLF & _
+            @CRLF & _
+            '## License' & @CRLF & _
+            @CRLF & _
+            'Distributed under the MIT License. See [LICENSE](https://' & $sGitlabUrl & '/' & GUICtrlRead($aGitlabUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/-/blob/main/LICENSE.md) for more information.' & @CRLF & _
+            @CRLF & _
+            '## Acknowledgements' & @CRLF & _
+            @CRLF & _
+            '- Badges by [Shields](https://shields.io)' & @CRLF & _
+            '- Utilities components by' & @CRLF & _
+            '  - none' & @CRLF & _
+            @CRLF & _
+            '##' & @CRLF & _
+            @CRLF & _
+            '[To the top](#)' & @CRLF
+    Else
+        Local $sReadmeContent = _
+            '#####' & @CRLF & _
+            @CRLF & _
+            '<p align="center">' & @CRLF & _
+            '    <img src="media/images/icon.png" width="80" />' & @CRLF & _
+            '    <h2 align="center">Welcome to <code>' & GUICtrlRead($aProjectName[$eInput]) & '</code>【ツ】</h2>' & @CRLF & _
+            '</p>' & @CRLF & _
+            @CRLF & _
+            '[![license](https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square&logo=spdx)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/LICENSE.md)' & @CRLF & _
+            '[![contributors](https://img.shields.io/github/contributors/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/graphs/contributors)' & @CRLF & _
+            '![repo size](https://img.shields.io/github/repo-size/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)' & @CRLF & _
+            '[![last commit](https://img.shields.io/github/last-commit/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/commits/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & ')' & @CRLF & _
+            '[![release](https://img.shields.io/github/release/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '.svg?style=flat-square&logo=github)](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/releases/latest)' & @CRLF & _
+            '![os](https://img.shields.io/badge/os-windows-yellow.svg?style=flat-square&logo=windows)' & @CRLF & _
+            '![editor](https://img.shields.io/badge/editor-VSCode-blueviolet.svg?style=flat-square&logo=visual-studio-code)' & @CRLF & _
+            @CRLF & _
+            '[Description](#description) | [Features](#features) | [Getting started](#getting-started) | [Configuration](#configuration) | [FAQ](#faq) | [Contributing](#contributing) | [License](#license) | [Acknowledgements](#acknowledgements)' & @CRLF & _
+            @CRLF & _
+            '## Description' & @CRLF & _
+            @CRLF & _
+            '' & GUICtrlRead($aProjectName[$eInput]) & ' [...] description [...].' & @CRLF & _
+            @CRLF & _
+            '## Features' & @CRLF & _
+            @CRLF & _
+            'To be defined [...]' & @CRLF & _
+            @CRLF & _
+            '## Getting started' & @CRLF & _
+            @CRLF & _
+            '#### *Preconditions*' & @CRLF & _
+            @CRLF & _
+            'To be defined [...]' & @CRLF & _
+            @CRLF & _
+            '#### *Installation*' & @CRLF & _
+            @CRLF & _
+            'Variant 1 - Run the EXE:' & @CRLF & _
+            @CRLF & _
+            'Starting the EXE `build\' & GUICtrlRead($aProjectName[$eInput]) & '.exe` which is compiled with `#AutoIt3Wrapper_UseX64=y` and `#AutoIt3Wrapper_UseUpx=n` (the default expected system is x64).' & @CRLF & _
+            @CRLF & _
+            'Variant 2 - Compile it on your own:' & @CRLF & _
+            @CRLF & _
+            'Open file `src\Main.au3`, adjust the *#AutoIt3Wrapper compiler information* if you want to. For example you could change `#AutoIt3Wrapper_UseUpx=n` from no (n) to yes (y), etc.' & @CRLF & _
+            'Then, run or compile the program.' & @CRLF & _
+            @CRLF & _
+            '#### *Usage*' & @CRLF & _
+            @CRLF & _
+            'To be defined [...]' & @CRLF & _
+            @CRLF & _
+            '#### *Keyboard shortcuts*' & @CRLF & _
+            @CRLF & _
+            '| Action | Shortcut |' & @CRLF & _
+            '| :---   | :---     |' & @CRLF & _
+            '| ...    | ...      |' & @CRLF & _
+            '| ...    | ...      |' & @CRLF & _
+            @CRLF & _
+            '## Configuration' & @CRLF & _
+            @CRLF & _
+            'To be defined [...]' & @CRLF & _
+            @CRLF & _
+            '## FAQ' & @CRLF & _
+            @CRLF & _
+            '<details>' & @CRLF & _
+            '<summary><i>Frequently Asked Questions</i></summary><br>' & @CRLF & _
+            @CRLF & _
+            '  <details>' & @CRLF & _
+            '  <summary><code>1. How to [...]</code></summary><p>' & @CRLF & _
+            @CRLF & _
+            '  **Q:** Is there a frequently asked question already?<br>' & @CRLF & _
+            '  **A:** No, not yet.' & @CRLF & _
+            @CRLF & _
+            '  <br></p></details>' & @CRLF & _
+            @CRLF & _
+            '  <details>' & @CRLF & _
+            '  <summary><code>2. How to [...]</code></summary><p>' & @CRLF & _
+            @CRLF & _
+            '  **Q:** [...]?<br>' & @CRLF & _
+            '  **A:** [...].' & @CRLF & _
+            @CRLF & _
+            '  <br></p></details>' & @CRLF & _
+            @CRLF & _
+            '</details>' & @CRLF & _
+            @CRLF & _
+            '## Contributing' & @CRLF & _
+            @CRLF & _
+            'Just look at [CONTRIBUTING](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/docs/CONTRIBUTING.md), thank you!' & @CRLF & _
+            @CRLF & _
+            '## License' & @CRLF & _
+            @CRLF & _
+            'Distributed under the MIT License. See [LICENSE](https://github.com/' & GUICtrlRead($aGithubUsername[$eInput]) & '/' & GUICtrlRead($aProjectName[$eInput]) & '/blob/' & GUICtrlRead($aGithubDefaultBranch[$eInput]) & '/LICENSE.md) for more information.' & @CRLF & _
+            @CRLF & _
+            '## Acknowledgements' & @CRLF & _
+            @CRLF & _
+            '- Opportunity by [GitHub](https://github.com)' & @CRLF & _
+            '- Badges by [Shields](https://shields.io)' & @CRLF & _
+            '- Utilities components by' & @CRLF & _
+            '  - none' & @CRLF & _
+            @CRLF & _
+            '##' & @CRLF & _
+            @CRLF & _
+            '[To the top](#)' & @CRLF
+    EndIf
+
+    $aContent[$eFileReadme] = $sReadmeContent
 EndFunc
