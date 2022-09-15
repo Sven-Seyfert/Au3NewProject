@@ -85,6 +85,8 @@ While True
                     _SetBorderColor($aLocation, $aColor[$eBorder])
                     _SetBorderColor($aGithubUsername, $aColor[$eBorder])
                     _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUrl, $aColor[$eBorder])
 
                 Case $aLocation[$eInput]
                     _SetControlFocusWithoutSelectedText($aLocation)
@@ -92,6 +94,8 @@ While True
                     _SetBorderColor($aLocation, $aColor[$eBlue])
                     _SetBorderColor($aGithubUsername, $aColor[$eBorder])
                     _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUrl, $aColor[$eBorder])
 
                 Case $aGithubUsername[$eInput]
                     _SetControlFocusWithoutSelectedText($aGithubUsername)
@@ -99,6 +103,8 @@ While True
                     _SetBorderColor($aLocation, $aColor[$eBorder])
                     _SetBorderColor($aGithubUsername, $aColor[$eBlue])
                     _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUrl, $aColor[$eBorder])
 
                 Case $aGithubDefaultBranch[$eInput]
                     _SetControlFocusWithoutSelectedText($aGithubDefaultBranch)
@@ -106,6 +112,26 @@ While True
                     _SetBorderColor($aLocation, $aColor[$eBorder])
                     _SetBorderColor($aGithubUsername, $aColor[$eBorder])
                     _SetBorderColor($aGithubDefaultBranch, $aColor[$eBlue])
+                    _SetBorderColor($aGitlabUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUrl, $aColor[$eBorder])
+
+                Case $aGitlabUsername[$eInput]
+                    _SetControlFocusWithoutSelectedText($aGitlabUsername)
+                    _SetBorderColor($aProjectName, $aColor[$eBorder])
+                    _SetBorderColor($aLocation, $aColor[$eBorder])
+                    _SetBorderColor($aGithubUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUsername, $aColor[$eBlue])
+                    _SetBorderColor($aGitlabUrl, $aColor[$eBorder])
+
+                Case $aGitlabUrl[$eInput]
+                    _SetControlFocusWithoutSelectedText($aGitlabUrl)
+                    _SetBorderColor($aProjectName, $aColor[$eBorder])
+                    _SetBorderColor($aLocation, $aColor[$eBorder])
+                    _SetBorderColor($aGithubUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGithubDefaultBranch, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUsername, $aColor[$eBorder])
+                    _SetBorderColor($aGitlabUrl, $aColor[$eBlue])
             EndSwitch
 
         Case $aCheckboxStart[$eCheckbox], $aCheckboxStart[$eLabel]
